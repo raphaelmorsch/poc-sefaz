@@ -1,0 +1,348 @@
+Name:               esteno-bc7r5-master-2
+Roles:              control-plane,master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=vsphere-vm.cpu-8.mem-32gb.os-unknown
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=esteno-bc7r5-master-2
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=
+                    node-role.kubernetes.io/master=
+                    node.cluster.x-k8s.io/esxi-host=bhevmp56.fazenda.mg.gov.br
+                    node.kubernetes.io/instance-type=vsphere-vm.cpu-8.mem-32gb.os-unknown
+                    node.openshift.io/os_id=rhcos
+Annotations:        alpha.kubernetes.io/provided-node-ip: 172.23.218.104
+                    cluster.x-k8s.io/cluster-name: esteno-bc7r5
+                    cluster.x-k8s.io/cluster-namespace: openshift-cluster-api-guests
+                    cluster.x-k8s.io/labels-from-machine: node.cluster.x-k8s.io/esxi-host
+                    cluster.x-k8s.io/machine: esteno-bc7r5-master-2
+                    csi.volume.kubernetes.io/nodeid: {"csi.vsphere.vmware.com":"422b2bb1-5710-247b-d892-41bd1b5aeaa4"}
+                    k8s.ovn.org/host-cidrs: ["10.88.0.1/16","172.23.218.104/24"]
+                    k8s.ovn.org/l3-gateway-config:
+                      {"default":{"mode":"shared","interface-id":"br-ex_esteno-bc7r5-master-2","mac-address":"00:50:56:ab:b6:1d","ip-addresses":["172.23.218.104...
+                    k8s.ovn.org/network-ids: {"default":"0"}
+                    k8s.ovn.org/node-chassis-id: a9827789-a94f-4ffd-ac8d-9470a167fa7b
+                    k8s.ovn.org/node-gateway-router-lrp-ifaddr: {"ipv4":"100.64.0.3/16"}
+                    k8s.ovn.org/node-id: 3
+                    k8s.ovn.org/node-mgmt-port-mac-address: 82:56:63:9f:25:04
+                    k8s.ovn.org/node-primary-ifaddr: {"ipv4":"172.23.218.104/24"}
+                    k8s.ovn.org/node-subnets: {"default":["10.130.0.0/23"]}
+                    k8s.ovn.org/node-transit-switch-port-ifaddr: {"ipv4":"100.88.0.3/16"}
+                    k8s.ovn.org/remote-zone-migrated: esteno-bc7r5-master-2
+                    k8s.ovn.org/zone-name: esteno-bc7r5-master-2
+                    machine.openshift.io/machine: openshift-machine-api/esteno-bc7r5-master-2
+                    machineconfiguration.openshift.io/controlPlaneTopology: HighlyAvailable
+                    machineconfiguration.openshift.io/currentConfig: rendered-master-b71e1e5c03685689fe6250dcadf6d2bb
+                    machineconfiguration.openshift.io/desiredConfig: rendered-master-b71e1e5c03685689fe6250dcadf6d2bb
+                    machineconfiguration.openshift.io/desiredDrain: uncordon-rendered-master-b71e1e5c03685689fe6250dcadf6d2bb
+                    machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-b71e1e5c03685689fe6250dcadf6d2bb
+                    machineconfiguration.openshift.io/lastObservedServerCAAnnotation: false
+                    machineconfiguration.openshift.io/lastSyncedControllerConfigResourceVersion: 554055
+                    machineconfiguration.openshift.io/post-config-action: 
+                    machineconfiguration.openshift.io/reason: 
+                    machineconfiguration.openshift.io/state: Done
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Tue, 19 Nov 2024 14:13:34 -0300
+Taints:             node-role.kubernetes.io/master:NoSchedule
+Unschedulable:      false
+Lease:
+  HolderIdentity:  esteno-bc7r5-master-2
+  AcquireTime:     <unset>
+  RenewTime:       Wed, 20 Nov 2024 20:50:40 -0300
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Wed, 20 Nov 2024 20:46:15 -0300   Wed, 20 Nov 2024 20:46:15 -0300   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Wed, 20 Nov 2024 20:46:15 -0300   Wed, 20 Nov 2024 20:46:15 -0300   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Wed, 20 Nov 2024 20:46:15 -0300   Wed, 20 Nov 2024 20:46:15 -0300   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Wed, 20 Nov 2024 20:46:15 -0300   Wed, 20 Nov 2024 20:46:15 -0300   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  172.23.218.104
+  ExternalIP:  172.23.218.104
+  Hostname:    esteno-bc7r5-master-2
+Capacity:
+  cpu:                8
+  ephemeral-storage:  167181292Ki
+  hugepages-2Mi:      0
+  memory:             32865752Ki
+  pods:               250
+Allocatable:
+  cpu:                7500m
+  ephemeral-storage:  153000536629
+  hugepages-2Mi:      0
+  memory:             31714776Ki
+  pods:               250
+System Info:
+  Machine ID:                             9a31eece9f3941ecb4f2c5fc35a62d56
+  System UUID:                            b12b2b42-1057-7b24-d892-41bd1b5aeaa4
+  Boot ID:                                e45bb21f-0744-4ccc-8b1b-9f0a7dae639a
+  Kernel Version:                         5.14.0-427.44.1.el9_4.x86_64
+  OS Image:                               Red Hat Enterprise Linux CoreOS 416.94.202411111409-0
+  Operating System:                       linux
+  Architecture:                           amd64
+  Container Runtime Version:              cri-o://1.29.10-3.rhaos4.16.git319967e.el9
+  Kubelet Version:                        v1.29.9+7423cac
+  Kube-Proxy Version:                     v1.29.9+7423cac
+ProviderID:                               vsphere://422b2bb1-5710-247b-d892-41bd1b5aeaa4
+Non-terminated Pods:                      (37 in total)
+  Namespace                               Name                                                    CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                               ----                                                    ------------  ----------  ---------------  -------------  ---
+  openshift-apiserver                     apiserver-55fb95d674-pmq46                              110m (1%)     0 (0%)      250Mi (0%)       0 (0%)         28h
+  openshift-authentication                oauth-openshift-6d64b98f74-rcn48                        10m (0%)      0 (0%)      50Mi (0%)        0 (0%)         37m
+  openshift-cluster-csi-drivers           vmware-vsphere-csi-driver-node-snldp                    30m (0%)      0 (0%)      150Mi (0%)       0 (0%)         30h
+  openshift-cluster-node-tuning-operator  tuned-kfcw4                                             10m (0%)      0 (0%)      50Mi (0%)        0 (0%)         30h
+  openshift-console                       downloads-7db8695ffd-pk27j                              10m (0%)      0 (0%)      50Mi (0%)        0 (0%)         27h
+  openshift-controller-manager            controller-manager-574bf684b8-2d6jp                     100m (1%)     0 (0%)      100Mi (0%)       0 (0%)         6h58m
+  openshift-dns                           dns-default-md9t8                                       60m (0%)      0 (0%)      110Mi (0%)       0 (0%)         30h
+  openshift-dns                           node-resolver-bvpdj                                     5m (0%)       0 (0%)      21Mi (0%)        0 (0%)         30h
+  openshift-etcd                          etcd-esteno-bc7r5-master-2                              360m (4%)     0 (0%)      910Mi (2%)       0 (0%)         30h
+  openshift-etcd                          etcd-guard-esteno-bc7r5-master-2                        10m (0%)      0 (0%)      5Mi (0%)         0 (0%)         28h
+  openshift-image-registry                node-ca-9lbs9                                           10m (0%)      0 (0%)      10Mi (0%)        0 (0%)         30h
+  openshift-kube-apiserver                kube-apiserver-esteno-bc7r5-master-2                    290m (3%)     0 (0%)      1224Mi (3%)      0 (0%)         6h49m
+  openshift-kube-apiserver                kube-apiserver-guard-esteno-bc7r5-master-2              10m (0%)      0 (0%)      5Mi (0%)         0 (0%)         28h
+  openshift-kube-controller-manager       kube-controller-manager-esteno-bc7r5-master-2           80m (1%)      0 (0%)      500Mi (1%)       0 (0%)         30h
+  openshift-kube-controller-manager       kube-controller-manager-guard-esteno-bc7r5-master-2     10m (0%)      0 (0%)      5Mi (0%)         0 (0%)         28h
+  openshift-kube-scheduler                openshift-kube-scheduler-esteno-bc7r5-master-2          25m (0%)      0 (0%)      150Mi (0%)       0 (0%)         30h
+  openshift-kube-scheduler                openshift-kube-scheduler-guard-esteno-bc7r5-master-2    10m (0%)      0 (0%)      5Mi (0%)         0 (0%)         28h
+  openshift-machine-config-operator       kube-rbac-proxy-crio-esteno-bc7r5-master-2              20m (0%)      0 (0%)      50Mi (0%)        0 (0%)         30h
+  openshift-machine-config-operator       machine-config-daemon-std76                             40m (0%)      0 (0%)      100Mi (0%)       0 (0%)         30h
+  openshift-machine-config-operator       machine-config-server-j52p4                             20m (0%)      0 (0%)      50Mi (0%)        0 (0%)         30h
+  openshift-marketplace                   certified-operators-66sh8                               10m (0%)      0 (0%)      40Mi (0%)        0 (0%)         96m
+  openshift-marketplace                   community-operators-72pdj                               10m (0%)      0 (0%)      120Mi (0%)       0 (0%)         6h37m
+  openshift-marketplace                   redhat-marketplace-qx8xj                                10m (0%)      0 (0%)      20Mi (0%)        0 (0%)         128m
+  openshift-marketplace                   redhat-operators-9ff4k                                  10m (0%)      0 (0%)      30Mi (0%)        0 (0%)         96m
+  openshift-monitoring                    node-exporter-6p9m4                                     9m (0%)       0 (0%)      47Mi (0%)        0 (0%)         30h
+  openshift-multus                        multus-additional-cni-plugins-jk5rb                     10m (0%)      0 (0%)      10Mi (0%)        0 (0%)         30h
+  openshift-multus                        multus-hvt9g                                            10m (0%)      0 (0%)      65Mi (0%)        0 (0%)         30h
+  openshift-multus                        network-metrics-daemon-kxt2t                            20m (0%)      0 (0%)      120Mi (0%)       0 (0%)         30h
+  openshift-network-diagnostics           network-check-target-qg2vc                              10m (0%)      0 (0%)      15Mi (0%)        0 (0%)         30h
+  openshift-network-node-identity         network-node-identity-r7bjt                             20m (0%)      0 (0%)      100Mi (0%)       0 (0%)         30h
+  openshift-network-operator              iptables-alerter-b5t6k                                  10m (0%)      10m (0%)    65Mi (0%)        0 (0%)         30h
+  openshift-oauth-apiserver               apiserver-6f774c54df-2vcqk                              150m (2%)     0 (0%)      200Mi (0%)       0 (0%)         28h
+  openshift-ovn-kubernetes                ovnkube-node-k6mxs                                      80m (1%)      0 (0%)      1630Mi (5%)      0 (0%)         30h
+  openshift-route-controller-manager      route-controller-manager-7b5cb99cf7-8tx58               100m (1%)     0 (0%)      100Mi (0%)       0 (0%)         6h58m
+  openshift-vsphere-infra                 coredns-esteno-bc7r5-master-2                           200m (2%)     0 (0%)      400Mi (1%)       0 (0%)         30h
+  openshift-vsphere-infra                 haproxy-esteno-bc7r5-master-2                           200m (2%)     0 (0%)      400Mi (1%)       0 (0%)         30h
+  openshift-vsphere-infra                 keepalived-esteno-bc7r5-master-2                        200m (2%)     0 (0%)      400Mi (1%)       0 (0%)         30h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests      Limits
+  --------           --------      ------
+  cpu                2279m (30%)   10m (0%)
+  memory             7557Mi (24%)  0 (0%)
+  ephemeral-storage  0 (0%)        0 (0%)
+  hugepages-2Mi      0 (0%)        0 (0%)
+Events:
+  Type     Reason                   Age                   From                   Message
+  ----     ------                   ----                  ----                   -------
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   Synced                   30h                   cloud-node-controller  Node synced successfully
+  Normal   NodeReady                30h                   kubelet                Node esteno-bc7r5-master-2 status is now: NodeReady
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           30h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           29h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           29h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           29h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           29h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           29h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           29h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotSchedulable       28h                   kubelet                Node esteno-bc7r5-master-2 status is now: NodeNotSchedulable
+  Normal   NodeNotReady             28h                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   Starting                 28h                   kubelet                Starting kubelet.
+  Normal   Starting                 28h                   kubelet                Starting kubelet.
+  Normal   NodeAllocatableEnforced  28h                   kubelet                Updated Node Allocatable limit across pods
+  Warning  Rebooted                 28h (x2 over 28h)     kubelet                Node esteno-bc7r5-master-2 has been rebooted, boot id: e45bb21f-0744-4ccc-8b1b-9f0a7dae639a
+  Normal   NodeNotSchedulable       28h                   kubelet                Node esteno-bc7r5-master-2 status is now: NodeNotSchedulable
+  Normal   NodeSchedulable          28h                   kubelet                Node esteno-bc7r5-master-2 status is now: NodeSchedulable
+  Normal   RegisteredNode           28h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           27h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           27h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           27h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           27h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           27h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           26h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           26h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           26h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           26h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           26h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           25h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           25h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           25h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           25h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           24h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             24h                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           23h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           23h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           23h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           23h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           23h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           23h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           22h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           22h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           22h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           22h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           22h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           21h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           20h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           20h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           20h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           20h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           20h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           19h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           19h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           19h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           19h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           19h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           18h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           18h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           18h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           18h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           17h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             17h                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           17h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           17h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           17h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           17h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           17h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           17h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             16h (x3 over 28h)     kubelet                Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           16h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           16h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           16h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           16h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             16h                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           16h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           16h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           15h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           15h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           15h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           15h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           15h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             15h                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           14h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           14h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           14h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           14h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             13h                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           13h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           12h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           12h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           12h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           12h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           12h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           12h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             12h                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           11h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           11h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           11h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           11h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           11h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           10h                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           9h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           9h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           9h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           9h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           9h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           9h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           9h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           8h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           8h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           8h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           8h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           8h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           8h                    node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           7h52m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           7h40m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           7h31m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           7h19m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           7h9m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           6h58m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           6h49m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           6h37m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           6h27m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           6h12m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           6h7m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           5h59m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           5h50m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           5h38m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           5h27m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           5h18m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           5h6m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           4h55m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           4h46m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           4h35m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           4h25m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           4h14m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           4h4m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           3h53m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           3h43m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           3h42m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           3h32m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           3h23m                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           3h1m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           170m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           160m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           159m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           139m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           129m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           127m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           127m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           118m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           105m                  node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           96m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           85m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           74m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           60m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           57m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           48m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           47m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             46m                   node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   RegisteredNode           38m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           25m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           15m                   node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   RegisteredNode           5m29s                 node-controller        Node esteno-bc7r5-master-2 event: Registered Node esteno-bc7r5-master-2 in Controller
+  Normal   NodeNotReady             4m34s                 node-controller        Node esteno-bc7r5-master-2 status is now: NodeNotReady
+  Normal   NodeHasSufficientMemory  4m29s (x13 over 28h)  kubelet                Node esteno-bc7r5-master-2 status is now: NodeHasSufficientMemory
+  Normal   NodeHasNoDiskPressure    4m29s (x13 over 28h)  kubelet                Node esteno-bc7r5-master-2 status is now: NodeHasNoDiskPressure
+  Normal   NodeHasSufficientPID     4m29s (x13 over 28h)  kubelet                Node esteno-bc7r5-master-2 status is now: NodeHasSufficientPID
+  Normal   NodeReady                4m29s (x12 over 28h)  kubelet                Node esteno-bc7r5-master-2 status is now: NodeReady
