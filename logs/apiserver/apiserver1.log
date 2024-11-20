@@ -1,0 +1,499 @@
+Copying system trust bundle
+W1120 19:45:44.758419       1 feature_gate.go:239] Setting deprecated feature gate KMSv1=true. It will be removed in a future release.
+I1120 19:45:44.758450       1 feature_gate.go:249] feature gates: &{map[CloudDualStackNodeIPs:true DisableKubeletCloudCredentialProviders:true DynamicResourceAllocation:false EventedPLEG:false KMSv1:true MaxUnavailableStatefulSet:false NodeSwap:false RouteExternalCertificate:false ServiceAccountTokenNodeBinding:false ServiceAccountTokenNodeBindingValidation:false ServiceAccountTokenPodNodeInfo:false TranslateStreamCloseWebsocketRequests:false ValidatingAdmissionPolicy:false]}
+W1120 19:45:44.758485       1 config.go:121] Ignoring unknown FeatureGate "NetworkDiagnosticsConfig"
+W1120 19:45:44.758491       1 config.go:121] Ignoring unknown FeatureGate "VSphereMultiVCenters"
+W1120 19:45:44.758494       1 config.go:121] Ignoring unknown FeatureGate "CSIDriverSharedResource"
+W1120 19:45:44.758498       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallOpenStack"
+W1120 19:45:44.758502       1 config.go:121] Ignoring unknown FeatureGate "GCPLabelsTags"
+W1120 19:45:44.758505       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallNutanix"
+W1120 19:45:44.758509       1 config.go:121] Ignoring unknown FeatureGate "DNSNameResolver"
+W1120 19:45:44.758512       1 config.go:121] Ignoring unknown FeatureGate "EtcdBackendQuota"
+W1120 19:45:44.758516       1 config.go:121] Ignoring unknown FeatureGate "BareMetalLoadBalancer"
+W1120 19:45:44.758519       1 config.go:121] Ignoring unknown FeatureGate "ChunkSizeMiB"
+W1120 19:45:44.758523       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallAzure"
+W1120 19:45:44.758526       1 config.go:121] Ignoring unknown FeatureGate "NetworkLiveMigration"
+W1120 19:45:44.758530       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallAWS"
+W1120 19:45:44.758533       1 config.go:121] Ignoring unknown FeatureGate "InsightsOnDemandDataGather"
+W1120 19:45:44.758537       1 config.go:121] Ignoring unknown FeatureGate "NewOLM"
+W1120 19:45:44.758540       1 config.go:121] Ignoring unknown FeatureGate "PlatformOperators"
+W1120 19:45:44.758543       1 config.go:121] Ignoring unknown FeatureGate "SigstoreImageVerification"
+W1120 19:45:44.758547       1 config.go:121] Ignoring unknown FeatureGate "BuildCSIVolumes"
+W1120 19:45:44.758550       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProviderAzure"
+W1120 19:45:44.758553       1 config.go:121] Ignoring unknown FeatureGate "InstallAlternateInfrastructureAWS"
+W1120 19:45:44.758557       1 config.go:121] Ignoring unknown FeatureGate "AdminNetworkPolicy"
+W1120 19:45:44.758560       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProviderExternal"
+W1120 19:45:44.758563       1 config.go:121] Ignoring unknown FeatureGate "MixedCPUsAllocation"
+W1120 19:45:44.758567       1 config.go:121] Ignoring unknown FeatureGate "SignatureStores"
+W1120 19:45:44.758570       1 config.go:121] Ignoring unknown FeatureGate "MetricsCollectionProfiles"
+W1120 19:45:44.758575       1 config.go:121] Ignoring unknown FeatureGate "VSphereStaticIPs"
+W1120 19:45:44.758578       1 config.go:121] Ignoring unknown FeatureGate "AutomatedEtcdBackup"
+W1120 19:45:44.758582       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallVSphere"
+W1120 19:45:44.758585       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProviderGCP"
+W1120 19:45:44.758589       1 config.go:121] Ignoring unknown FeatureGate "VSphereDriverConfiguration"
+W1120 19:45:44.758592       1 config.go:121] Ignoring unknown FeatureGate "VolumeGroupSnapshot"
+W1120 19:45:44.758595       1 config.go:121] Ignoring unknown FeatureGate "InsightsConfig"
+W1120 19:45:44.758599       1 config.go:121] Ignoring unknown FeatureGate "PinnedImages"
+W1120 19:45:44.758602       1 config.go:121] Ignoring unknown FeatureGate "Example"
+W1120 19:45:44.758606       1 config.go:121] Ignoring unknown FeatureGate "HardwareSpeed"
+W1120 19:45:44.758609       1 config.go:121] Ignoring unknown FeatureGate "ImagePolicy"
+W1120 19:45:44.758613       1 config.go:121] Ignoring unknown FeatureGate "UpgradeStatus"
+W1120 19:45:44.758616       1 config.go:121] Ignoring unknown FeatureGate "MachineAPIOperatorDisableMachineHealthCheckController"
+W1120 19:45:44.758620       1 config.go:121] Ignoring unknown FeatureGate "OnClusterBuild"
+W1120 19:45:44.758624       1 config.go:121] Ignoring unknown FeatureGate "VSphereControlPlaneMachineSet"
+W1120 19:45:44.758627       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstall"
+W1120 19:45:44.758631       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProvider"
+W1120 19:45:44.758634       1 config.go:121] Ignoring unknown FeatureGate "MachineConfigNodes"
+W1120 19:45:44.758638       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallGCP"
+W1120 19:45:44.758641       1 config.go:121] Ignoring unknown FeatureGate "ExternalOIDC"
+W1120 19:45:44.758645       1 config.go:121] Ignoring unknown FeatureGate "GatewayAPI"
+W1120 19:45:44.758648       1 config.go:121] Ignoring unknown FeatureGate "ManagedBootImages"
+W1120 19:45:44.758652       1 config.go:121] Ignoring unknown FeatureGate "NodeDisruptionPolicy"
+W1120 19:45:44.758660       1 config.go:121] Ignoring unknown FeatureGate "AlibabaPlatform"
+W1120 19:45:44.758667       1 config.go:121] Ignoring unknown FeatureGate "InsightsConfigAPI"
+W1120 19:45:44.758671       1 config.go:121] Ignoring unknown FeatureGate "MachineAPIProviderOpenStack"
+W1120 19:45:44.758674       1 config.go:121] Ignoring unknown FeatureGate "MetricsServer"
+W1120 19:45:44.758678       1 config.go:121] Ignoring unknown FeatureGate "AzureWorkloadIdentity"
+W1120 19:45:44.758681       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallIBMCloud"
+W1120 19:45:44.758684       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallPowerVS"
+W1120 19:45:44.758688       1 config.go:121] Ignoring unknown FeatureGate "OpenShiftPodSecurityAdmission"
+W1120 19:45:44.758691       1 config.go:121] Ignoring unknown FeatureGate "GCPClusterHostedDNS"
+W1120 19:45:44.758699       1 config.go:121] Ignoring unknown FeatureGate "PrivateHostedZoneAWS"
+I1120 19:45:44.759679       1 dynamic_serving_content.go:113] "Loaded a new cert/key pair" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+I1120 19:46:33.575476       1 requestheader_controller.go:244] Loaded a new request header values for RequestHeaderAuthRequestController
+I1120 19:46:33.579357       1 audit.go:340] Using audit backend: ignoreErrors<log>
+I1120 19:46:33.580446       1 plugins.go:83] "Registered admission plugin" plugin="NamespaceLifecycle"
+I1120 19:46:33.580467       1 plugins.go:83] "Registered admission plugin" plugin="ValidatingAdmissionWebhook"
+I1120 19:46:33.580475       1 plugins.go:83] "Registered admission plugin" plugin="MutatingAdmissionWebhook"
+I1120 19:46:33.580481       1 plugins.go:83] "Registered admission plugin" plugin="ValidatingAdmissionPolicy"
+I1120 19:46:33.580686       1 admission.go:48] Admission plugin "project.openshift.io/ProjectRequestLimit" is not configured so it will be disabled.
+I1120 19:46:33.583470       1 plugins.go:157] Loaded 5 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,build.openshift.io/BuildConfigSecretInjector,image.openshift.io/ImageLimitRange,image.openshift.io/ImagePolicy,MutatingAdmissionWebhook.
+I1120 19:46:33.583488       1 plugins.go:160] Loaded 9 validating admission controller(s) successfully in the following order: OwnerReferencesPermissionEnforcement,build.openshift.io/BuildConfigSecretInjector,build.openshift.io/BuildByStrategy,image.openshift.io/ImageLimitRange,image.openshift.io/ImagePolicy,quota.openshift.io/ClusterResourceQuota,route.openshift.io/RequiredRouteAnnotations,ValidatingAdmissionWebhook,ResourceQuota.
+I1120 19:46:33.583826       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.583837       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.583850       1 maxinflight.go:116] "Set denominator for readonly requests" limit=3000
+I1120 19:46:33.583856       1 maxinflight.go:120] "Set denominator for mutating requests" limit=1500
+I1120 19:46:33.632435       1 store.go:1579] "Monitoring resource count at path" resource="deploymentconfigs.apps.openshift.io" path="<storage-prefix>//deploymentconfigs"
+I1120 19:46:33.639423       1 handler.go:275] Adding GroupVersion apps.openshift.io v1 to ResourceManager
+I1120 19:46:33.639585       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.639623       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.662463       1 cacher.go:451] cacher (deploymentconfigs.apps.openshift.io): initialized
+I1120 19:46:33.662494       1 reflector.go:351] Caches populated for *apps.DeploymentConfig from storage/cacher.go:/deploymentconfigs
+I1120 19:46:33.669897       1 handler.go:275] Adding GroupVersion authorization.openshift.io v1 to ResourceManager
+I1120 19:46:33.678795       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.678854       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.708533       1 store.go:1579] "Monitoring resource count at path" resource="builds.build.openshift.io" path="<storage-prefix>//builds"
+I1120 19:46:33.717795       1 cacher.go:451] cacher (builds.build.openshift.io): initialized
+I1120 19:46:33.717823       1 reflector.go:351] Caches populated for *build.Build from storage/cacher.go:/builds
+I1120 19:46:33.719734       1 store.go:1579] "Monitoring resource count at path" resource="buildconfigs.build.openshift.io" path="<storage-prefix>//buildconfigs"
+I1120 19:46:33.723424       1 handler.go:275] Adding GroupVersion build.openshift.io v1 to ResourceManager
+I1120 19:46:33.723605       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.723648       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.723758       1 cacher.go:451] cacher (buildconfigs.build.openshift.io): initialized
+I1120 19:46:33.723779       1 reflector.go:351] Caches populated for *build.BuildConfig from storage/cacher.go:/buildconfigs
+I1120 19:46:33.742484       1 apiserver.go:156] reading image import ca path: /var/run/configmaps/image-import-ca, incoming err: <nil>
+I1120 19:46:33.742569       1 apiserver.go:161] skipping dir or symlink: /var/run/configmaps/image-import-ca
+I1120 19:46:33.742614       1 apiserver.go:156] reading image import ca path: /var/run/configmaps/image-import-ca/..2024_11_19_19_20_44.3168545752, incoming err: <nil>
+I1120 19:46:33.742635       1 apiserver.go:161] skipping dir or symlink: /var/run/configmaps/image-import-ca/..2024_11_19_19_20_44.3168545752
+I1120 19:46:33.742657       1 apiserver.go:156] reading image import ca path: /var/run/configmaps/image-import-ca/..data, incoming err: <nil>
+I1120 19:46:33.742676       1 apiserver.go:161] skipping dir or symlink: /var/run/configmaps/image-import-ca/..data
+I1120 19:46:33.756082       1 store.go:1579] "Monitoring resource count at path" resource="images.image.openshift.io" path="<storage-prefix>//images"
+I1120 19:46:33.775445       1 store.go:1579] "Monitoring resource count at path" resource="imagestreams.image.openshift.io" path="<storage-prefix>//imagestreams"
+I1120 19:46:33.778922       1 handler.go:275] Adding GroupVersion image.openshift.io v1 to ResourceManager
+W1120 19:46:33.778943       1 genericapiserver.go:756] Skipping API image.openshift.io/1.0 because it has no resources.
+W1120 19:46:33.778950       1 genericapiserver.go:756] Skipping API image.openshift.io/pre012 because it has no resources.
+I1120 19:46:33.787199       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.787225       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.789859       1 handler.go:275] Adding GroupVersion project.openshift.io v1 to ResourceManager
+I1120 19:46:33.789924       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.789933       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.936340       1 store.go:1579] "Monitoring resource count at path" resource="routes.route.openshift.io" path="<storage-prefix>//routes"
+I1120 19:46:33.939707       1 handler.go:275] Adding GroupVersion route.openshift.io v1 to ResourceManager
+I1120 19:46:33.940137       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.940208       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.942727       1 cacher.go:451] cacher (routes.route.openshift.io): initialized
+I1120 19:46:33.942797       1 reflector.go:351] Caches populated for *route.Route from storage/cacher.go:/routes
+I1120 19:46:33.951423       1 cacher.go:451] cacher (imagestreams.image.openshift.io): initialized
+I1120 19:46:33.951509       1 reflector.go:351] Caches populated for *image.ImageStream from storage/cacher.go:/imagestreams
+I1120 19:46:33.968819       1 store.go:1579] "Monitoring resource count at path" resource="templates.template.openshift.io" path="<storage-prefix>//templates"
+I1120 19:46:33.982798       1 store.go:1579] "Monitoring resource count at path" resource="templateinstances.template.openshift.io" path="<storage-prefix>//templateinstances"
+I1120 19:46:33.988158       1 cacher.go:451] cacher (templates.template.openshift.io): initialized
+I1120 19:46:33.988237       1 reflector.go:351] Caches populated for *template.Template from storage/cacher.go:/templates
+I1120 19:46:33.999838       1 cacher.go:451] cacher (templateinstances.template.openshift.io): initialized
+I1120 19:46:33.999914       1 reflector.go:351] Caches populated for *template.TemplateInstance from storage/cacher.go:/templateinstances
+I1120 19:46:34.002258       1 store.go:1579] "Monitoring resource count at path" resource="brokertemplateinstances.template.openshift.io" path="<storage-prefix>//brokertemplateinstances"
+I1120 19:46:34.004706       1 handler.go:275] Adding GroupVersion template.openshift.io v1 to ResourceManager
+I1120 19:46:34.004882       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:34.004918       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:34.008203       1 cacher.go:451] cacher (brokertemplateinstances.template.openshift.io): initialized
+I1120 19:46:34.008225       1 reflector.go:351] Caches populated for *template.BrokerTemplateInstance from storage/cacher.go:/brokertemplateinstances
+I1120 19:46:34.013228       1 handler.go:275] Adding GroupVersion quota.openshift.io v1 to ResourceManager
+I1120 19:46:34.013640       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:34.013696       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:34.033800       1 store.go:1579] "Monitoring resource count at path" resource="rangeallocations.security.openshift.io" path="<storage-prefix>//rangeallocations"
+I1120 19:46:34.039891       1 handler.go:275] Adding GroupVersion security.openshift.io v1 to ResourceManager
+I1120 19:46:34.040087       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:34.040126       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:34.042290       1 cacher.go:451] cacher (rangeallocations.security.openshift.io): initialized
+I1120 19:46:34.042439       1 reflector.go:351] Caches populated for *security.RangeAllocation from storage/cacher.go:/rangeallocations
+I1120 19:46:34.069884       1 cacher.go:451] cacher (images.image.openshift.io): initialized
+I1120 19:46:34.071055       1 reflector.go:351] Caches populated for *image.Image from storage/cacher.go:/images
+I1120 19:46:34.851130       1 server.go:50] Starting master on 0.0.0.0:8443 (v0.0.0-master+$Format:%H$)
+I1120 19:46:34.851513       1 genericapiserver.go:528] MuxAndDiscoveryComplete has all endpoints registered and discovery information is complete
+I1120 19:46:34.909136       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+I1120 19:46:34.909232       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+I1120 19:46:34.909298       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I1120 19:46:34.909339       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1120 19:46:34.909384       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I1120 19:46:34.909414       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I1120 19:46:34.911347       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key" certDetail="\"api.openshift-apiserver.svc\" [serving] validServingFor=[api.openshift-apiserver.svc,api.openshift-apiserver.svc.cluster.local] issuer=\"openshift-service-serving-signer@1732036796\" (2024-11-19 17:20:20 +0000 UTC to 2026-11-19 17:20:21 +0000 UTC (now=2024-11-20 19:46:34.911303671 +0000 UTC))"
+I1120 19:46:34.911464       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+I1120 19:46:34.912385       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1732131945\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1732131944\" (2024-11-20 18:45:44 +0000 UTC to 2025-11-20 18:45:44 +0000 UTC (now=2024-11-20 19:46:34.912357606 +0000 UTC))"
+I1120 19:46:34.912476       1 secure_serving.go:213] Serving securely on [::]:8443
+I1120 19:46:34.912859       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I1120 19:46:34.946362       1 openshift_apiserver.go:593] Using default project node label selector: 
+I1120 19:46:34.951304       1 genericapiserver.go:681] [graceful-termination] waiting for shutdown to be initiated
+I1120 19:46:34.951332       1 clusterquotamapping.go:127] Starting ClusterQuotaMappingController controller
+I1120 19:46:35.157341       1 reflector.go:351] Caches populated for *v1.ImageStream from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.168310       1 reflector.go:351] Caches populated for *v1.Role from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.169708       1 healthz.go:261] poststarthook/authorization.openshift.io-bootstrapclusterroles,poststarthook/authorization.openshift.io-ensurenodebootstrap-sa check failed: healthz
+[-]poststarthook/authorization.openshift.io-bootstrapclusterroles failed: not finished
+[-]poststarthook/authorization.openshift.io-ensurenodebootstrap-sa failed: not finished
+I1120 19:46:35.182916       1 healthz.go:261] poststarthook/authorization.openshift.io-bootstrapclusterroles,poststarthook/authorization.openshift.io-ensurenodebootstrap-sa check failed: healthz
+[-]poststarthook/authorization.openshift.io-bootstrapclusterroles failed: not finished
+[-]poststarthook/authorization.openshift.io-ensurenodebootstrap-sa failed: not finished
+I1120 19:46:35.183482       1 reflector.go:351] Caches populated for *v1.Route from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.183656       1 reflector.go:351] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.183765       1 reflector.go:351] Caches populated for *v1alpha1.ImageContentSourcePolicy from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.187022       1 reflector.go:351] Caches populated for *v1.ClusterRoleBinding from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.207651       1 reflector.go:351] Caches populated for *v1.LimitRange from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.208728       1 reflector.go:351] Caches populated for *v1.ResourceQuota from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.209294       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+I1120 19:46:35.394203       1 reflector.go:351] Caches populated for *etcd.ImageLayers from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.404304       1 reflector.go:351] Caches populated for *v1.MutatingWebhookConfiguration from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.557217       1 reflector.go:351] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.558715       1 reflector.go:351] Caches populated for *v1.Namespace from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.559814       1 reflector.go:351] Caches populated for *v1.ValidatingWebhookConfiguration from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.564587       1 reflector.go:351] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.612163       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I1120 19:46:35.618068       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1120 19:46:35.634570       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_aggregator-client-signer@1732104010\" [] issuer=\"<self>\" (2024-11-20 12:00:09 +0000 UTC to 2024-12-20 12:00:10 +0000 UTC (now=2024-11-20 19:46:35.63454412 +0000 UTC))"
+I1120 19:46:35.637731       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key" certDetail="\"api.openshift-apiserver.svc\" [serving] validServingFor=[api.openshift-apiserver.svc,api.openshift-apiserver.svc.cluster.local] issuer=\"openshift-service-serving-signer@1732036796\" (2024-11-19 17:20:20 +0000 UTC to 2026-11-19 17:20:21 +0000 UTC (now=2024-11-20 19:46:35.63770454 +0000 UTC))"
+I1120 19:46:35.641675       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1732131945\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1732131944\" (2024-11-20 18:45:44 +0000 UTC to 2025-11-20 18:45:44 +0000 UTC (now=2024-11-20 19:46:35.64164332 +0000 UTC))"
+I1120 19:46:35.642130       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"admin-kubeconfig-signer\" [] issuer=\"<self>\" (2024-11-19 16:47:55 +0000 UTC to 2034-11-17 16:47:55 +0000 UTC (now=2024-11-20 19:46:35.642103219 +0000 UTC))"
+I1120 19:46:35.646144       1 tlsconfig.go:178] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-control-plane-signer\" [] issuer=\"<self>\" (2024-11-19 16:48:00 +0000 UTC to 2025-11-19 16:48:00 +0000 UTC (now=2024-11-20 19:46:35.646097236 +0000 UTC))"
+I1120 19:46:35.646184       1 tlsconfig.go:178] "Loaded client CA" index=2 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-apiserver-to-kubelet-signer\" [] issuer=\"<self>\" (2024-11-19 16:48:00 +0000 UTC to 2025-11-19 16:48:00 +0000 UTC (now=2024-11-20 19:46:35.646170108 +0000 UTC))"
+I1120 19:46:35.646208       1 tlsconfig.go:178] "Loaded client CA" index=3 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-bootstrap-kubeconfig-signer\" [] issuer=\"<self>\" (2024-11-19 16:47:57 +0000 UTC to 2034-11-17 16:47:57 +0000 UTC (now=2024-11-20 19:46:35.646196641 +0000 UTC))"
+I1120 19:46:35.646232       1 tlsconfig.go:178] "Loaded client CA" index=4 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_node-system-admin-signer@1732036803\" [] issuer=\"<self>\" (2024-11-19 17:20:02 +0000 UTC to 2025-11-19 17:20:03 +0000 UTC (now=2024-11-20 19:46:35.646217552 +0000 UTC))"
+I1120 19:46:35.646265       1 tlsconfig.go:178] "Loaded client CA" index=5 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-controller-manager-operator_csr-signer-signer@1732104004\" [] issuer=\"<self>\" (2024-11-20 12:00:03 +0000 UTC to 2025-01-19 12:00:04 +0000 UTC (now=2024-11-20 19:46:35.646251459 +0000 UTC))"
+I1120 19:46:35.646292       1 tlsconfig.go:178] "Loaded client CA" index=6 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-csr-signer_@1732104424\" [] issuer=\"openshift-kube-controller-manager-operator_csr-signer-signer@1732104004\" (2024-11-20 12:07:03 +0000 UTC to 2024-12-20 12:07:04 +0000 UTC (now=2024-11-20 19:46:35.64627867 +0000 UTC))"
+I1120 19:46:35.646317       1 tlsconfig.go:178] "Loaded client CA" index=7 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_aggregator-client-signer@1732104010\" [] issuer=\"<self>\" (2024-11-20 12:00:09 +0000 UTC to 2024-12-20 12:00:10 +0000 UTC (now=2024-11-20 19:46:35.646305462 +0000 UTC))"
+I1120 19:46:35.646696       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key" certDetail="\"api.openshift-apiserver.svc\" [serving] validServingFor=[api.openshift-apiserver.svc,api.openshift-apiserver.svc.cluster.local] issuer=\"openshift-service-serving-signer@1732036796\" (2024-11-19 17:20:20 +0000 UTC to 2026-11-19 17:20:21 +0000 UTC (now=2024-11-20 19:46:35.646680055 +0000 UTC))"
+I1120 19:46:35.646908       1 reflector.go:351] Caches populated for *v1.ServiceAccount from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.646992       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1732131945\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1732131944\" (2024-11-20 18:45:44 +0000 UTC to 2025-11-20 18:45:44 +0000 UTC (now=2024-11-20 19:46:35.646978174 +0000 UTC))"
+I1120 19:46:35.642499       1 reflector.go:351] Caches populated for *v1.RoleBinding from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.660764       1 reflector.go:351] Caches populated for *v1.ClusterRole from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.661844       1 reflector.go:351] Caches populated for *v1.Service from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.805672       1 reflector.go:351] Caches populated for *v1.Pod from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.086523       1 reflector.go:351] Caches populated for *v1.ImageDigestMirrorSet from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.101901       1 reflector.go:351] Caches populated for *v1.ImageTagMirrorSet from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.104671       1 reflector.go:351] Caches populated for *v1.ClusterResourceQuota from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.105649       1 reflector.go:351] Caches populated for *v1.SecurityContextConstraints from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.108273       1 reflector.go:351] Caches populated for *v1.Ingress from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:59.148772       1 controller.go:624] quota admission added evaluator for: routes.route.openshift.io
+I1120 19:46:59.148894       1 controller.go:624] quota admission added evaluator for: routes.route.openshift.io
+I1120 19:54:27.581711       1 healthz.go:261] etcd,etcd-readiness check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+[-]etcd-readiness failed: error getting data from etcd: etcdserver: request timed out
+E1120 19:54:27.581836       1 timeout.go:142] post-timeout activity - time-elapsed: 7.613893863s, GET "/readyz" result: <nil>
+I1120 19:54:33.973196       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:54:43.971829       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I1120 19:54:48.916580       1 retry_etcdclient.go:158] etcd retry - counter: 1, lastErrLabel: Unavailable lastError: etcdserver: request timed out, error: <nil>
+I1120 19:54:48.916706       1 trace.go:236] Trace[1561033917]: "Get" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:c923faa7-078d-4089-beac-1eb7e7cce94a,client:10.129.0.37,api-group:route.openshift.io,api-version:v1,name:downloads,subresource:,namespace:openshift-console,protocol:HTTP/2.0,resource:routes,scope:resource,url:/apis/route.openshift.io/v1/namespaces/openshift-console/routes/downloads,user-agent:console/v0.0.0 (linux/amd64) kubernetes/$Format,verb:GET (20-Nov-2024 19:54:38.880) (total time: 10036ms):
+Trace[1561033917]: ---"About to write a response" 10035ms (19:54:48.916)
+Trace[1561033917]: [10.036044211s] [10.036044211s] END
+I1120 19:54:52.978466       1 healthz.go:261] etcd check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:14.971537       1 healthz.go:261] etcd check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:22.971712       1 healthz.go:261] etcd,etcd-readiness check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+[-]etcd-readiness failed: error getting data from etcd: context deadline exceeded
+E1120 19:55:22.971804       1 timeout.go:142] post-timeout activity - time-elapsed: 8.003862889s, GET "/readyz" result: <nil>
+I1120 19:55:33.973989       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:37.588280       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: etcdserver: request timed out
+I1120 19:55:48.973230       1 healthz.go:261] etcd check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:51.908741       1 retry_etcdclient.go:158] etcd retry - counter: 1, lastErrLabel: Unavailable lastError: etcdserver: request timed out, error: StorageError: key not found, Code: 1, Key: /openshift.io/routes/openshift-console/downloads-custom, ResourceVersion: 0, AdditionalErrorMsg: 
+I1120 19:55:51.908891       1 trace.go:236] Trace[1517942714]: "Delete" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:bd764358-e223-46d1-baa2-92f9efdda56f,client:10.129.0.37,api-group:route.openshift.io,api-version:v1,name:downloads-custom,subresource:,namespace:openshift-console,protocol:HTTP/2.0,resource:routes,scope:resource,url:/apis/route.openshift.io/v1/namespaces/openshift-console/routes/downloads-custom,user-agent:console/v0.0.0 (linux/amd64) kubernetes/$Format,verb:DELETE (20-Nov-2024 19:55:38.873) (total time: 13035ms):
+Trace[1517942714]: [13.035463341s] [13.035463341s] END
+I1120 19:56:03.973133       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:03.973160       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:05.891337       1 retry_etcdclient.go:158] etcd retry - counter: 1, lastErrLabel: Unavailable lastError: etcdserver: request timed out, error: <nil>
+I1120 19:56:05.891482       1 trace.go:236] Trace[108053383]: "Get" accept:application/json, */*,audit-id:ed190548-6f66-4bb1-b039-691a3a819918,client:10.128.0.26,api-group:route.openshift.io,api-version:v1,name:canary,subresource:,namespace:openshift-ingress-canary,protocol:HTTP/2.0,resource:routes,scope:resource,url:/apis/route.openshift.io/v1/namespaces/openshift-ingress-canary/routes/canary,user-agent:ingress-operator/v0.0.0 (linux/amd64) kubernetes/$Format,verb:GET (20-Nov-2024 19:55:56.237) (total time: 9654ms):
+Trace[108053383]: ---"About to write a response" 9653ms (19:56:05.891)
+Trace[108053383]: [9.654066222s] [9.654066222s] END
+I1120 19:56:23.972742       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:23.972784       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: context deadline exceeded
+Copying system trust bundle
+W1120 19:45:44.758419       1 feature_gate.go:239] Setting deprecated feature gate KMSv1=true. It will be removed in a future release.
+I1120 19:45:44.758450       1 feature_gate.go:249] feature gates: &{map[CloudDualStackNodeIPs:true DisableKubeletCloudCredentialProviders:true DynamicResourceAllocation:false EventedPLEG:false KMSv1:true MaxUnavailableStatefulSet:false NodeSwap:false RouteExternalCertificate:false ServiceAccountTokenNodeBinding:false ServiceAccountTokenNodeBindingValidation:false ServiceAccountTokenPodNodeInfo:false TranslateStreamCloseWebsocketRequests:false ValidatingAdmissionPolicy:false]}
+W1120 19:45:44.758485       1 config.go:121] Ignoring unknown FeatureGate "NetworkDiagnosticsConfig"
+W1120 19:45:44.758491       1 config.go:121] Ignoring unknown FeatureGate "VSphereMultiVCenters"
+W1120 19:45:44.758494       1 config.go:121] Ignoring unknown FeatureGate "CSIDriverSharedResource"
+W1120 19:45:44.758498       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallOpenStack"
+W1120 19:45:44.758502       1 config.go:121] Ignoring unknown FeatureGate "GCPLabelsTags"
+W1120 19:45:44.758505       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallNutanix"
+W1120 19:45:44.758509       1 config.go:121] Ignoring unknown FeatureGate "DNSNameResolver"
+W1120 19:45:44.758512       1 config.go:121] Ignoring unknown FeatureGate "EtcdBackendQuota"
+W1120 19:45:44.758516       1 config.go:121] Ignoring unknown FeatureGate "BareMetalLoadBalancer"
+W1120 19:45:44.758519       1 config.go:121] Ignoring unknown FeatureGate "ChunkSizeMiB"
+W1120 19:45:44.758523       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallAzure"
+W1120 19:45:44.758526       1 config.go:121] Ignoring unknown FeatureGate "NetworkLiveMigration"
+W1120 19:45:44.758530       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallAWS"
+W1120 19:45:44.758533       1 config.go:121] Ignoring unknown FeatureGate "InsightsOnDemandDataGather"
+W1120 19:45:44.758537       1 config.go:121] Ignoring unknown FeatureGate "NewOLM"
+W1120 19:45:44.758540       1 config.go:121] Ignoring unknown FeatureGate "PlatformOperators"
+W1120 19:45:44.758543       1 config.go:121] Ignoring unknown FeatureGate "SigstoreImageVerification"
+W1120 19:45:44.758547       1 config.go:121] Ignoring unknown FeatureGate "BuildCSIVolumes"
+W1120 19:45:44.758550       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProviderAzure"
+W1120 19:45:44.758553       1 config.go:121] Ignoring unknown FeatureGate "InstallAlternateInfrastructureAWS"
+W1120 19:45:44.758557       1 config.go:121] Ignoring unknown FeatureGate "AdminNetworkPolicy"
+W1120 19:45:44.758560       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProviderExternal"
+W1120 19:45:44.758563       1 config.go:121] Ignoring unknown FeatureGate "MixedCPUsAllocation"
+W1120 19:45:44.758567       1 config.go:121] Ignoring unknown FeatureGate "SignatureStores"
+W1120 19:45:44.758570       1 config.go:121] Ignoring unknown FeatureGate "MetricsCollectionProfiles"
+W1120 19:45:44.758575       1 config.go:121] Ignoring unknown FeatureGate "VSphereStaticIPs"
+W1120 19:45:44.758578       1 config.go:121] Ignoring unknown FeatureGate "AutomatedEtcdBackup"
+W1120 19:45:44.758582       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallVSphere"
+W1120 19:45:44.758585       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProviderGCP"
+W1120 19:45:44.758589       1 config.go:121] Ignoring unknown FeatureGate "VSphereDriverConfiguration"
+W1120 19:45:44.758592       1 config.go:121] Ignoring unknown FeatureGate "VolumeGroupSnapshot"
+W1120 19:45:44.758595       1 config.go:121] Ignoring unknown FeatureGate "InsightsConfig"
+W1120 19:45:44.758599       1 config.go:121] Ignoring unknown FeatureGate "PinnedImages"
+W1120 19:45:44.758602       1 config.go:121] Ignoring unknown FeatureGate "Example"
+W1120 19:45:44.758606       1 config.go:121] Ignoring unknown FeatureGate "HardwareSpeed"
+W1120 19:45:44.758609       1 config.go:121] Ignoring unknown FeatureGate "ImagePolicy"
+W1120 19:45:44.758613       1 config.go:121] Ignoring unknown FeatureGate "UpgradeStatus"
+W1120 19:45:44.758616       1 config.go:121] Ignoring unknown FeatureGate "MachineAPIOperatorDisableMachineHealthCheckController"
+W1120 19:45:44.758620       1 config.go:121] Ignoring unknown FeatureGate "OnClusterBuild"
+W1120 19:45:44.758624       1 config.go:121] Ignoring unknown FeatureGate "VSphereControlPlaneMachineSet"
+W1120 19:45:44.758627       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstall"
+W1120 19:45:44.758631       1 config.go:121] Ignoring unknown FeatureGate "ExternalCloudProvider"
+W1120 19:45:44.758634       1 config.go:121] Ignoring unknown FeatureGate "MachineConfigNodes"
+W1120 19:45:44.758638       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallGCP"
+W1120 19:45:44.758641       1 config.go:121] Ignoring unknown FeatureGate "ExternalOIDC"
+W1120 19:45:44.758645       1 config.go:121] Ignoring unknown FeatureGate "GatewayAPI"
+W1120 19:45:44.758648       1 config.go:121] Ignoring unknown FeatureGate "ManagedBootImages"
+W1120 19:45:44.758652       1 config.go:121] Ignoring unknown FeatureGate "NodeDisruptionPolicy"
+W1120 19:45:44.758660       1 config.go:121] Ignoring unknown FeatureGate "AlibabaPlatform"
+W1120 19:45:44.758667       1 config.go:121] Ignoring unknown FeatureGate "InsightsConfigAPI"
+W1120 19:45:44.758671       1 config.go:121] Ignoring unknown FeatureGate "MachineAPIProviderOpenStack"
+W1120 19:45:44.758674       1 config.go:121] Ignoring unknown FeatureGate "MetricsServer"
+W1120 19:45:44.758678       1 config.go:121] Ignoring unknown FeatureGate "AzureWorkloadIdentity"
+W1120 19:45:44.758681       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallIBMCloud"
+W1120 19:45:44.758684       1 config.go:121] Ignoring unknown FeatureGate "ClusterAPIInstallPowerVS"
+W1120 19:45:44.758688       1 config.go:121] Ignoring unknown FeatureGate "OpenShiftPodSecurityAdmission"
+W1120 19:45:44.758691       1 config.go:121] Ignoring unknown FeatureGate "GCPClusterHostedDNS"
+W1120 19:45:44.758699       1 config.go:121] Ignoring unknown FeatureGate "PrivateHostedZoneAWS"
+I1120 19:45:44.759679       1 dynamic_serving_content.go:113] "Loaded a new cert/key pair" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+I1120 19:46:33.575476       1 requestheader_controller.go:244] Loaded a new request header values for RequestHeaderAuthRequestController
+I1120 19:46:33.579357       1 audit.go:340] Using audit backend: ignoreErrors<log>
+I1120 19:46:33.580446       1 plugins.go:83] "Registered admission plugin" plugin="NamespaceLifecycle"
+I1120 19:46:33.580467       1 plugins.go:83] "Registered admission plugin" plugin="ValidatingAdmissionWebhook"
+I1120 19:46:33.580475       1 plugins.go:83] "Registered admission plugin" plugin="MutatingAdmissionWebhook"
+I1120 19:46:33.580481       1 plugins.go:83] "Registered admission plugin" plugin="ValidatingAdmissionPolicy"
+I1120 19:46:33.580686       1 admission.go:48] Admission plugin "project.openshift.io/ProjectRequestLimit" is not configured so it will be disabled.
+I1120 19:46:33.583470       1 plugins.go:157] Loaded 5 mutating admission controller(s) successfully in the following order: NamespaceLifecycle,build.openshift.io/BuildConfigSecretInjector,image.openshift.io/ImageLimitRange,image.openshift.io/ImagePolicy,MutatingAdmissionWebhook.
+I1120 19:46:33.583488       1 plugins.go:160] Loaded 9 validating admission controller(s) successfully in the following order: OwnerReferencesPermissionEnforcement,build.openshift.io/BuildConfigSecretInjector,build.openshift.io/BuildByStrategy,image.openshift.io/ImageLimitRange,image.openshift.io/ImagePolicy,quota.openshift.io/ClusterResourceQuota,route.openshift.io/RequiredRouteAnnotations,ValidatingAdmissionWebhook,ResourceQuota.
+I1120 19:46:33.583826       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.583837       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.583850       1 maxinflight.go:116] "Set denominator for readonly requests" limit=3000
+I1120 19:46:33.583856       1 maxinflight.go:120] "Set denominator for mutating requests" limit=1500
+I1120 19:46:33.632435       1 store.go:1579] "Monitoring resource count at path" resource="deploymentconfigs.apps.openshift.io" path="<storage-prefix>//deploymentconfigs"
+I1120 19:46:33.639423       1 handler.go:275] Adding GroupVersion apps.openshift.io v1 to ResourceManager
+I1120 19:46:33.639585       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.639623       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.662463       1 cacher.go:451] cacher (deploymentconfigs.apps.openshift.io): initialized
+I1120 19:46:33.662494       1 reflector.go:351] Caches populated for *apps.DeploymentConfig from storage/cacher.go:/deploymentconfigs
+I1120 19:46:33.669897       1 handler.go:275] Adding GroupVersion authorization.openshift.io v1 to ResourceManager
+I1120 19:46:33.678795       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.678854       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.708533       1 store.go:1579] "Monitoring resource count at path" resource="builds.build.openshift.io" path="<storage-prefix>//builds"
+I1120 19:46:33.717795       1 cacher.go:451] cacher (builds.build.openshift.io): initialized
+I1120 19:46:33.717823       1 reflector.go:351] Caches populated for *build.Build from storage/cacher.go:/builds
+I1120 19:46:33.719734       1 store.go:1579] "Monitoring resource count at path" resource="buildconfigs.build.openshift.io" path="<storage-prefix>//buildconfigs"
+I1120 19:46:33.723424       1 handler.go:275] Adding GroupVersion build.openshift.io v1 to ResourceManager
+I1120 19:46:33.723605       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.723648       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.723758       1 cacher.go:451] cacher (buildconfigs.build.openshift.io): initialized
+I1120 19:46:33.723779       1 reflector.go:351] Caches populated for *build.BuildConfig from storage/cacher.go:/buildconfigs
+I1120 19:46:33.742484       1 apiserver.go:156] reading image import ca path: /var/run/configmaps/image-import-ca, incoming err: <nil>
+I1120 19:46:33.742569       1 apiserver.go:161] skipping dir or symlink: /var/run/configmaps/image-import-ca
+I1120 19:46:33.742614       1 apiserver.go:156] reading image import ca path: /var/run/configmaps/image-import-ca/..2024_11_19_19_20_44.3168545752, incoming err: <nil>
+I1120 19:46:33.742635       1 apiserver.go:161] skipping dir or symlink: /var/run/configmaps/image-import-ca/..2024_11_19_19_20_44.3168545752
+I1120 19:46:33.742657       1 apiserver.go:156] reading image import ca path: /var/run/configmaps/image-import-ca/..data, incoming err: <nil>
+I1120 19:46:33.742676       1 apiserver.go:161] skipping dir or symlink: /var/run/configmaps/image-import-ca/..data
+I1120 19:46:33.756082       1 store.go:1579] "Monitoring resource count at path" resource="images.image.openshift.io" path="<storage-prefix>//images"
+I1120 19:46:33.775445       1 store.go:1579] "Monitoring resource count at path" resource="imagestreams.image.openshift.io" path="<storage-prefix>//imagestreams"
+I1120 19:46:33.778922       1 handler.go:275] Adding GroupVersion image.openshift.io v1 to ResourceManager
+W1120 19:46:33.778943       1 genericapiserver.go:756] Skipping API image.openshift.io/1.0 because it has no resources.
+W1120 19:46:33.778950       1 genericapiserver.go:756] Skipping API image.openshift.io/pre012 because it has no resources.
+I1120 19:46:33.787199       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.787225       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.789859       1 handler.go:275] Adding GroupVersion project.openshift.io v1 to ResourceManager
+I1120 19:46:33.789924       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.789933       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.936340       1 store.go:1579] "Monitoring resource count at path" resource="routes.route.openshift.io" path="<storage-prefix>//routes"
+I1120 19:46:33.939707       1 handler.go:275] Adding GroupVersion route.openshift.io v1 to ResourceManager
+I1120 19:46:33.940137       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:33.940208       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:33.942727       1 cacher.go:451] cacher (routes.route.openshift.io): initialized
+I1120 19:46:33.942797       1 reflector.go:351] Caches populated for *route.Route from storage/cacher.go:/routes
+I1120 19:46:33.951423       1 cacher.go:451] cacher (imagestreams.image.openshift.io): initialized
+I1120 19:46:33.951509       1 reflector.go:351] Caches populated for *image.ImageStream from storage/cacher.go:/imagestreams
+I1120 19:46:33.968819       1 store.go:1579] "Monitoring resource count at path" resource="templates.template.openshift.io" path="<storage-prefix>//templates"
+I1120 19:46:33.982798       1 store.go:1579] "Monitoring resource count at path" resource="templateinstances.template.openshift.io" path="<storage-prefix>//templateinstances"
+I1120 19:46:33.988158       1 cacher.go:451] cacher (templates.template.openshift.io): initialized
+I1120 19:46:33.988237       1 reflector.go:351] Caches populated for *template.Template from storage/cacher.go:/templates
+I1120 19:46:33.999838       1 cacher.go:451] cacher (templateinstances.template.openshift.io): initialized
+I1120 19:46:33.999914       1 reflector.go:351] Caches populated for *template.TemplateInstance from storage/cacher.go:/templateinstances
+I1120 19:46:34.002258       1 store.go:1579] "Monitoring resource count at path" resource="brokertemplateinstances.template.openshift.io" path="<storage-prefix>//brokertemplateinstances"
+I1120 19:46:34.004706       1 handler.go:275] Adding GroupVersion template.openshift.io v1 to ResourceManager
+I1120 19:46:34.004882       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:34.004918       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:34.008203       1 cacher.go:451] cacher (brokertemplateinstances.template.openshift.io): initialized
+I1120 19:46:34.008225       1 reflector.go:351] Caches populated for *template.BrokerTemplateInstance from storage/cacher.go:/brokertemplateinstances
+I1120 19:46:34.013228       1 handler.go:275] Adding GroupVersion quota.openshift.io v1 to ResourceManager
+I1120 19:46:34.013640       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:34.013696       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:34.033800       1 store.go:1579] "Monitoring resource count at path" resource="rangeallocations.security.openshift.io" path="<storage-prefix>//rangeallocations"
+I1120 19:46:34.039891       1 handler.go:275] Adding GroupVersion security.openshift.io v1 to ResourceManager
+I1120 19:46:34.040087       1 maxinflight.go:139] "Initialized nonMutatingChan" len=3000
+I1120 19:46:34.040126       1 maxinflight.go:145] "Initialized mutatingChan" len=1500
+I1120 19:46:34.042290       1 cacher.go:451] cacher (rangeallocations.security.openshift.io): initialized
+I1120 19:46:34.042439       1 reflector.go:351] Caches populated for *security.RangeAllocation from storage/cacher.go:/rangeallocations
+I1120 19:46:34.069884       1 cacher.go:451] cacher (images.image.openshift.io): initialized
+I1120 19:46:34.071055       1 reflector.go:351] Caches populated for *image.Image from storage/cacher.go:/images
+I1120 19:46:34.851130       1 server.go:50] Starting master on 0.0.0.0:8443 (v0.0.0-master+$Format:%H$)
+I1120 19:46:34.851513       1 genericapiserver.go:528] MuxAndDiscoveryComplete has all endpoints registered and discovery information is complete
+I1120 19:46:34.909136       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+I1120 19:46:34.909232       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+I1120 19:46:34.909298       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I1120 19:46:34.909339       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1120 19:46:34.909384       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I1120 19:46:34.909414       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I1120 19:46:34.911347       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key" certDetail="\"api.openshift-apiserver.svc\" [serving] validServingFor=[api.openshift-apiserver.svc,api.openshift-apiserver.svc.cluster.local] issuer=\"openshift-service-serving-signer@1732036796\" (2024-11-19 17:20:20 +0000 UTC to 2026-11-19 17:20:21 +0000 UTC (now=2024-11-20 19:46:34.911303671 +0000 UTC))"
+I1120 19:46:34.911464       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+I1120 19:46:34.912385       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1732131945\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1732131944\" (2024-11-20 18:45:44 +0000 UTC to 2025-11-20 18:45:44 +0000 UTC (now=2024-11-20 19:46:34.912357606 +0000 UTC))"
+I1120 19:46:34.912476       1 secure_serving.go:213] Serving securely on [::]:8443
+I1120 19:46:34.912859       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I1120 19:46:34.946362       1 openshift_apiserver.go:593] Using default project node label selector: 
+I1120 19:46:34.951304       1 genericapiserver.go:681] [graceful-termination] waiting for shutdown to be initiated
+I1120 19:46:34.951332       1 clusterquotamapping.go:127] Starting ClusterQuotaMappingController controller
+I1120 19:46:35.157341       1 reflector.go:351] Caches populated for *v1.ImageStream from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.168310       1 reflector.go:351] Caches populated for *v1.Role from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.169708       1 healthz.go:261] poststarthook/authorization.openshift.io-bootstrapclusterroles,poststarthook/authorization.openshift.io-ensurenodebootstrap-sa check failed: healthz
+[-]poststarthook/authorization.openshift.io-bootstrapclusterroles failed: not finished
+[-]poststarthook/authorization.openshift.io-ensurenodebootstrap-sa failed: not finished
+I1120 19:46:35.182916       1 healthz.go:261] poststarthook/authorization.openshift.io-bootstrapclusterroles,poststarthook/authorization.openshift.io-ensurenodebootstrap-sa check failed: healthz
+[-]poststarthook/authorization.openshift.io-bootstrapclusterroles failed: not finished
+[-]poststarthook/authorization.openshift.io-ensurenodebootstrap-sa failed: not finished
+I1120 19:46:35.183482       1 reflector.go:351] Caches populated for *v1.Route from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.183656       1 reflector.go:351] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.183765       1 reflector.go:351] Caches populated for *v1alpha1.ImageContentSourcePolicy from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.187022       1 reflector.go:351] Caches populated for *v1.ClusterRoleBinding from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.207651       1 reflector.go:351] Caches populated for *v1.LimitRange from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.208728       1 reflector.go:351] Caches populated for *v1.ResourceQuota from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.209294       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+I1120 19:46:35.394203       1 reflector.go:351] Caches populated for *etcd.ImageLayers from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.404304       1 reflector.go:351] Caches populated for *v1.MutatingWebhookConfiguration from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.557217       1 reflector.go:351] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.558715       1 reflector.go:351] Caches populated for *v1.Namespace from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.559814       1 reflector.go:351] Caches populated for *v1.ValidatingWebhookConfiguration from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.564587       1 reflector.go:351] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.612163       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I1120 19:46:35.618068       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I1120 19:46:35.634570       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_aggregator-client-signer@1732104010\" [] issuer=\"<self>\" (2024-11-20 12:00:09 +0000 UTC to 2024-12-20 12:00:10 +0000 UTC (now=2024-11-20 19:46:35.63454412 +0000 UTC))"
+I1120 19:46:35.637731       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key" certDetail="\"api.openshift-apiserver.svc\" [serving] validServingFor=[api.openshift-apiserver.svc,api.openshift-apiserver.svc.cluster.local] issuer=\"openshift-service-serving-signer@1732036796\" (2024-11-19 17:20:20 +0000 UTC to 2026-11-19 17:20:21 +0000 UTC (now=2024-11-20 19:46:35.63770454 +0000 UTC))"
+I1120 19:46:35.641675       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1732131945\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1732131944\" (2024-11-20 18:45:44 +0000 UTC to 2025-11-20 18:45:44 +0000 UTC (now=2024-11-20 19:46:35.64164332 +0000 UTC))"
+I1120 19:46:35.642130       1 tlsconfig.go:178] "Loaded client CA" index=0 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"admin-kubeconfig-signer\" [] issuer=\"<self>\" (2024-11-19 16:47:55 +0000 UTC to 2034-11-17 16:47:55 +0000 UTC (now=2024-11-20 19:46:35.642103219 +0000 UTC))"
+I1120 19:46:35.646144       1 tlsconfig.go:178] "Loaded client CA" index=1 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-control-plane-signer\" [] issuer=\"<self>\" (2024-11-19 16:48:00 +0000 UTC to 2025-11-19 16:48:00 +0000 UTC (now=2024-11-20 19:46:35.646097236 +0000 UTC))"
+I1120 19:46:35.646184       1 tlsconfig.go:178] "Loaded client CA" index=2 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-apiserver-to-kubelet-signer\" [] issuer=\"<self>\" (2024-11-19 16:48:00 +0000 UTC to 2025-11-19 16:48:00 +0000 UTC (now=2024-11-20 19:46:35.646170108 +0000 UTC))"
+I1120 19:46:35.646208       1 tlsconfig.go:178] "Loaded client CA" index=3 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kubelet-bootstrap-kubeconfig-signer\" [] issuer=\"<self>\" (2024-11-19 16:47:57 +0000 UTC to 2034-11-17 16:47:57 +0000 UTC (now=2024-11-20 19:46:35.646196641 +0000 UTC))"
+I1120 19:46:35.646232       1 tlsconfig.go:178] "Loaded client CA" index=4 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_node-system-admin-signer@1732036803\" [] issuer=\"<self>\" (2024-11-19 17:20:02 +0000 UTC to 2025-11-19 17:20:03 +0000 UTC (now=2024-11-20 19:46:35.646217552 +0000 UTC))"
+I1120 19:46:35.646265       1 tlsconfig.go:178] "Loaded client CA" index=5 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-controller-manager-operator_csr-signer-signer@1732104004\" [] issuer=\"<self>\" (2024-11-20 12:00:03 +0000 UTC to 2025-01-19 12:00:04 +0000 UTC (now=2024-11-20 19:46:35.646251459 +0000 UTC))"
+I1120 19:46:35.646292       1 tlsconfig.go:178] "Loaded client CA" index=6 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"kube-csr-signer_@1732104424\" [] issuer=\"openshift-kube-controller-manager-operator_csr-signer-signer@1732104004\" (2024-11-20 12:07:03 +0000 UTC to 2024-12-20 12:07:04 +0000 UTC (now=2024-11-20 19:46:35.64627867 +0000 UTC))"
+I1120 19:46:35.646317       1 tlsconfig.go:178] "Loaded client CA" index=7 certName="client-ca::kube-system::extension-apiserver-authentication::client-ca-file,client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file" certDetail="\"openshift-kube-apiserver-operator_aggregator-client-signer@1732104010\" [] issuer=\"<self>\" (2024-11-20 12:00:09 +0000 UTC to 2024-12-20 12:00:10 +0000 UTC (now=2024-11-20 19:46:35.646305462 +0000 UTC))"
+I1120 19:46:35.646696       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key" certDetail="\"api.openshift-apiserver.svc\" [serving] validServingFor=[api.openshift-apiserver.svc,api.openshift-apiserver.svc.cluster.local] issuer=\"openshift-service-serving-signer@1732036796\" (2024-11-19 17:20:20 +0000 UTC to 2026-11-19 17:20:21 +0000 UTC (now=2024-11-20 19:46:35.646680055 +0000 UTC))"
+I1120 19:46:35.646908       1 reflector.go:351] Caches populated for *v1.ServiceAccount from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.646992       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1732131945\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1732131944\" (2024-11-20 18:45:44 +0000 UTC to 2025-11-20 18:45:44 +0000 UTC (now=2024-11-20 19:46:35.646978174 +0000 UTC))"
+I1120 19:46:35.642499       1 reflector.go:351] Caches populated for *v1.RoleBinding from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.660764       1 reflector.go:351] Caches populated for *v1.ClusterRole from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.661844       1 reflector.go:351] Caches populated for *v1.Service from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:35.805672       1 reflector.go:351] Caches populated for *v1.Pod from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.086523       1 reflector.go:351] Caches populated for *v1.ImageDigestMirrorSet from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.101901       1 reflector.go:351] Caches populated for *v1.ImageTagMirrorSet from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.104671       1 reflector.go:351] Caches populated for *v1.ClusterResourceQuota from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.105649       1 reflector.go:351] Caches populated for *v1.SecurityContextConstraints from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:37.108273       1 reflector.go:351] Caches populated for *v1.Ingress from k8s.io/client-go@v0.29.2/tools/cache/reflector.go:229
+I1120 19:46:59.148772       1 controller.go:624] quota admission added evaluator for: routes.route.openshift.io
+I1120 19:46:59.148894       1 controller.go:624] quota admission added evaluator for: routes.route.openshift.io
+I1120 19:54:27.581711       1 healthz.go:261] etcd,etcd-readiness check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+[-]etcd-readiness failed: error getting data from etcd: etcdserver: request timed out
+E1120 19:54:27.581836       1 timeout.go:142] post-timeout activity - time-elapsed: 7.613893863s, GET "/readyz" result: <nil>
+I1120 19:54:33.973196       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:54:43.971829       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+I1120 19:54:48.916580       1 retry_etcdclient.go:158] etcd retry - counter: 1, lastErrLabel: Unavailable lastError: etcdserver: request timed out, error: <nil>
+I1120 19:54:48.916706       1 trace.go:236] Trace[1561033917]: "Get" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:c923faa7-078d-4089-beac-1eb7e7cce94a,client:10.129.0.37,api-group:route.openshift.io,api-version:v1,name:downloads,subresource:,namespace:openshift-console,protocol:HTTP/2.0,resource:routes,scope:resource,url:/apis/route.openshift.io/v1/namespaces/openshift-console/routes/downloads,user-agent:console/v0.0.0 (linux/amd64) kubernetes/$Format,verb:GET (20-Nov-2024 19:54:38.880) (total time: 10036ms):
+Trace[1561033917]: ---"About to write a response" 10035ms (19:54:48.916)
+Trace[1561033917]: [10.036044211s] [10.036044211s] END
+I1120 19:54:52.978466       1 healthz.go:261] etcd check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:14.971537       1 healthz.go:261] etcd check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:22.971712       1 healthz.go:261] etcd,etcd-readiness check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+[-]etcd-readiness failed: error getting data from etcd: context deadline exceeded
+E1120 19:55:22.971804       1 timeout.go:142] post-timeout activity - time-elapsed: 8.003862889s, GET "/readyz" result: <nil>
+I1120 19:55:33.973989       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:37.588280       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: etcdserver: request timed out
+I1120 19:55:48.973230       1 healthz.go:261] etcd check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:55:51.908741       1 retry_etcdclient.go:158] etcd retry - counter: 1, lastErrLabel: Unavailable lastError: etcdserver: request timed out, error: StorageError: key not found, Code: 1, Key: /openshift.io/routes/openshift-console/downloads-custom, ResourceVersion: 0, AdditionalErrorMsg: 
+I1120 19:55:51.908891       1 trace.go:236] Trace[1517942714]: "Delete" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:bd764358-e223-46d1-baa2-92f9efdda56f,client:10.129.0.37,api-group:route.openshift.io,api-version:v1,name:downloads-custom,subresource:,namespace:openshift-console,protocol:HTTP/2.0,resource:routes,scope:resource,url:/apis/route.openshift.io/v1/namespaces/openshift-console/routes/downloads-custom,user-agent:console/v0.0.0 (linux/amd64) kubernetes/$Format,verb:DELETE (20-Nov-2024 19:55:38.873) (total time: 13035ms):
+Trace[1517942714]: [13.035463341s] [13.035463341s] END
+I1120 19:56:03.973133       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:03.973160       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:05.891337       1 retry_etcdclient.go:158] etcd retry - counter: 1, lastErrLabel: Unavailable lastError: etcdserver: request timed out, error: <nil>
+I1120 19:56:05.891482       1 trace.go:236] Trace[108053383]: "Get" accept:application/json, */*,audit-id:ed190548-6f66-4bb1-b039-691a3a819918,client:10.128.0.26,api-group:route.openshift.io,api-version:v1,name:canary,subresource:,namespace:openshift-ingress-canary,protocol:HTTP/2.0,resource:routes,scope:resource,url:/apis/route.openshift.io/v1/namespaces/openshift-ingress-canary/routes/canary,user-agent:ingress-operator/v0.0.0 (linux/amd64) kubernetes/$Format,verb:GET (20-Nov-2024 19:55:56.237) (total time: 9654ms):
+Trace[108053383]: ---"About to write a response" 9653ms (19:56:05.891)
+Trace[108053383]: [9.654066222s] [9.654066222s] END
+I1120 19:56:23.972742       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:23.972784       1 healthz.go:261] etcd-readiness check failed: readyz
+[-]etcd-readiness failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:44.971089       1 healthz.go:261] etcd check failed: healthz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+I1120 19:56:47.925155       1 retry_etcdclient.go:158] etcd retry - counter: 1, lastErrLabel: Unavailable lastError: etcdserver: request timed out, error: StorageError: key not found, Code: 1, Key: /openshift.io/routes/openshift-console/console-custom, ResourceVersion: 0, AdditionalErrorMsg: 
+I1120 19:56:47.925451       1 trace.go:236] Trace[1986012077]: "Delete" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:f0e85020-3dc9-4fb2-ba40-7341bd444d71,client:10.129.0.37,api-group:route.openshift.io,api-version:v1,name:console-custom,subresource:,namespace:openshift-console,protocol:HTTP/2.0,resource:routes,scope:resource,url:/apis/route.openshift.io/v1/namespaces/openshift-console/routes/console-custom,user-agent:console/v0.0.0 (linux/amd64) kubernetes/$Format,verb:DELETE (20-Nov-2024 19:56:38.789) (total time: 9135ms):
+Trace[1986012077]: [9.135926947s] [9.135926947s] END
+I1120 19:56:52.974340       1 healthz.go:261] etcd,etcd-readiness check failed: readyz
+[-]etcd failed: error getting data from etcd: context deadline exceeded
+[-]etcd-readiness failed: error getting data from etcd: context deadline exceeded
+E1120 19:56:52.974438       1 timeout.go:142] post-timeout activity - time-elapsed: 8.007339638s, GET "/readyz" result: <nil>
