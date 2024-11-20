@@ -1,0 +1,138 @@
+additionalTrustBundlePolicy: Proxyonly
+apiVersion: v1
+baseDomain: fazenda.mg.gov.br
+compute:
+- architecture: amd64
+  hyperthreading: Enabled
+  name: worker
+  platform: {}
+  replicas: 6
+controlPlane:
+  architecture: amd64
+  hyperthreading: Enabled
+  name: master
+  platform: {}
+  replicas: 3
+metadata:
+  creationTimestamp: null
+  name: esteno
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  machineNetwork:
+  - cidr: 10.0.0.0/16
+  networkType: OVNKubernetes
+  serviceNetwork:
+  - 172.30.0.0/16
+platform:
+  vsphere:
+    apiVIPs:
+    - 172.23.218.111
+    failureDomains:
+    - name: generated-failure-domain
+      region: generated-region
+      server: bhevmger01.fazenda.mg
+      topology:
+        computeCluster: /SEFMG/host/ClusterAnalitico-Producao
+        datacenter: SEFMG
+        folder: "/SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Vaya"
+        datastore: /SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA
+        networks:
+        - VDS_Rede_Linux_218
+        resourcePool: /SEFMG/host/ClusterAnalitico-Producao/Resources
+      zone: generated-zone
+    hosts:
+    - role: bootstrap
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.136/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: control-plane
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.102/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: control-plane
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.103/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: control-plane
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.104/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.105/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.106/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.107/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.108/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.109/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 172.23.218.110/24
+        gateway: 172.23.218.1
+        nameservers:
+        - 172.23.212.216
+        - 172.23.212.226
+    ingressVIPs:
+    - 172.23.218.112
+    vcenters:
+    - datacenters:
+      - SEFMG
+      password: XXXXXXXXXXX
+      port: 443
+      server: bhevmger01.fazenda.mg
+      user: user@vsphere.local
+publish: External
+pullSecret: '{"auths":{"cloud.openshift.com":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfZjRmNzRhNWQ3MThmNDg2MGFlOTAwZjJmNTc3YzdhNTc6VVVXNU45SEdUQUlMQVpLMFNaQ0c4M1FHSlVNQlJKVjVBWVFKRjM4ODlRWVhDNldHMFdNNlhQVlM2SDROT084OQ==","email":"sisop@fazenda.mg.gov.br"},"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfZjRmNzRhNWQ3MThmNDg2MGFlOTAwZjJmNTc3YzdhNTc6VVVXNU45SEdUQUlMQVpLMFNaQ0c4M1FHSlVNQlJKVjVBWVFKRjM4ODlRWVhDNldHMFdNNlhQVlM2SDROT084OQ==","email":"sisop@fazenda.mg.gov.br"},"registry.connect.redhat.com":{"auth":"fHVoYy1wb29sLTg5ODFlM2MxLTFhNmUtNDkzNS1iMmE5LWU4MjA1ZTdhMmE2ODpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSXhNV1ZsWlRnME1ESTJOREkwTkRkaVltRTFNVE0wTldWa01EY3hOR0pqWXlKOS5nYnAxY084NjQtb2RtUzlDMXk2ZXBDRGRqWVlwekVqc0VsbTZxdV9weFA5WWhCOHc3WHhuRW5sTHFiVmN1cFViMzdTLURHQWo0V2EzOVVOdFItVHhKWWYxdGg1WlUtM0tzcURkU2xZaHJtbV9LekJRVDVqbFdvejI2RHROeDBsRUg0alR0VFBLZjhoZUw0MVhMTkJfcHJhU1hvaTRNdE1vUjM3T3h4Qnc3TjcyRzUxbEJZaklZd3lsVXotQUxBemJXdXNBZ05FZUNIbHdqdTZTXzlycnBYSEJKNFJJNGc0a2lvVk9VR1doVGtpOUZTNkVicW53TzNtbGFYZzA3RzY5azZJeUY5NWgwdXdKMGFyUEpQLUkwMDNzY3FSekJZOVBiSXcxMVh0THpOYWEtQWVTX0NnX0JTZVJIN0RPdDRUUUVuN1d0YkgwdFFrZUs1MHpON2RHSEROQVlIX0lBSlEzZHhreWxkZlZoVl9BM2JxWk8xZjlZUzFCaEFWMWpZNG5HRGU4NUFuRzYwQmpMN2x3R3BsT2Q2bnRSQVcyMHJONmM2MjVCQ1cwU2lFWThMNGJZTnVSZXlMQXBtRjQzSFhobDRyMklKQ3BPNlJFTGFOelVBd0dLZGtzY3ZDcl9hTmJvNUtlRGJneWFCMGlSNUR6QzhKTXhtUEVfWTNIYmhqYzh4Rl9fZWdlTkpzZjQtSTExUjB0cl9Dc3BzVGUwOF9fRlJ5Q3RwNmM5LUtPd2N4VVE0Mm5ObXZON0JROURtSl9qeEY3elVfRFhDRzNlekV1QndGTC1RTHUyc21PaVJ5YnpieEFOT0tVTlVmX3hCeHlVeVJsdGdEaV9ubUR2dWZsQXV1TGFzbFRmdVNwelhaTlBfRDNzcS1VZ0JPLUQ2bmMwdnlFc3lyc2NYZw==","email":"sisop@fazenda.mg.gov.br"},"registry.redhat.io":{"auth":"fHVoYy1wb29sLTg5ODFlM2MxLTFhNmUtNDkzNS1iMmE5LWU4MjA1ZTdhMmE2ODpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSXhNV1ZsWlRnME1ESTJOREkwTkRkaVltRTFNVE0wTldWa01EY3hOR0pqWXlKOS5nYnAxY084NjQtb2RtUzlDMXk2ZXBDRGRqWVlwekVqc0VsbTZxdV9weFA5WWhCOHc3WHhuRW5sTHFiVmN1cFViMzdTLURHQWo0V2EzOVVOdFItVHhKWWYxdGg1WlUtM0tzcURkU2xZaHJtbV9LekJRVDVqbFdvejI2RHROeDBsRUg0alR0VFBLZjhoZUw0MVhMTkJfcHJhU1hvaTRNdE1vUjM3T3h4Qnc3TjcyRzUxbEJZaklZd3lsVXotQUxBemJXdXNBZ05FZUNIbHdqdTZTXzlycnBYSEJKNFJJNGc0a2lvVk9VR1doVGtpOUZTNkVicW53TzNtbGFYZzA3RzY5azZJeUY5NWgwdXdKMGFyUEpQLUkwMDNzY3FSekJZOVBiSXcxMVh0THpOYWEtQWVTX0NnX0JTZVJIN0RPdDRUUUVuN1d0YkgwdFFrZUs1MHpON2RHSEROQVlIX0lBSlEzZHhreWxkZlZoVl9BM2JxWk8xZjlZUzFCaEFWMWpZNG5HRGU4NUFuRzYwQmpMN2x3R3BsT2Q2bnRSQVcyMHJONmM2MjVCQ1cwU2lFWThMNGJZTnVSZXlMQXBtRjQzSFhobDRyMklKQ3BPNlJFTGFOelVBd0dLZGtzY3ZDcl9hTmJvNUtlRGJneWFCMGlSNUR6QzhKTXhtUEVfWTNIYmhqYzh4Rl9fZWdlTkpzZjQtSTExUjB0cl9Dc3BzVGUwOF9fRlJ5Q3RwNmM5LUtPd2N4VVE0Mm5ObXZON0JROURtSl9qeEY3elVfRFhDRzNlekV1QndGTC1RTHUyc21PaVJ5YnpieEFOT0tVTlVmX3hCeHlVeVJsdGdEaV9ubUR2dWZsQXV1TGFzbFRmdVNwelhaTlBfRDNzcS1VZ0JPLUQ2bmMwdnlFc3lyc2NYZw==","email":"sisop@fazenda.mg.gov.br"}}}'
+sshKey: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG0u8CgAioeJ/E6JH9BAu0++uDnEMXGMDYAWcopYRDzu8ULBOcCuCPrnXi2zDFLPur8lPH0iJNy8x2hW6SZfOKZrDeSBInr+c/S49e4QzBYE46kGjVz2YokxRJvSwpMUaDYWMMvd6JpW8C45JvVS5n3QXXD4V4V1X8PI1wUCYK+doIqFmsnfG3ud9HuUXyfFZs7Cc9s6D5YZVuwocsdaLqBGeJLVDktM2TDR49S/N2B9jariQYoSlTr+zRBBq5Y25gfupDDAgwihn9zv9Tgw+PhwqeoXlzwBribaI34u7v01djjgkOlFew+T9a7dYplXk22lpj3WtbMEmi6oR6xyQd root@esteno-01

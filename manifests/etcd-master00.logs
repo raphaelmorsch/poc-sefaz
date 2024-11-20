@@ -1,0 +1,43 @@
+{"level":"info","ts":"2024-11-20T19:24:07.569446Z","caller":"traceutil/trace.go:171","msg":"trace[1555517632] range","detail":"{range_begin:/kubernetes.io/apiserver.openshift.io/
+apirequestcounts/imagepruners.v1.imageregistry.operator.openshift.io; range_end:; }","duration":"11.103619571s","start":"2024-11-20T19:23:56.465822Z","end":"2024-11-20T19:24:07.5
+69441Z","steps":["trace[1555517632] 'agreement among raft nodes before linearized reading'  (duration: 11.101945078s)"],"step_count":1}
+{"level":"info","ts":"2024-11-20T19:24:07.569446Z","caller":"traceutil/trace.go:171","msg":"trace[1464485564] range","detail":"{range_begin:/kubernetes.io/config.openshift.io/clu
+steroperators/marketplace; range_end:; }","duration":"10.014527882s","start":"2024-11-20T19:23:57.554911Z","end":"2024-11-20T19:24:07.569439Z","steps":["trace[1464485564] 'agreem
+ent among raft nodes before linearized reading'  (duration: 10.013413876s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:24:07.569462Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:56.465792Z","time spent":"11.103664819
+s","remote":"172.23.218.104:59690","response type":"/etcdserverpb.KV/Range","request count":0,"request size":108,"response count":0,"response size":0,"request content":"key:\"/ku
+bernetes.io/apiserver.openshift.io/apirequestcounts/imagepruners.v1.imageregistry.operator.openshift.io\" "}
+{"level":"info","ts":"2024-11-20T19:24:07.569463Z","caller":"traceutil/trace.go:171","msg":"trace[685572683] range","detail":"{range_begin:/kubernetes.io/replicasets/; range_end:
+/kubernetes.io/replicasets0; }","duration":"9.94659744s","start":"2024-11-20T19:23:57.622859Z","end":"2024-11-20T19:24:07.569457Z","steps":["trace[685572683] 'agreement among raf
+t nodes before linearized reading'  (duration: 9.945424808s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:24:07.569477Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:57.554881Z","time spent":"10.014587399
+s","remote":"172.23.218.102:54376","response type":"/etcdserverpb.KV/Range","request count":0,"request size":65,"response count":0,"response size":0,"request content":"key:\"/kub
+ernetes.io/config.openshift.io/clusteroperators/marketplace\" "}
+{"level":"info","ts":"2024-11-20T19:24:07.569482Z","caller":"traceutil/trace.go:171","msg":"trace[1513516205] range","detail":"{range_begin:/kubernetes.io/leases/openshift-consol
+e-operator/console-operator-lock; range_end:; }","duration":"11.054987624s","start":"2024-11-20T19:23:56.51449Z","end":"2024-11-20T19:24:07.569478Z","steps":["trace[1513516205] '
+agreement among raft nodes before linearized reading'  (duration: 11.053796472s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:24:07.569489Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:57.622827Z","time spent":"9.946654998s
+","remote":"172.23.218.104:34566","response type":"/etcdserverpb.KV/Range","request count":0,"request size":60,"response count":0,"response size":0,"request content":"key:\"/kube
+rnetes.io/replicasets/\" range_end:\"/kubernetes.io/replicasets0\" count_only:true "}
+{"level":"info","ts":"2024-11-20T19:24:07.569462Z","caller":"traceutil/trace.go:171","msg":"trace[1223762342] range","detail":"{range_begin:/kubernetes.io/serviceaccounts/openshi
+ft-etcd/etcd-sa; range_end:; }","duration":"10.460466376s","start":"2024-11-20T19:23:57.108988Z","end":"2024-11-20T19:24:07.569455Z","steps":["trace[1223762342] 'agreement among 
+raft nodes before linearized reading'  (duration: 10.459260274s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:24:07.569507Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:56.514462Z","time spent":"11.055034731
+s","remote":"[::1]:33682","response type":"/etcdserverpb.KV/Range","request count":0,"request size":72,"response count":0,"response size":0,"request content":"key:\"/kubernetes.i
+o/leases/openshift-console-operator/console-operator-lock\" "}
+{"level":"warn","ts":"2024-11-20T19:24:07.569505Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:57.906831Z","time spent":"9.662663827s
+","remote":"172.23.218.102:60148","response type":"/etcdserverpb.KV/Range","request count":0,"request size":80,"response count":0,"response size":0,"request content":"key:\"/kube
+rnetes.io/k8s.ovn.org/egressips/\" range_end:\"/kubernetes.io/k8s.ovn.org/egressips0\" count_only:true "}
+{"level":"info","ts":"2024-11-20T19:24:07.56925Z","caller":"traceutil/trace.go:171","msg":"trace[1452019534] range","detail":"{range_begin:/kubernetes.io/apiserver.openshift.io/a
+pirequestcounts/consolesamples.v1.console.openshift.io; range_end:; }","duration":"13.559366173s","start":"2024-11-20T19:23:54.00988Z","end":"2024-11-20T19:24:07.569246Z","steps"
+:["trace[1452019534] 'agreement among raft nodes before linearized reading'  (duration: 13.557827501s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:24:07.569509Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:57.108956Z","time spent":"10.460550494
+s","remote":"172.23.218.102:38396","response type":"/etcdserverpb.KV/Range","request count":0,"request size":55,"response count":0,"response size":0,"request content":"key:\"/kub
+ernetes.io/serviceaccounts/openshift-etcd/etcd-sa\" "}
+{"level":"warn","ts":"2024-11-20T19:24:07.569531Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:54.009846Z","time spent":"13.559680912
+s","remote":"172.23.218.103:48280","response type":"/etcdserverpb.KV/Range","request count":0,"request size":95,"response count":0,"response size":0,"request content":"key:\"/kub
+ernetes.io/apiserver.openshift.io/apirequestcounts/consolesamples.v1.console.openshift.io\" "}
+{"level":"warn","ts":"2024-11-20T19:24:07.569282Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:23:54.351307Z","time spent":"13.217969708
+s","remote":"[::1]:33530","response type":"/etcdserverpb.KV/Range","request count":0,"request size":47,"response count":0,"response size":0,"request content":"key:\"/kubernetes.i
+o/namespaces/openshift-apiserver\" "}
+{"level":"warn","ts":"2024-11-20T19:24:07.569733Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T^

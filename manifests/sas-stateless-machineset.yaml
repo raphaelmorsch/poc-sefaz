@@ -1,0 +1,43 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  name: sas-stateless-static-ip-machineset
+  namespace: openshift-machine-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: sas-stateless-cluster
+      machine.openshift.io/cluster-api-machineset: sas-stateless-static-ip-machineset
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: sas-stateless-cluster
+        machine.openshift.io/cluster-api-machineset: sas-stateless-static-ip-machineset
+    spec:
+      providerSpec:
+        value:
+          apiVersion: vsphereprovider.openshift.io/v1beta1
+          kind: VSphereMachineProviderSpec
+          credentialsSecret:
+            name: vsphere-creds #criar vsphere credentials secret
+            namespace: openshift-machine-api
+          diskGiB: 200
+          memoryMiB: 131072
+          numCPUs: 16
+          network:
+            devices:
+              - networkName: "VDS_Rede_Linux_218"
+                ipAddrs:
+                  - claimRef:
+                      apiVersion: ipam.metal3.io/v1alpha1
+                      kind: IPAddressClaim
+                      name: static-ip-claim-sas  # Template for IP address claims
+                      namespace: openshift-machine-api
+          template: "rhel8-template"  # Adjust to your template name
+          workspace:
+            datacenter: "SEFMG"
+            datastore: "/SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA"
+            folder: "/SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Vaya"
+            resourcePool: "/SEFMG/host/ClusterAnalitico-Producao/Resources"
+            server: "bhevmger01.fazenda.mg"

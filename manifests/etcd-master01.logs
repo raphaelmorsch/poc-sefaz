@@ -1,0 +1,28 @@
+{"level":"warn","ts":"2024-11-20T19:55:44.587877Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:55:31.238204Z","time spent":"13.349665912
+s","remote":"172.23.218.103:43144","response type":"/etcdserverpb.KV/Range","request count":0,"request size":101,"response count":0,"response size":0,"request content":"key:\"/ku
+bernetes.io/apiserver.openshift.io/apirequestcounts/imagedigestmirrorsets.v1.config.openshift.io\" "}
+{"level":"info","ts":"2024-11-20T19:55:44.586797Z","caller":"traceutil/trace.go:171","msg":"trace[296574369] range","detail":"{range_begin:/kubernetes.io/apiserver.openshift.io/a
+pirequestcounts/egressservices.v1.k8s.ovn.org; range_end:; }","duration":"13.694106438s","start":"2024-11-20T19:55:30.892687Z","end":"2024-11-20T19:55:44.586794Z","steps":["trace
+[296574369] 'agreement among raft nodes before linearized reading'  (duration: 13.694095441s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:55:44.587901Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:55:30.89266Z","time spent":"13.695236889s
+","remote":"172.23.218.103:43144","response type":"/etcdserverpb.KV/Range","request count":0,"request size":86,"response count":0,"response size":0,"request content":"key:\"/kube
+rnetes.io/apiserver.openshift.io/apirequestcounts/egressservices.v1.k8s.ovn.org\" "}
+{"level":"warn","ts":"2024-11-20T19:55:44.586702Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:55:30.909873Z","time spent":"13.676826844
+s","remote":"[::1]:41360","response type":"/etcdserverpb.KV/Range","request count":0,"request size":76,"response count":0,"response size":0,"request content":"key:\"/kubernetes.i
+o/pods/openshift-etcd/revision-pruner-9-esteno-bc7r5-master-2\" "}
+{"level":"warn","ts":"2024-11-20T19:55:44.58664Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:55:31.277818Z","time spent":"13.308815917s
+","remote":"[::1]:36806","response type":"/etcdserverpb.KV/Range","request count":0,"request size":111,"response count":0,"response size":0,"request content":"key:\"/kubernetes.i
+o/apiserver.openshift.io/apirequestcounts/controllerconfigs.v1.machineconfiguration.openshift.io\" "}
+{"level":"info","ts":"2024-11-20T19:55:44.586586Z","caller":"traceutil/trace.go:171","msg":"trace[1650535686] range","detail":"{range_begin:/kubernetes.io/apiserver.openshift.io/
+apirequestcounts/groups.v1.user.openshift.io; range_end:; }","duration":"13.674485762s","start":"2024-11-20T19:55:30.912085Z","end":"2024-11-20T19:55:44.586571Z","steps":["trace[
+1650535686] 'agreement among raft nodes before linearized reading'  (duration: 13.674442388s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:55:44.58755Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:55:30.919267Z","time spent":"13.667969191s
+","remote":"172.23.218.103:48296","response type":"/etcdserverpb.KV/Range","request count":0,"request size":66,"response count":0,"response size":0,"request content":"key:\"/kubet/t
+rnetes.io/services/specs/openshift-console/console-redirect\" "}
+{"level":"warn","ts":"2024-11-20T19:55:44.586819Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:55:36.07143Z","time spent":"8.515386008s"
+,"remote":"172.23.218.103:48284","response type":"/etcdserverpb.KV/Range","request count":0,"request size":74,"response count":0,"response size":0,"request content":"key:\"/kuber
+netes.io/pods/openshift-etcd/\" range_end:\"/kubernetes.io/pods/openshift-etcd0\" "}
+{"level":"info","ts":"2024-11-20T19:55:44.587899Z","caller":"traceutil/trace.go:171","msg":"trace[1599360133] range","detail":"{range_begin:/kubernetes.io/apiserver.openshift.io/
+apirequestcounts/adminnetworkpolicies.v1alpha1.policy.networking.k8s.io; range_end:; }","duration":"13.697851435s","start":"2024-11-20T19:55:30.890032Z","end":"2024-11-20T19:55:4
+4.587883Z","steps":["trace[1599360133] 'agreement among raft nodes before linearized reading'  (duration: 13.696781347s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:55:

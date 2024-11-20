@@ -1,0 +1,47 @@
+[+]shutdown ok
+readyz check failed
+  Warning  NodeNotReady  3h36m                 node-controller  Node is not ready
+  Normal   Pulled        109m (x139 over 25h)  kubelet          Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5a29293b81174a76e2f579c54d5a1548f6b2ebb35f576aaa9d2ad4d
+e0e629887" already present on machine
+  Warning  ProbeError    81m (x400 over 25h)   kubelet          (combined from similar events): Readiness probe error: Get "https://10.128.0.9:8443/readyz": net/http: request canceled (Clien
+t.Timeout exceeded while awaiting headers)
+body:
+  Warning  ProbeError  50m (x743 over 25h)  kubelet  Readiness probe error: Get "https://10.128.0.9:8443/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+body:
+  Warning  ProbeError  49m (x422 over 25h)  kubelet  Liveness probe error: HTTP probe failed with statuscode: 500
+body: [+]ping ok
+[+]log ok
+[-]etcd failed: reason withheld
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/max-in-flight-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/image.openshift.io-apiserver-caches ok
+[+]poststarthook/authorization.openshift.io-bootstrapclusterroles ok
+[+]poststarthook/authorization.openshift.io-ensurenodebootstrap-sa ok
+[+]poststarthook/project.openshift.io-projectcache ok
+[+]poststarthook/project.openshift.io-projectauthorizationcache ok
+[+]poststarthook/openshift.io-startinformers ok
+[+]poststarthook/openshift.io-restmapperupdater ok
+[+]poststarthook/quota.openshift.io-clusterquotamapping ok
+healthz check failed
+  Warning  Unhealthy   28m (x527 over 25h)  kubelet  Readiness probe failed: HTTP probe failed with statuscode: 500
+  Warning  ProbeError  28m (x189 over 25h)  kubelet  Readiness probe error: HTTP probe failed with statuscode: 500
+body: [+]ping ok
+[+]log ok
+[-]etcd failed: reason withheld
+[+]etcd-readiness ok
+[+]informer-sync ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/max-in-flight-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/image.openshift.io-apiserver-caches ok
+[+]poststarthook/authorization.openshift.io-bootstrapclusterroles ok
+[+]poststarthook/authorization.openshift.io-ensurenodebootstrap-sa ok
+[+]poststarthook/project.openshift.io-projectcache ok
+[+]poststarthook/project.openshift.io-projectauthorizationcache ok
+[+]poststarthook/openshift.io-startinformers ok
+[+]poststarthook/openshift.io-restmapperupdater ok
+[+]poststarthook/quota.openshift.io-clusterquotamapping ok
+[+]shutdown ok
+readyz check failed
+  Warning  Unhealthy  8m (x785 over 25h)  kubelet  Readiness probe failed: Get "https://10.128.0.9:8443/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)

@@ -1,0 +1,9 @@
+apiVersion: ipam.metal3.io/v1alpha1
+kind: IPPool
+metadata:
+  name: static-ip-pool
+  namespace: openshift-machine-api
+spec:
+  addresses:
+    - start: "172.23.218.120"
+      end: "172.23.218.136"  # IP range for assignment

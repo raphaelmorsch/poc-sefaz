@@ -1,0 +1,37 @@
+variant: openshift
+version: 4.17.0
+metadata:
+  name: 99-worker-chrony 
+  labels:
+    machineconfiguration.openshift.io/role: worker 
+storage:
+  files:
+  - path: /etc/chrony.conf
+    mode: 0644
+    overwrite: true
+    contents:
+      inline: |
+        server ntp01.fazenda.mg.gov.br iburst
+        server ntp02.fazenda.mg.gov.br iburst
+        driftfile /var/lib/chrony/drift
+        makestep 1.0
+        rtcsync
+        logdir /var/log/chrony
+systemd:
+  units:
+    - name: chronyd.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=NTP client/server
+        Documentation=man:chronyd(8) man:chrony.conf(5)
+        After=network.target
+        ConditionCapability=CAP_SYS_TIME
+
+        [Service]
+        ExecStart=/usr/sbin/chronyd -f /etc/chrony.conf
+        Restart=always
+        RestartSec=5s
+
+        [Install]
+        WantedBy=multi-user.target

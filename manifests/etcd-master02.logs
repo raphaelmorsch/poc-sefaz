@@ -1,0 +1,31 @@
+2024/11/20 19:46:04 WARNING: [core] [Server #7] grpc: Server.processUnaryRPC failed to write status: connection error: desc = "transport is closing"
+{"level":"warn","ts":"2024-11-20T19:46:04.148814Z","caller":"etcdserver/v3_server.go:920","msg":"waiting for ReadIndex response took too long, retrying","sent-request-id":3431341
+916593411979,"retry-timeout":"500ms"}
+{"level":"warn","ts":"2024-11-20T19:46:04.649517Z","caller":"etcdserver/v3_server.go:920","msg":"waiting for ReadIndex response took too long, retrying","sent-request-id":3431341
+916593411979,"retry-timeout":"500ms"}
+{"level":"warn","ts":"2024-11-20T19:46:04.88363Z","caller":"etcdserver/util.go:170","msg":"apply request took too long","took":"2.809949456s","expected-duration":"200ms","prefix"
+:"read-only range ","request":"key:\"/kubernetes.io/apiserver.openshift.io/apirequestcounts/namespaces.v1alpha1.operators.coreos.com\" ","response":"","error":"context deadline e
+xceeded"}
+{"level":"info","ts":"2024-11-20T19:46:04.883683Z","caller":"traceutil/trace.go:171","msg":"trace[1719815091] range","detail":"{range_begin:/kubernetes.io/apiserver.openshift.io/
+apirequestcounts/namespaces.v1alpha1.operators.coreos.com; range_end:; }","duration":"2.810016611s","start":"2024-11-20T19:46:02.073655Z","end":"2024-11-20T19:46:04.883672Z","ste
+ps":["trace[1719815091] 'agreement among raft nodes before linearized reading'  (duration: 2.809945346s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:46:04.883716Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:46:02.073623Z","time spent":"2.810087487s
+","remote":"[::1]:59584","response type":"/etcdserverpb.KV/Range","request count":0,"request size":97,"response count":0,"response size":0,"request content":"key:\"/kubernetes.io
+/apiserver.openshift.io/apirequestcounts/namespaces.v1alpha1.operators.coreos.com\" "}
+{"level":"warn","ts":"2024-11-20T19:46:05.051458Z","caller":"etcdserver/util.go:170","msg":"apply request took too long","took":"8.999972232s","expected-duration":"200ms","prefix
+":"read-only range ","request":"key:\"/kubernetes.io/health\" ","response":"","error":"context canceled"}
+{"level":"info","ts":"2024-11-20T19:46:05.051509Z","caller":"traceutil/trace.go:171","msg":"trace[907454802] range","detail":"{range_begin:/kubernetes.io/health; range_end:; }","
+duration":"9.000031606s","start":"2024-11-20T19:45:56.051466Z","end":"2024-11-20T19:46:05.051497Z","steps":["trace[907454802] 'agreement among raft nodes before linearized readin
+g'  (duration: 8.999969245s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:46:05.051541Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:45:56.051434Z","time spent":"9.000101323s
+","remote":"172.23.218.102:57518","response type":"/etcdserverpb.KV/Range","request count":0,"request size":23,"response count":0,"response size":0,"request content":"key:\"/kube
+rnetes.io/health\" "}
+2024/11/20 19:46:05 WARNING: [core] [Server #7] grpc: Server.processUnaryRPC failed to write status: connection error: desc = "transport is closing"
+{"level":"warn","ts":"2024-11-20T19:46:05.063737Z","caller":"etcdserver/util.go:170","msg":"apply request took too long","took":"9.000287592s","expected-duration":"200ms","prefix
+":"read-only range ","request":"key:\"/kubernetes.io/health\" ","response":"","error":"context canceled"}
+{"level":"info","ts":"2024-11-20T19:46:05.063776Z","caller":"traceutil/trace.go:171","msg":"trace[717554205] range","detail":"{range_begin:/kubernetes.io/health; range_end:; }","
+duration":"9.000334123s","start":"2024-11-20T19:45:56.063433Z","end":"2024-11-20T19:46:05.063767Z","steps":["trace[717554205] 'agreement among raft nodes before linearized readin
+g'  (duration: 9.000287609s)"],"step_count":1}
+{"level":"warn","ts":"2024-11-20T19:46:05.063838Z","caller":"v3rpc/interceptor.go:197","msg":"request stats","start time":"2024-11-20T19:45:56.063403Z","time spent":"9.000421357s
+","remote":"[::1]:57890","response type":"/etcdserverpb.KV/Range","request count":0,"request size":23,"response count":0,"response size":0,"request content":"key:\"/kubernetes.io
+/health\" "}
