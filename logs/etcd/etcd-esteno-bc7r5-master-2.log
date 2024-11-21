@@ -1,0 +1,562 @@
+Name:                 etcd-esteno-bc7r5-master-2
+Namespace:            openshift-etcd
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Node:                 esteno-bc7r5-master-2/172.23.218.104
+Start Time:           Tue, 19 Nov 2024 16:24:32 -0300
+Labels:               app=etcd
+                      etcd=true
+                      k8s-app=etcd
+                      revision=9
+Annotations:          kubectl.kubernetes.io/default-container: etcd
+                      kubernetes.io/config.hash: 3df9c0a5aed49a060701993d061a050f
+                      kubernetes.io/config.mirror: 3df9c0a5aed49a060701993d061a050f
+                      kubernetes.io/config.seen: 2024-11-19T17:42:19.833869270Z
+                      kubernetes.io/config.source: file
+                      target.workload.openshift.io/management: {"effect": "PreferredDuringScheduling"}
+Status:               Running
+IP:                   172.23.218.104
+IPs:
+  IP:           172.23.218.104
+Controlled By:  Node/esteno-bc7r5-master-2
+Init Containers:
+  setup:
+    Container ID:  cri-o://0145e4c39e386af7bcd9231c36a3c66278cf0ad48f5a00febb7064c8e449fa8a
+    Image:         quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Image ID:      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /bin/sh
+      -c
+      #!/bin/sh
+      echo -n "Fixing etcd log permissions."
+      mkdir -p /var/log/etcd && chmod 0700 /var/log/etcd
+      
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 19 Nov 2024 16:24:33 -0300
+      Finished:     Tue, 19 Nov 2024 16:24:33 -0300
+    Ready:          True
+    Restart Count:  1
+    Requests:
+      cpu:        5m
+      memory:     50Mi
+    Environment:  <none>
+    Mounts:
+      /var/log/etcd from log-dir (rw)
+  etcd-ensure-env-vars:
+    Container ID:  cri-o://8ada156f7ecd453520d430559a908ef1f52001c446cd2290c1534a00db6732bf
+    Image:         quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Image ID:      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /bin/sh
+      -c
+      #!/bin/sh
+      set -euo pipefail
+      
+      : "${NODE_esteno_bc7r5_master_2_ETCD_URL_HOST?not set}"
+      : "${NODE_esteno_bc7r5_master_2_ETCD_NAME?not set}"
+      : "${NODE_esteno_bc7r5_master_2_IP?not set}"
+      
+      # check for ipv4 addresses as well as ipv6 addresses with extra square brackets
+      if [[ "${NODE_esteno_bc7r5_master_2_IP}" != "${NODE_IP}" && "${NODE_esteno_bc7r5_master_2_IP}" != "[${NODE_IP}]" ]]; then
+        # echo the error message to stderr
+        echo "Expected node IP to be ${NODE_IP} got ${NODE_esteno_bc7r5_master_2_IP}" >&2
+        exit 1
+      fi
+      
+      # check for ipv4 addresses as well as ipv6 addresses with extra square brackets
+      if [[ "${NODE_esteno_bc7r5_master_2_ETCD_URL_HOST}" != "${NODE_IP}" && "${NODE_esteno_bc7r5_master_2_ETCD_URL_HOST}" != "[${NODE_IP}]" ]]; then
+        # echo the error message to stderr
+        echo "Expected etcd url host to be ${NODE_IP} got ${NODE_esteno_bc7r5_master_2_ETCD_URL_HOST}" >&2
+        exit 1
+      fi
+      
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 19 Nov 2024 16:24:33 -0300
+      Finished:     Tue, 19 Nov 2024 16:24:33 -0300
+    Ready:          True
+    Restart Count:  1
+    Requests:
+      cpu:     10m
+      memory:  60Mi
+    Environment:
+      ALL_ETCD_ENDPOINTS:                                https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_API:                                       3
+      ETCDCTL_CACERT:                                    /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+      ETCDCTL_CERT:                                      /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt
+      ETCDCTL_ENDPOINTS:                                 https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_KEY:                                       /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key
+      ETCD_CIPHER_SUITES:                                TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      ETCD_DATA_DIR:                                     /var/lib/etcd
+      ETCD_ELECTION_TIMEOUT:                             1000
+      ETCD_ENABLE_PPROF:                                 true
+      ETCD_EXPERIMENTAL_MAX_LEARNERS:                    3
+      ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION:          200ms
+      ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL:  5s
+      ETCD_HEARTBEAT_INTERVAL:                           100
+      ETCD_IMAGE:                                        quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+      ETCD_INITIAL_CLUSTER_STATE:                        existing
+      ETCD_QUOTA_BACKEND_BYTES:                          8589934592
+      ETCD_SOCKET_REUSE_ADDRESS:                         true
+      NODE_esteno_bc7r5_master_0_ETCD_NAME:              esteno-bc7r5-master-0
+      NODE_esteno_bc7r5_master_0_ETCD_URL_HOST:          172.23.218.102
+      NODE_esteno_bc7r5_master_0_IP:                     172.23.218.102
+      NODE_esteno_bc7r5_master_1_ETCD_NAME:              esteno-bc7r5-master-1
+      NODE_esteno_bc7r5_master_1_ETCD_URL_HOST:          172.23.218.103
+      NODE_esteno_bc7r5_master_1_IP:                     172.23.218.103
+      NODE_esteno_bc7r5_master_2_ETCD_NAME:              esteno-bc7r5-master-2
+      NODE_esteno_bc7r5_master_2_ETCD_URL_HOST:          172.23.218.104
+      NODE_esteno_bc7r5_master_2_IP:                     172.23.218.104
+      NODE_IP:                                            (v1:status.podIP)
+    Mounts:                                              <none>
+  etcd-resources-copy:
+    Container ID:  cri-o://ed7f5cfd7f7ff3f41e3c7aee33124f98f385d83891fcc733ac75c3cf434217f3
+    Image:         quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Image ID:      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /bin/sh
+      -c
+      #!/bin/sh
+      set -euo pipefail
+      
+      rm -f $(grep -l '^### Created by cluster-etcd-operator' /usr/local/bin/*)
+      cp -p /etc/kubernetes/static-pod-certs/configmaps/etcd-scripts/*.sh /usr/local/bin
+      
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 19 Nov 2024 16:24:35 -0300
+      Finished:     Tue, 19 Nov 2024 16:24:35 -0300
+    Ready:          True
+    Restart Count:  1
+    Requests:
+      cpu:        10m
+      memory:     60Mi
+    Environment:  <none>
+    Mounts:
+      /etc/kubernetes/static-pod-certs from cert-dir (rw)
+      /etc/kubernetes/static-pod-resources from resource-dir (rw)
+      /usr/local/bin from usr-local-bin (rw)
+Containers:
+  etcdctl:
+    Container ID:  cri-o://1114daec7ec1afb4fe46cfa420fd31b6b993fcf81cb928866b9a4bc3c20ba6b7
+    Image:         quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Image ID:      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /bin/bash
+      -c
+      trap TERM INT; sleep infinity & wait
+    State:          Running
+      Started:      Tue, 19 Nov 2024 16:24:36 -0300
+    Ready:          True
+    Restart Count:  1
+    Requests:
+      cpu:     10m
+      memory:  60Mi
+    Environment:
+      ALL_ETCD_ENDPOINTS:                                https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_API:                                       3
+      ETCDCTL_CACERT:                                    /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+      ETCDCTL_CERT:                                      /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt
+      ETCDCTL_ENDPOINTS:                                 https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_KEY:                                       /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key
+      ETCD_CIPHER_SUITES:                                TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      ETCD_DATA_DIR:                                     /var/lib/etcd
+      ETCD_ELECTION_TIMEOUT:                             1000
+      ETCD_ENABLE_PPROF:                                 true
+      ETCD_EXPERIMENTAL_MAX_LEARNERS:                    3
+      ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION:          200ms
+      ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL:  5s
+      ETCD_HEARTBEAT_INTERVAL:                           100
+      ETCD_IMAGE:                                        quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+      ETCD_INITIAL_CLUSTER_STATE:                        existing
+      ETCD_QUOTA_BACKEND_BYTES:                          8589934592
+      ETCD_SOCKET_REUSE_ADDRESS:                         true
+      NODE_esteno_bc7r5_master_0_ETCD_NAME:              esteno-bc7r5-master-0
+      NODE_esteno_bc7r5_master_0_ETCD_URL_HOST:          172.23.218.102
+      NODE_esteno_bc7r5_master_0_IP:                     172.23.218.102
+      NODE_esteno_bc7r5_master_1_ETCD_NAME:              esteno-bc7r5-master-1
+      NODE_esteno_bc7r5_master_1_ETCD_URL_HOST:          172.23.218.103
+      NODE_esteno_bc7r5_master_1_IP:                     172.23.218.103
+      NODE_esteno_bc7r5_master_2_ETCD_NAME:              esteno-bc7r5-master-2
+      NODE_esteno_bc7r5_master_2_ETCD_URL_HOST:          172.23.218.104
+      NODE_esteno_bc7r5_master_2_IP:                     172.23.218.104
+      ETCD_STATIC_POD_VERSION:                           9
+    Mounts:
+      /etc/kubernetes/manifests from static-pod-dir (rw)
+      /etc/kubernetes/static-pod-certs from cert-dir (rw)
+      /etc/kubernetes/static-pod-resources from resource-dir (rw)
+      /var/lib/etcd/ from data-dir (rw)
+  etcd:
+    Container ID:  cri-o://fd7c27617b0f613e8bdc22a8814052a3c1a0523d7580ab9483affb52336531eb
+    Image:         quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Image ID:      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /bin/sh
+      -c
+      #!/bin/sh
+      set -euo pipefail
+      
+      etcdctl member list || true
+      
+      # this has a non-zero return code if the command is non-zero.  If you use an export first, it doesn't and you
+      # will succeed when you should fail.
+      ETCD_INITIAL_CLUSTER=$(discover-etcd-initial-cluster \
+        --cacert=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \
+        --cert=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt \
+        --key=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key \
+        --endpoints=${ALL_ETCD_ENDPOINTS} \
+        --data-dir=/var/lib/etcd \
+        --target-peer-url-host=${NODE_esteno_bc7r5_master_2_ETCD_URL_HOST} \
+        --target-name=esteno-bc7r5-master-2)
+      export ETCD_INITIAL_CLUSTER
+      
+      # we cannot use the "normal" port conflict initcontainer because when we upgrade, the existing static pod will never yield,
+      # so we do the detection in etcd container itself.
+      echo -n "Waiting for ports 2379, 2380 and 9978 to be released."
+      time while [ -n "$(ss -Htan '( sport = 2379 or sport = 2380 or sport = 9978 )')" ]; do
+        echo -n "."
+        sleep 1
+      done
+      
+      export ETCD_NAME=${NODE_esteno_bc7r5_master_2_ETCD_NAME}
+      env | grep ETCD | grep -v NODE
+      
+      set -x
+      # See https://etcd.io/docs/v3.4.0/tuning/ for why we use ionice
+      exec nice -n -19 ionice -c2 -n0 etcd \
+        --logger=zap \
+        --log-level=info \
+        --experimental-initial-corrupt-check=true \
+        --snapshot-count=10000 \
+        --initial-advertise-peer-urls=https://${NODE_esteno_bc7r5_master_2_IP}:2380 \
+        --cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-esteno-bc7r5-master-2.crt \
+        --key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-esteno-bc7r5-master-2.key \
+        --trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \
+        --client-cert-auth=true \
+        --peer-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt \
+        --peer-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key \
+        --peer-trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \
+        --peer-client-cert-auth=true \
+        --advertise-client-urls=https://${NODE_esteno_bc7r5_master_2_IP}:2379 \
+        --listen-client-urls=https://0.0.0.0:2379,unixs://${NODE_esteno_bc7r5_master_2_IP}:0 \
+        --listen-peer-urls=https://0.0.0.0:2380 \
+        --metrics=extensive \
+        --listen-metrics-urls=https://0.0.0.0:9978 ||  mv /etc/kubernetes/etcd-backup-dir/etcd-member.yaml /etc/kubernetes/manifests
+      
+    State:       Running
+      Started:   Wed, 20 Nov 2024 21:15:48 -0300
+    Last State:  Terminated
+      Reason:    Error
+      Message:    [logterm: 148, index: 851018, vote: 488e3f2693916479] ignored MsgPreVote from 488e3f2693916479 [logterm: 148, index: 851018] at term 148: lease is not expired (remaining ticks: 10)"}
+{"level":"info","ts":"2024-11-21T00:15:36.694559Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"75e569877a562f9e [logterm: 148, index: 851018, vote: 488e3f2693916479] ignored MsgPreVote from 488e3f2693916479 [logterm: 148, index: 851018] at term 148: lease is not expired (remaining ticks: 10)"}
+{"level":"info","ts":"2024-11-21T00:15:38.195051Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"75e569877a562f9e [logterm: 148, index: 851018, vote: 488e3f2693916479] ignored MsgPreVote from 488e3f2693916479 [logterm: 148, index: 851018] at term 148: lease is not expired (remaining ticks: 10)"}
+{"level":"info","ts":"2024-11-21T00:15:39.69449Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"75e569877a562f9e [logterm: 148, index: 851018, vote: 488e3f2693916479] ignored MsgPreVote from 488e3f2693916479 [logterm: 148, index: 851018] at term 148: lease is not expired (remaining ticks: 10)"}
+{"level":"info","ts":"2024-11-21T00:15:41.194872Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"75e569877a562f9e [logterm: 148, index: 851018, vote: 488e3f2693916479] ignored MsgPreVote from 488e3f2693916479 [logterm: 148, index: 851018] at term 148: lease is not expired (remaining ticks: 10)"}
+{"level":"info","ts":"2024-11-21T00:15:42.695189Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"75e569877a562f9e [logterm: 148, index: 851018, vote: 488e3f2693916479] ignored MsgPreVote from 488e3f2693916479 [logterm: 148, index: 851018] at term 148: lease is not expired (remaining ticks: 10)"}
+{"level":"info","
+      Exit Code:    -1
+      Started:      Wed, 20 Nov 2024 21:05:18 -0300
+      Finished:     Wed, 20 Nov 2024 21:15:44 -0300
+    Ready:          True
+    Restart Count:  60
+    Requests:
+      cpu:      300m
+      memory:   600Mi
+    Liveness:   http-get https://:9980/healthz delay=0s timeout=30s period=5s #success=1 #failure=5
+    Readiness:  http-get https://:9980/readyz delay=0s timeout=30s period=5s #success=1 #failure=5
+    Startup:    http-get https://:9980/readyz delay=10s timeout=1s period=10s #success=1 #failure=18
+    Environment:
+      ALL_ETCD_ENDPOINTS:                                https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_API:                                       3
+      ETCDCTL_CACERT:                                    /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+      ETCDCTL_CERT:                                      /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt
+      ETCDCTL_ENDPOINTS:                                 https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_KEY:                                       /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key
+      ETCD_CIPHER_SUITES:                                TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      ETCD_DATA_DIR:                                     /var/lib/etcd
+      ETCD_ELECTION_TIMEOUT:                             1000
+      ETCD_ENABLE_PPROF:                                 true
+      ETCD_EXPERIMENTAL_MAX_LEARNERS:                    3
+      ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION:          200ms
+      ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL:  5s
+      ETCD_HEARTBEAT_INTERVAL:                           100
+      ETCD_IMAGE:                                        quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+      ETCD_INITIAL_CLUSTER_STATE:                        existing
+      ETCD_QUOTA_BACKEND_BYTES:                          8589934592
+      ETCD_SOCKET_REUSE_ADDRESS:                         true
+      NODE_esteno_bc7r5_master_0_ETCD_NAME:              esteno-bc7r5-master-0
+      NODE_esteno_bc7r5_master_0_ETCD_URL_HOST:          172.23.218.102
+      NODE_esteno_bc7r5_master_0_IP:                     172.23.218.102
+      NODE_esteno_bc7r5_master_1_ETCD_NAME:              esteno-bc7r5-master-1
+      NODE_esteno_bc7r5_master_1_ETCD_URL_HOST:          172.23.218.103
+      NODE_esteno_bc7r5_master_1_IP:                     172.23.218.103
+      NODE_esteno_bc7r5_master_2_ETCD_NAME:              esteno-bc7r5-master-2
+      NODE_esteno_bc7r5_master_2_ETCD_URL_HOST:          172.23.218.104
+      NODE_esteno_bc7r5_master_2_IP:                     172.23.218.104
+      ETCD_STATIC_POD_VERSION:                           9
+    Mounts:
+      /etc/kubernetes/manifests from static-pod-dir (rw)
+      /etc/kubernetes/static-pod-certs from cert-dir (rw)
+      /etc/kubernetes/static-pod-resources from resource-dir (rw)
+      /var/lib/etcd/ from data-dir (rw)
+  etcd-metrics:
+    Container ID:  cri-o://cdec6779d44a3015a14dcb2e69b8d7730afd2500ab279a01eb3a07e935346276
+    Image:         quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Image ID:      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /bin/sh
+      -c
+      #!/bin/sh
+      set -euo pipefail
+      
+      export ETCD_NAME=${NODE_esteno_bc7r5_master_2_ETCD_NAME}
+      
+      exec nice -n -18 etcd grpc-proxy start \
+        --endpoints https://${NODE_esteno_bc7r5_master_2_ETCD_URL_HOST}:9978 \
+        --metrics-addr https://0.0.0.0:9979 \
+        --listen-addr 127.0.0.1:9977 \
+        --advertise-client-url ""  \
+        --key /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key \
+        --key-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-esteno-bc7r5-master-2.key \
+        --cert /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt \
+        --cert-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-esteno-bc7r5-master-2.crt \
+        --cacert /etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \
+        --trusted-ca-file /etc/kubernetes/static-pod-certs/configmaps/etcd-metrics-proxy-serving-ca/ca-bundle.crt \
+        --listen-cipher-suites TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256
+      
+    State:          Running
+      Started:      Tue, 19 Nov 2024 16:24:36 -0300
+    Ready:          True
+    Restart Count:  1
+    Requests:
+      cpu:     40m
+      memory:  200Mi
+    Environment:
+      ALL_ETCD_ENDPOINTS:                                https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_API:                                       3
+      ETCDCTL_CACERT:                                    /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+      ETCDCTL_CERT:                                      /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt
+      ETCDCTL_ENDPOINTS:                                 https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_KEY:                                       /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key
+      ETCD_CIPHER_SUITES:                                TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      ETCD_DATA_DIR:                                     /var/lib/etcd
+      ETCD_ELECTION_TIMEOUT:                             1000
+      ETCD_ENABLE_PPROF:                                 true
+      ETCD_EXPERIMENTAL_MAX_LEARNERS:                    3
+      ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION:          200ms
+      ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL:  5s
+      ETCD_HEARTBEAT_INTERVAL:                           100
+      ETCD_IMAGE:                                        quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+      ETCD_INITIAL_CLUSTER_STATE:                        existing
+      ETCD_QUOTA_BACKEND_BYTES:                          8589934592
+      ETCD_SOCKET_REUSE_ADDRESS:                         true
+      NODE_esteno_bc7r5_master_0_ETCD_NAME:              esteno-bc7r5-master-0
+      NODE_esteno_bc7r5_master_0_ETCD_URL_HOST:          172.23.218.102
+      NODE_esteno_bc7r5_master_0_IP:                     172.23.218.102
+      NODE_esteno_bc7r5_master_1_ETCD_NAME:              esteno-bc7r5-master-1
+      NODE_esteno_bc7r5_master_1_ETCD_URL_HOST:          172.23.218.103
+      NODE_esteno_bc7r5_master_1_IP:                     172.23.218.103
+      NODE_esteno_bc7r5_master_2_ETCD_NAME:              esteno-bc7r5-master-2
+      NODE_esteno_bc7r5_master_2_ETCD_URL_HOST:          172.23.218.104
+      NODE_esteno_bc7r5_master_2_IP:                     172.23.218.104
+      ETCD_STATIC_POD_VERSION:                           9
+    Mounts:
+      /etc/kubernetes/static-pod-certs from cert-dir (rw)
+      /etc/kubernetes/static-pod-resources from resource-dir (rw)
+      /var/lib/etcd/ from data-dir (rw)
+  etcd-readyz:
+    Container ID:  cri-o://cdfb757b65fd828f61acbe3595d2cdb33a532b1069edfe80edd699dd7a38e5d4
+    Image:         quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:accb30f5a635770d8b3f9849448b974b72b2ff8ec44f84002cda82b5547da42c
+    Image ID:      quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:accb30f5a635770d8b3f9849448b974b72b2ff8ec44f84002cda82b5547da42c
+    Port:          9980/TCP
+    Host Port:     9980/TCP
+    Command:
+      /bin/sh
+      -c
+      #!/bin/sh
+      set -euo pipefail
+      
+      exec nice -n -18 cluster-etcd-operator readyz \
+        --target=https://localhost:2379 \
+        --listen-port=9980 \
+        --serving-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-esteno-bc7r5-master-2.crt \
+        --serving-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-esteno-bc7r5-master-2.key \
+        --client-cert-file=$(ETCDCTL_CERT) \
+        --client-key-file=$(ETCDCTL_KEY) \
+        --client-cacert-file=$(ETCDCTL_CACERT)
+      
+    State:          Running
+      Started:      Tue, 19 Nov 2024 16:24:36 -0300
+    Ready:          True
+    Restart Count:  1
+    Requests:
+      cpu:     10m
+      memory:  50Mi
+    Environment:
+      ALL_ETCD_ENDPOINTS:                                https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_API:                                       3
+      ETCDCTL_CACERT:                                    /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+      ETCDCTL_CERT:                                      /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.crt
+      ETCDCTL_ENDPOINTS:                                 https://172.23.218.102:2379,https://172.23.218.103:2379,https://172.23.218.104:2379
+      ETCDCTL_KEY:                                       /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-esteno-bc7r5-master-2.key
+      ETCD_CIPHER_SUITES:                                TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      ETCD_DATA_DIR:                                     /var/lib/etcd
+      ETCD_ELECTION_TIMEOUT:                             1000
+      ETCD_ENABLE_PPROF:                                 true
+      ETCD_EXPERIMENTAL_MAX_LEARNERS:                    3
+      ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION:          200ms
+      ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL:  5s
+      ETCD_HEARTBEAT_INTERVAL:                           100
+      ETCD_IMAGE:                                        quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4
+      ETCD_INITIAL_CLUSTER_STATE:                        existing
+      ETCD_QUOTA_BACKEND_BYTES:                          8589934592
+      ETCD_SOCKET_REUSE_ADDRESS:                         true
+      NODE_esteno_bc7r5_master_0_ETCD_NAME:              esteno-bc7r5-master-0
+      NODE_esteno_bc7r5_master_0_ETCD_URL_HOST:          172.23.218.102
+      NODE_esteno_bc7r5_master_0_IP:                     172.23.218.102
+      NODE_esteno_bc7r5_master_1_ETCD_NAME:              esteno-bc7r5-master-1
+      NODE_esteno_bc7r5_master_1_ETCD_URL_HOST:          172.23.218.103
+      NODE_esteno_bc7r5_master_1_IP:                     172.23.218.103
+      NODE_esteno_bc7r5_master_2_ETCD_NAME:              esteno-bc7r5-master-2
+      NODE_esteno_bc7r5_master_2_ETCD_URL_HOST:          172.23.218.104
+      NODE_esteno_bc7r5_master_2_IP:                     172.23.218.104
+    Mounts:
+      /etc/kubernetes/static-pod-certs from cert-dir (rw)
+      /var/log/etcd/ from log-dir (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  static-pod-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/manifests
+    HostPathType:  
+  resource-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/static-pod-resources/etcd-pod-9
+    HostPathType:  
+  cert-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/static-pod-resources/etcd-certs
+    HostPathType:  
+  data-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/etcd
+    HostPathType:  
+  usr-local-bin:
+    Type:          HostPath (bare host directory volume)
+    Path:          /usr/local/bin
+    HostPathType:  
+  log-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log/etcd
+    HostPathType:  
+QoS Class:         Burstable
+Node-Selectors:    <none>
+Tolerations:       op=Exists
+Events:
+  Type     Reason      Age   From     Message
+  ----     ------      ----  ----     -------
+  Normal   Pulled      31h   kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     31h   kubelet  Created container setup
+  Normal   Started     31h   kubelet  Started container setup
+  Normal   Pulled      31h   kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     31h   kubelet  Created container etcd-ensure-env-vars
+  Normal   Started     31h   kubelet  Started container etcd-ensure-env-vars
+  Normal   Pulled      31h   kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     31h   kubelet  Created container etcd-resources-copy
+  Normal   Started     31h   kubelet  Started container etcd-resources-copy
+  Normal   Pulled      31h   kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     31h   kubelet  Created container etcdctl
+  Normal   Started     31h   kubelet  Started container etcdctl
+  Normal   Pulled      31h   kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     31h   kubelet  Created container etcd
+  Normal   Started     31h   kubelet  Started container etcd
+  Normal   Pulled      31h   kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     31h   kubelet  Created container etcd-metrics
+  Normal   Started     31h   kubelet  Started container etcd-metrics
+  Normal   Pulled      31h   kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:accb30f5a635770d8b3f9849448b974b72b2ff8ec44f84002cda82b5547da42c" already present on machine
+  Normal   Created     31h   kubelet  Created container etcd-readyz
+  Normal   Started     31h   kubelet  Started container etcd-readyz
+  Warning  ProbeError  30h   kubelet  Readiness probe error: Get "https://172.23.218.104:9980/readyz": context deadline exceeded
+body:
+  Warning  Unhealthy   30h                kubelet  Readiness probe failed: Get "https://172.23.218.104:9980/readyz": context deadline exceeded
+  Warning  ProbeError  30h (x4 over 30h)  kubelet  Readiness probe error: HTTP probe failed with statuscode: 503
+body: failed to establish etcd client: too many active cache clients, rejecting to create new one
+  Warning  Unhealthy   29h                kubelet  Liveness probe failed: Get "https://172.23.218.104:9980/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  Warning  ProbeError  29h (x4 over 30h)  kubelet  Readiness probe error: Get "https://172.23.218.104:9980/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+body:
+  Warning  ProbeError  29h (x4 over 30h)  kubelet  Liveness probe error: Get "https://172.23.218.104:9980/healthz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+body:
+  Warning  Unhealthy   29h (x4 over 30h)  kubelet  Readiness probe failed: Get "https://172.23.218.104:9980/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+  Warning  Unhealthy   29h (x4 over 30h)  kubelet  Liveness probe failed: Get "https://172.23.218.104:9980/healthz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+  Warning  ProbeError  29h (x2 over 29h)  kubelet  Liveness probe error: Get "https://172.23.218.104:9980/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+body:
+  Normal   Created     29h                kubelet  Created container etcd-ensure-env-vars
+  Normal   Created     29h                kubelet  Created container setup
+  Normal   Started     29h                kubelet  Started container setup
+  Normal   Pulled      29h                kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Pulled      29h                kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Started     29h                kubelet  Started container etcd-ensure-env-vars
+  Normal   Pulled      29h                kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     29h                kubelet  Created container etcd-resources-copy
+  Normal   Started     29h                kubelet  Started container etcd-resources-copy
+  Normal   Pulled      29h                kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     29h                kubelet  Created container etcd-readyz
+  Normal   Started     29h                kubelet  Started container etcdctl
+  Normal   Pulled      29h                kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     29h                kubelet  Created container etcd
+  Normal   Started     29h                kubelet  Started container etcd
+  Normal   Pulled      29h                kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5df2226c7a153b8dc48045476f66d5e44aa1ee78f125ee8945629c0c762a52e4" already present on machine
+  Normal   Created     29h                kubelet  Created container etcd-metrics
+  Normal   Started     29h                kubelet  Started container etcd-metrics
+  Normal   Pulled      29h                kubelet  Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:accb30f5a635770d8b3f9849448b974b72b2ff8ec44f84002cda82b5547da42c" already present on machine
+  Normal   Created     29h                kubelet  Created container etcdctl
+  Normal   Started     29h                kubelet  Started container etcd-readyz
+  Warning  Unhealthy   11h (x9 over 29h)  kubelet  Liveness probe failed: Get "https://172.23.218.104:9980/healthz": context deadline exceeded
+  Warning  ProbeError  11h (x9 over 29h)  kubelet  Liveness probe error: Get "https://172.23.218.104:9980/healthz": context deadline exceeded
+body:
+  Warning  Unhealthy   9h (x9 over 28h)  kubelet  Readiness probe failed: Get "https://172.23.218.104:9980/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  Warning  ProbeError  9h (x9 over 28h)  kubelet  Readiness probe error: Get "https://172.23.218.104:9980/readyz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+body:
+  Normal   Killing     3h23m (x48 over 29h)  kubelet  Container etcd failed liveness probe, will be restarted
+  Warning  ProbeError  3h23m (x96 over 29h)  kubelet  Liveness probe error: HTTP probe failed with statuscode: 503
+body: failed to establish etcd client: too many active cache clients, rejecting to create new one
+  Warning  Unhealthy   3h23m (x96 over 29h)   kubelet  Liveness probe failed: HTTP probe failed with statuscode: 503
+  Warning  ProbeError  3h23m (x552 over 29h)  kubelet  Readiness probe error: HTTP probe failed with statuscode: 503
+body: failed to establish etcd client: too many active cache clients, rejecting to create new one
+  Warning  Unhealthy   3h23m (x552 over 29h)  kubelet  Readiness probe failed: HTTP probe failed with statuscode: 503
+  Warning  Unhealthy   141m (x6 over 25h)     kubelet  Readiness probe failed: Get "https://172.23.218.104:9980/readyz": context deadline exceeded
+  Warning  ProbeError  141m (x6 over 25h)     kubelet  Readiness probe error: Get "https://172.23.218.104:9980/readyz": context deadline exceeded
+body:
+  Warning  ProbeError  133m (x426 over 29h)  kubelet  Startup probe error: Get "https://172.23.218.104:9980/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+body:
+  Warning  ProbeError  61m (x136 over 29h)  kubelet  Liveness probe error: Get "https://172.23.218.104:9980/healthz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+body:
+  Warning  Unhealthy   61m (x136 over 29h)  kubelet  Liveness probe failed: Get "https://172.23.218.104:9980/healthz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+  Warning  Unhealthy   60m (x13 over 27h)   kubelet  Liveness probe failed: Get "https://172.23.218.104:9980/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+  Warning  ProbeError  60m (x13 over 27h)   kubelet  Liveness probe error: Get "https://172.23.218.104:9980/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+body:
+  Warning  ProbeError  50m (x143 over 29h)  kubelet  Readiness probe error: Get "https://172.23.218.104:9980/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+body:
+  Warning  Unhealthy  50m (x143 over 29h)  kubelet  Readiness probe failed: Get "https://172.23.218.104:9980/readyz": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
