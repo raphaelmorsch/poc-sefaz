@@ -17,19 +17,27 @@ spec:
     spec:
       providerSpec:
         value:
-          apiVersion: vsphereprovider.openshift.io/v1beta1
+          apiVersion: machine.openshift.io/v1beta1
           kind: VSphereMachineProviderSpec
           credentialsSecret:
-            name: vsphere-creds #criar vsphere credentials secret
+            name: vsphere-cloud-credentials #criar vsphere credentials secret
             namespace: openshift-machine-api
           diskGiB: 128
           memoryMiB: 32768
           numCPUs: 4
           network:
             devices:
-              - networkName: "VDS_Rede_Linux_218"
-                ipPoolRef: "sas-postgres-ip-pool"
-          template: "rhel8-template"  # Adjust to your template name
+            - addressesFromPools:
+              - group: installer.openshift.io
+                name: default-0
+                resource: IPPool
+              nameservers:
+              - 172.23.212.216
+              - 172.23.212.226
+          networkName: VDS_Rede_Linux_218
+          template: "esteno-bc7r5-rhcos-generated-region-generated-zone"
+          userDataSecret:
+            name: worker-user-data
           workspace:
             datacenter: "SEFMG"
             datastore: "/SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA"
