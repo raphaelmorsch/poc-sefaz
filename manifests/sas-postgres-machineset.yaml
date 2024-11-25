@@ -7,8 +7,12 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: sas-postgres-cluster
+      machine.openshift.io/cluster-api-cluster: esteno-bc7r5
       machine.openshift.io/cluster-api-machineset: sas-postgres-static-ip-machineset
+      machine.openshift.io/cluster-api-machine-role: worker
+      machine.openshift.io/cluster-api-machine-type: worker
+      machine.openshift.io/region:
+      machine.openshift.io/zone:
   template:
     metadata:
       labels:
@@ -27,20 +31,20 @@ spec:
           numCPUs: 4
           network:
             devices:
-            - addressesFromPools:
-              - group: installer.openshift.io
-                name: default-0
-                resource: IPPool
+            - addresses:
+                  - 172.23.218.113/24
+                  - 172.23.218.114/24
+                  - 172.23.218.115/24
               nameservers:
               - 172.23.212.216
               - 172.23.212.226
-          networkName: VDS_Rede_Linux_218
+            networkName: VDS_Rede_Linux_218
           template: "esteno-bc7r5-rhcos-generated-region-generated-zone"
           userDataSecret:
             name: worker-user-data
           workspace:
             datacenter: "SEFMG"
             datastore: "/SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA"
-            folder: "/SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Vaya"
+            folder: "/SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Viya 4"
             resourcePool: "/SEFMG/host/ClusterAnalitico-Producao/Resources"
             server: "bhevmger01.fazenda.mg"
