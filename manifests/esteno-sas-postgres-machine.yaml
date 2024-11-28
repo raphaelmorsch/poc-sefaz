@@ -8,7 +8,7 @@ metadata:
     machine.openshift.io/region:
     machine.openshift.io/zone:
     sas.profile: sas-postgres
-  name: esteno-sas-postgres-worker-2
+  name: esteno-sas-postgres-worker-3
   namespace: openshift-machine-api
 spec:
   lifecycleHooks: {}
@@ -27,7 +27,7 @@ spec:
         devices:
         - gateway: 172.23.218.1 
           ipAddrs:
-          - 172.23.218.114/24 
+          - 172.23.218.115/24 
           nameservers: 
           - 172.23.212.216
           - 172.23.212.226
