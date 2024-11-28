@@ -1,0 +1,15 @@
+apiVersion: ipam.cluster.x-k8s.io/v1alpha1
+kind: IPAddress
+metadata:
+  name: esteno-sas-postgres-ipaddress-0-111
+  namespace: openshift-machine-api
+spec:
+  addresses: 172.23.218.111
+  claimRef:
+    name: <<nome-do-claim-gerado-depois-do-scale>>
+  gateway: 172.23.218.1
+  poolRef:
+    apiGroup: installer.openshift.io
+    kind: IPPool
+    name: default-0
+  prefix: 24

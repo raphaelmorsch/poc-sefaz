@@ -4,7 +4,7 @@ metadata:
   name: esteno-sas-postgres
   namespace: openshift-machine-api
 spec:
-  replicas: 3
+  replicas: 0
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: esteno-bc7r5
