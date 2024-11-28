@@ -35,10 +35,10 @@ spec:
           numCPUs: 4
           network:
             devices:
-            - addresses:
-                  - 172.23.218.113/24
-                  - 172.23.218.114/24
-                  - 172.23.218.115/24
+            - addressesFromPools:
+              - group: installer.openshift.io
+                name: default-0
+                resource: IPPool
               nameservers:
               - 172.23.212.216
               - 172.23.212.226
