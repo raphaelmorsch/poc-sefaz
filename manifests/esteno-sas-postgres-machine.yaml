@@ -39,8 +39,8 @@ spec:
         name: worker-user-data
       workspace:
         datacenter: SEFMG 
-        datastore: /SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA 
-        folder: /SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Viya 4 
-        resourcepool: /SEFMG/host/ClusterAnalitico-Producao/Resources 
+        datastore: "/SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA" 
+        folder: "/SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Viya 4" 
+        resourcepool: "/SEFMG/host/ClusterAnalitico-Producao/Resources" 
         server: bhevmger01.fazenda.mg 
 status: {}
