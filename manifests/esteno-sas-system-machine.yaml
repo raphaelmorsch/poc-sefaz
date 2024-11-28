@@ -7,34 +7,34 @@ metadata:
     machine.openshift.io/cluster-api-machine-type: worker 
     machine.openshift.io/region:
     machine.openshift.io/zone:
-    sas.profile: sas-postgres
-  name: esteno-sas-postgres-worker-3
+    sas.profile: sas-system
+  name: esteno-sas-system-worker-1
   namespace: openshift-machine-api
 spec:
   lifecycleHooks: {}
   metadata: {}
   nodeLabels:
-    sas.profile: sas-postgres
+    sas.profile: sas-system
   providerSpec:
     value:
       apiVersion: machine.openshift.io/v1beta1
       credentialsSecret:
         name: vsphere-cloud-credentials
-      diskGiB: 128
+      diskGiB: 200
       kind: VSphereMachineProviderSpec
-      memoryMiB: 32768
+      memoryMiB: 65536
       metadata:
         creationTimestamp: null
       network:
         devices:
         - gateway: 172.23.218.1 
           ipAddrs:
-          - 172.23.218.115/24 
+          - 172.23.218.116/24 
           nameservers: 
           - 172.23.212.216
           - 172.23.212.226
           networkName: VDS_Rede_Linux_218
-      numCPUs: 4
+      numCPUs: 8
       numCoresPerSocket: 4
       snapshot: ""
       template: esteno-bc7r5-rhcos-generated-region-generated-zone
