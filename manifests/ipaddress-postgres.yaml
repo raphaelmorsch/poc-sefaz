@@ -6,7 +6,7 @@ metadata:
 spec:
   addresses: 172.23.218.111
   claimRef:
-    name: <<nome-do-claim-gerado-depois-do-scale>>
+    name: esteno-sas-postgres-5lzc4-claim-0-0
   gateway: 172.23.218.1
   poolRef:
     apiGroup: installer.openshift.io
