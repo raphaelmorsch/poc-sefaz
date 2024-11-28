@@ -1,14 +1,14 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  name: sas-postgres-static-ip-machineset
+  name: esteno-sas-postgres
   namespace: openshift-machine-api
 spec:
   replicas: 3
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: esteno-bc7r5
-      machine.openshift.io/cluster-api-machineset: sas-postgres-static-ip-machineset
+      machine.openshift.io/cluster-api-machineset: esteno-sas-postgres
       machine.openshift.io/cluster-api-machine-role: worker
       machine.openshift.io/cluster-api-machine-type: worker
       machine.openshift.io/region:
@@ -16,8 +16,8 @@ spec:
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: sas-postgres-cluster
-        machine.openshift.io/cluster-api-machineset: sas-postgres-static-ip-machineset
+        machine.openshift.io/cluster-api-cluster: esteno-bc7r5
+        machine.openshift.io/cluster-api-machineset: esteno-sas-postgres
     spec:
       providerSpec:
         value:
