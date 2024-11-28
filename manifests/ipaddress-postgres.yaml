@@ -4,7 +4,7 @@ metadata:
   name: esteno-sas-postgres-ipaddress-0-111
   namespace: openshift-machine-api
 spec:
-  addresses: 172.23.218.111
+  address: 172.23.218.111
   claimRef:
     name: esteno-sas-postgres-5lzc4-claim-0-0
   gateway: 172.23.218.1
