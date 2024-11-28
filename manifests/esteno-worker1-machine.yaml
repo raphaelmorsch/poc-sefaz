@@ -1,0 +1,93 @@
+Name:         esteno-bc7r5-worker-1
+Namespace:    openshift-machine-api
+Labels:       machine.openshift.io/cluster-api-cluster=esteno-bc7r5
+              machine.openshift.io/cluster-api-machine-role=worker
+              machine.openshift.io/cluster-api-machine-type=worker
+              machine.openshift.io/region=
+              machine.openshift.io/zone=
+Annotations:  machine.openshift.io/instance-state: poweredOn
+API Version:  machine.openshift.io/v1beta1
+Kind:         Machine
+Metadata:
+  Creation Timestamp:  2024-11-19T17:11:24Z
+  Finalizers:
+    machine.machine.openshift.io
+  Generation:        2
+  Resource Version:  5392613
+  UID:               acc4ee63-1f47-44dc-a736-cdd354280fc6
+Spec:
+  Lifecycle Hooks:
+  Metadata:
+  Provider ID:  vsphere://422b0b4b-b165-8618-79af-d1861491ced1
+  Provider Spec:
+    Value:
+      API Version:  machine.openshift.io/v1beta1
+      Credentials Secret:
+        Name:       vsphere-cloud-credentials
+      Disk Gi B:    160
+      Kind:         VSphereMachineProviderSpec
+      Memory Mi B:  32768
+      Metadata:
+        Creation Timestamp:  <nil>
+      Network:
+        Devices:
+          Addresses From Pools:
+            Group:     installer.openshift.io
+            Name:      default-0
+            Resource:  IPPool
+          Nameservers:
+            172.23.212.216
+            172.23.212.226
+          Network Name:      VDS_Rede_Linux_218
+      Num CP Us:             8
+      Num Cores Per Socket:  4
+      Snapshot:              
+      Template:              esteno-bc7r5-rhcos-generated-region-generated-zone
+      User Data Secret:
+        Name:  worker-user-data
+      Workspace:
+        Datacenter:     SEFMG
+        Datastore:      /SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA
+        Folder:         /SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Viya 4
+        Resource Pool:  /SEFMG/host/ClusterAnalitico-Producao/Resources
+        Server:         bhevmger01.fazenda.mg
+Status:
+  Addresses:
+    Address:  172.23.218.106
+    Type:     InternalIP
+    Address:  169.254.169.2
+    Type:     InternalIP
+    Address:  esteno-bc7r5-worker-1
+    Type:     InternalDNS
+  Conditions:
+    Last Transition Time:  2024-11-19T17:21:21Z
+    Status:                True
+    Type:                  Drainable
+    Last Transition Time:  2024-11-19T17:26:11Z
+    Status:                True
+    Type:                  InstanceExists
+    Last Transition Time:  2024-11-19T17:21:21Z
+    Status:                True
+    Type:                  Terminable
+  Last Updated:            2024-11-28T20:49:32Z
+  Node Ref:
+    Kind:  Node
+    Name:  esteno-bc7r5-worker-1
+    UID:   6feb8621-d549-4d52-b810-7ed17f699724
+  Phase:   Running
+  Provider Status:
+    Conditions:
+      Last Transition Time:  2024-11-19T17:22:22Z
+      Message:               All IP address claims are bound
+      Reason:                IPAddressesClaimed
+      Status:                True
+      Type:                  IPAddressClaimed
+      Last Transition Time:  2024-11-19T17:22:22Z
+      Message:               Machine successfully created
+      Reason:                MachineCreationSucceeded
+      Status:                True
+      Type:                  MachineCreation
+    Instance Id:             422b0b4b-b165-8618-79af-d1861491ced1
+    Instance State:          poweredOn
+    Task Ref:                task-809011
+Events:                      <none>
