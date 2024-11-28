@@ -18,6 +18,10 @@ spec:
       labels:
         machine.openshift.io/cluster-api-cluster: esteno-bc7r5
         machine.openshift.io/cluster-api-machineset: esteno-sas-postgres
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/region:
+        machine.openshift.io/zone:
     spec:
       providerSpec:
         value:
