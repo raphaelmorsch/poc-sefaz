@@ -1,10 +1,10 @@
 apiVersion: ipam.cluster.x-k8s.io/v1alpha1
 kind: IPAddress
 metadata:
-  name: esteno-sas-postgres-ipaddress-0-111
+  name: esteno-sas-postgres-ipaddress-0-113
   namespace: openshift-machine-api
 spec:
-  address: 172.23.218.111
+  address: 172.23.218.113
   claimRef:
     name: esteno-sas-postgres-5lzc4-claim-0-0
   gateway: 172.23.218.1
@@ -13,3 +13,5 @@ spec:
     kind: IPPool
     name: default-0
   prefix: 24
+
+  #oc --type=merge patch IPAddressClaim esteno-sas-postgres-5lzc4-claim-0-0 -p='{"status":{"addressRef": {"name": "esteno-sas-postgres-ipaddress-0-111"}}}' -n openshift-machine-api --subresource=status
