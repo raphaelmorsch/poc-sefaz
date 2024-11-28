@@ -38,7 +38,7 @@ spec:
               nameservers:
               - 172.23.212.216
               - 172.23.212.226
-            networkName: VDS_Rede_Linux_218
+              networkName: VDS_Rede_Linux_218
           template: "esteno-bc7r5-rhcos-generated-region-generated-zone"
           userDataSecret:
             name: worker-user-data
