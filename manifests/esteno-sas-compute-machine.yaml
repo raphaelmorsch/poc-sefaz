@@ -20,7 +20,7 @@ spec:
         name: vsphere-cloud-credentials
       diskGiB: 200
       kind: VSphereMachineProviderSpec
-      memoryMiB: 65563
+      memoryMiB: 65536
       metadata:
         creationTimestamp: null
       network:
@@ -45,5 +45,5 @@ spec:
         resourcepool: "/SEFMG/host/ClusterAnalitico-Producao/Resources" 
         server: bhevmger01.fazenda.mg
   nodeLabels:
-    sas.profile: sas-system     
+    sas.profile: sas-compute     
 status: {}

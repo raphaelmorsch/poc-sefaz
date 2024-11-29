@@ -45,5 +45,5 @@ spec:
         resourcepool: "/SEFMG/host/ClusterAnalitico-Producao/Resources" 
         server: bhevmger01.fazenda.mg
   nodeLabels:
-    sas.profile: sas-system     
+    sas.profile: sas-cas     
 status: {}
