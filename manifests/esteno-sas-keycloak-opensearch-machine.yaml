@@ -1,0 +1,49 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  labels:
+    machine.openshift.io/cluster-api-cluster: esteno-bc7r5
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker 
+    machine.openshift.io/region:
+    machine.openshift.io/zone:
+    sas.profile: sas-keycloak-opensearch
+  name: esteno-sas-keycloak-opensearch-worker-1
+  namespace: openshift-machine-api
+spec:
+  lifecycleHooks: {}
+  metadata: {}
+  providerSpec:
+    value:
+      apiVersion: machine.openshift.io/v1beta1
+      credentialsSecret:
+        name: vsphere-cloud-credentials
+      diskGiB: 128
+      kind: VSphereMachineProviderSpec
+      memoryMiB: 65536
+      metadata:
+        creationTimestamp: null
+      network:
+        devices:
+        - gateway: 172.23.218.1 
+          ipAddrs:
+          - 172.23.218.127/24 
+          nameservers: 
+          - 172.23.212.216
+          - 172.23.212.226
+          networkName: VDS_Rede_Linux_218
+      numCPUs: 4
+      numCoresPerSocket: 4
+      snapshot: ""
+      template: esteno-bc7r5-rhcos-generated-region-generated-zone
+      userDataSecret:
+        name: worker-user-data
+      workspace:
+        datacenter: SEFMG 
+        datastore: "/SEFMG/datastore/UNITY 880XT2/VMFS_SASVAYA" 
+        folder: "/SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Viya 4" 
+        resourcepool: "/SEFMG/host/ClusterAnalitico-Producao/Resources" 
+        server: bhevmger01.fazenda.mg
+  nodeLabels:
+    sas.profile: sas-keycloak-opensearch     
+status: {}
