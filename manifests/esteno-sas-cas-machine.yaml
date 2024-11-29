@@ -8,7 +8,7 @@ metadata:
     machine.openshift.io/region:
     machine.openshift.io/zone:
     sas.profile: sas-cas
-  name: esteno-sas-cas-worker-1
+  name: esteno-sas-cas-worker-2
   namespace: openshift-machine-api
 spec:
   lifecycleHooks: {}
@@ -27,7 +27,7 @@ spec:
         devices:
         - gateway: 172.23.218.1 
           ipAddrs:
-          - 172.23.218.117/24 
+          - 172.23.218.118/24 
           nameservers: 
           - 172.23.212.216
           - 172.23.212.226
