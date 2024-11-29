@@ -1,14 +1,14 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  name: esteno-sas-postgres
+  name: esteno-sas-stateful
   namespace: openshift-machine-api
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: esteno-bc7r5
-      machine.openshift.io/cluster-api-machineset: esteno-sas-postgres
+      machine.openshift.io/cluster-api-machineset: esteno-sas-stateful
       machine.openshift.io/cluster-api-machine-role: worker
       machine.openshift.io/cluster-api-machine-type: worker
       machine.openshift.io/region:
@@ -17,7 +17,7 @@ spec:
     metadata:
       labels:
         machine.openshift.io/cluster-api-cluster: esteno-bc7r5
-        machine.openshift.io/cluster-api-machineset: esteno-sas-postgres
+        machine.openshift.io/cluster-api-machineset: esteno-sas-stateful
         machine.openshift.io/cluster-api-machine-role: worker
         machine.openshift.io/cluster-api-machine-type: worker
         machine.openshift.io/region:
@@ -30,15 +30,14 @@ spec:
           credentialsSecret:
             name: vsphere-cloud-credentials #criar vsphere credentials secret
             namespace: openshift-machine-api
-          diskGiB: 128
-          memoryMiB: 32768
-          numCPUs: 4
+          diskGiB: 200
+          memoryMiB: 65536
+          numCPUs: 8
           network:
             devices:
             - addresses:
-                  - 172.23.218.113/24
-                  - 172.23.218.114/24
-                  - 172.23.218.115/24
+                  - 172.23.218.124/24
+                  - 172.23.218.125/24
               nameservers:
               - 172.23.212.216
               - 172.23.212.226
@@ -52,3 +51,5 @@ spec:
             folder: "/SEFMG/vm/Ambiente SISOP/Ambiente Analítico/Ambiente SAS Viya 4"
             resourcePool: "/SEFMG/host/ClusterAnalitico-Producao/Resources"
             server: "bhevmger01.fazenda.mg"
+        nodeLabels:
+          sas.profile: sas-stateful
