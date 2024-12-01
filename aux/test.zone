@@ -1,0 +1,31 @@
+$TTL 86400
+@   IN  SOA ns1.g2lvh.dynamic.redhatworkshops.io. admin.g2lvh.dynamic.redhatworkshops.io. (
+        2024113001  ; Serial (modifique sempre que editar)
+        3600        ; Refresh
+        1800        ; Retry
+        1209600     ; Expire
+        86400       ; Minimum TTL
+)
+
+    IN  NS  ns1.g2lvh.dynamic.redhatworkshops.io.
+
+ns1 IN  A   192.168.23.10  # IP do bastion
+
+# Registros principais para o cluster
+api       IN  A   192.168.23.201  # API Server
+api-int   IN  A   192.168.23.201  # Internal API Server
+
+# Registros para ingress
+*.apps    IN  A   192.168.23.202  # Ingress wildcard para aplicações
+
+# Registros para nós do cluster
+master01  IN  A   192.168.23.231
+master02  IN  A   192.168.23.232
+master03  IN  A   192.168.23.233
+
+worker01  IN  A   192.168.23.234
+worker02  IN  A   192.168.23.235
+worker03  IN  A   192.168.23.236
+worker04  IN  A   192.168.23.237
+worker05  IN  A   192.168.23.238
+worker06  IN  A   192.168.23.239

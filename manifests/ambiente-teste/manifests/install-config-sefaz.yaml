@@ -1,0 +1,137 @@
+additionalTrustBundlePolicy: Proxyonly
+apiVersion: v1
+baseDomain: g2lvh.dynamic.redhatworkshops.io
+compute:
+- architecture: amd64
+  hyperthreading: Enabled
+  name: worker
+  platform:
+    vsphere:
+      cpus: 8 # Number of CPUs for worker nodes
+      memoryMB: 32768 # Memory (in MB) for worker nodes (32GB)
+      osDisk:
+        diskSizeGB: 160 # Disk size in GB for worker nodes
+  replicas: 6
+controlPlane:
+  architecture: amd64
+  hyperthreading: Enabled
+  name: master
+  platform:
+    vsphere:
+      cpus: 8 # Number of CPUs for worker nodes
+      memoryMB: 32768 # Memory (in MB) for worker nodes (32GB)
+      osDisk:
+        diskSizeGB: 160 # Disk size in GB for worker nodes
+  replicas: 3
+metadata:
+  creationTimestamp: null
+  name: esteno
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  machineNetwork:
+  - cidr: 192.168.23.0/24
+  networkType: OVNKubernetes
+  serviceNetwork:
+  - 10.130.0.0/16
+platform:
+  vsphere:
+    apiVIPs:
+    - 192.168.23.201
+    failureDomains:
+    - name: generated-failure-domain
+      region: generated-region
+      server: vcsnsx-vc.infra.demo.redhat.com
+      topology:
+        computeCluster: Cluster-1
+        datacenter: SDDC-Datacenter
+        folder: "/SDDC-Datacenter/vm/Workloads/sandbox-g2lvh"
+        datastore: workload_share_SYmuF
+        networks:
+        - segment-sandbox-g2lvh
+      zone: generated-zone
+    hosts:
+    - role: bootstrap
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.230/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: control-plane
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.231/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: control-plane
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.232/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: control-plane
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.233/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.234/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.235/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.236/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.237/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.238/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    - role: compute
+      networkDevice:
+        ipAddrs:
+        - 192.168.23.239/24
+        gateway: 192.168.23.1
+        nameservers:
+        - 192.168.23.10
+    ingressVIPs:
+    - 192.168.23.202
+    vcenters:
+    - datacenters:
+      - SDDC-Datacenter
+      password: t3N88sBx_ZG0
+      port: 443
+      server: vcsnsx-vc.infra.demo.redhat.com
+      user: sandbox-g2lvh@demo
+publish: External
+pullSecret: '{"auths":{"cloud.openshift.com":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfOTJlMGUzOTA5ZGFlNDRjNjk2MmQ5YmExMDJmODdkNmI6RUVQUzBTQVFUUU8xWEVPTzRDRUxPTFdYR1RKQUpRQVBNQklYTlAzWlhaVDdLSzM4RFBPOUlROUpaM1FNWEhZVg==","email":"ramoreir@redhat.com"},"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K29jbV9hY2Nlc3NfOTJlMGUzOTA5ZGFlNDRjNjk2MmQ5YmExMDJmODdkNmI6RUVQUzBTQVFUUU8xWEVPTzRDRUxPTFdYR1RKQUpRQVBNQklYTlAzWlhaVDdLSzM4RFBPOUlROUpaM1FNWEhZVg==","email":"ramoreir@redhat.com"},"registry.connect.redhat.com":{"auth":"fHVoYy1wb29sLWQ0ZDU4MTRhLTU1MjYtNDdhZC04ODM4LTcyMjQ1ZjFlMDYzZDpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSTBaV016WVRNeU1XUmhZbVEwWlRreFlXWTRaVFU1TldVMk5tVTFORGRpTkNKOS5TZ2lIMmt4NTBmRmhXZFJzeC11UEdCTzdqUEZVMDJjbUtnSlhfbk85ZnQ2a1YzVFlHZ1RXbHRpYXExQ0YzY2pzaVJ1bFlvclRRSzlIaEE3ZWpzcVBhdlZDbVNIc3Nld2VneS0tbVdfcm5Pb2NwVS1oRHhPS0dvUTVFU29JeUdwbDF3YUg5RWlHcmJITDlBWEgtdmlNeUhfN01NZnMyMlpUbGZYcDBfQWZUWXlyY3owbzFsdmFXQTZKMERXQ3pFRzZrUXhzTTFuYUJ0eWthM1R0b1VBWGVwa2NIQVl4Nm9tOUp2UjJtcDlHTFdhSUNyS1pBaWhCZjVLMkdVcDRwb2gyZnpmeVVXRDJOd25CYVgtSG9tSmNadTNSd1FJZzAzQzJOTE9JMDBMN2hUV1pWR1NEWXViNU0tQ0NwS2V0Z1dBVGE2WXE1Y3dMM0RIendkeVA2WGtZRThMVTBhQm1QNHpFanNxa1QxZmlXLXVBOFVKQXN1Vi16eHY3cHkwLXVkQWVBTVRua0w5OXdlSGxJOXhIQmZYZkJHYlNtQno3MXlWd1l2dFNUZ2loQ0RoWmtnaUNMSFBCUnAwYUV4cnhyTEdZRElENjNpVlRjQ04tZS15RDFaSlRtWFB1amt0MGkxQTVUbzVVZ2JQQThJbDExYUd3UDdqVHNzNmdQWGVKSXRIVEZwd3J5OHBOWjhVMTVIYlM3aGE5V00zbjNzbjNvTklXWUtxNlQtQ3NSWVBxWk9vZU9GeDFSMzhJQ2d2Z21ZTWRGS1BzblVQSjZJZjhjWUxBa3BPT0ExNTBlY2RZUHlvRXQtd1lyMlU1a3pzYWdmcEUyazNtcFhMMEtPRXNpZWVPbW9HSlpTalU5UkotLTZlLXZ1TGNSTHkzOF9KaFNBNmZSbXJxZjBKaXFWbw==","email":"ramoreir@redhat.com"},"registry.redhat.io":{"auth":"fHVoYy1wb29sLWQ0ZDU4MTRhLTU1MjYtNDdhZC04ODM4LTcyMjQ1ZjFlMDYzZDpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSTBaV016WVRNeU1XUmhZbVEwWlRreFlXWTRaVFU1TldVMk5tVTFORGRpTkNKOS5TZ2lIMmt4NTBmRmhXZFJzeC11UEdCTzdqUEZVMDJjbUtnSlhfbk85ZnQ2a1YzVFlHZ1RXbHRpYXExQ0YzY2pzaVJ1bFlvclRRSzlIaEE3ZWpzcVBhdlZDbVNIc3Nld2VneS0tbVdfcm5Pb2NwVS1oRHhPS0dvUTVFU29JeUdwbDF3YUg5RWlHcmJITDlBWEgtdmlNeUhfN01NZnMyMlpUbGZYcDBfQWZUWXlyY3owbzFsdmFXQTZKMERXQ3pFRzZrUXhzTTFuYUJ0eWthM1R0b1VBWGVwa2NIQVl4Nm9tOUp2UjJtcDlHTFdhSUNyS1pBaWhCZjVLMkdVcDRwb2gyZnpmeVVXRDJOd25CYVgtSG9tSmNadTNSd1FJZzAzQzJOTE9JMDBMN2hUV1pWR1NEWXViNU0tQ0NwS2V0Z1dBVGE2WXE1Y3dMM0RIendkeVA2WGtZRThMVTBhQm1QNHpFanNxa1QxZmlXLXVBOFVKQXN1Vi16eHY3cHkwLXVkQWVBTVRua0w5OXdlSGxJOXhIQmZYZkJHYlNtQno3MXlWd1l2dFNUZ2loQ0RoWmtnaUNMSFBCUnAwYUV4cnhyTEdZRElENjNpVlRjQ04tZS15RDFaSlRtWFB1amt0MGkxQTVUbzVVZ2JQQThJbDExYUd3UDdqVHNzNmdQWGVKSXRIVEZwd3J5OHBOWjhVMTVIYlM3aGE5V00zbjNzbjNvTklXWUtxNlQtQ3NSWVBxWk9vZU9GeDFSMzhJQ2d2Z21ZTWRGS1BzblVQSjZJZjhjWUxBa3BPT0ExNTBlY2RZUHlvRXQtd1lyMlU1a3pzYWdmcEUyazNtcFhMMEtPRXNpZWVPbW9HSlpTalU5UkotLTZlLXZ1TGNSTHkzOF9KaFNBNmZSbXJxZjBKaXFWbw==","email":"ramoreir@redhat.com"}}}'
+sshKey: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDj/m6eJPBKpbctKX+rSQIDFqOnPyLfXoBrIZAkJh0AkpE1ld1W+9KGAx54epIDev4eXYeJf09BQGw8Hc1iG+OzmWRL1gUtpNpanDVRoqEzYbMOEbm7+WG6cT2nLxXHoeYrG8gCoeKP/kJRme9xt+6Ejc1WuRKD8xunFTJA6wRxpexfn3ujYBYIW7kxkJWc2EmxCCwveqBoy2v/a194e88wbCic9zYPq41Znky0dwFPGZsFJ0kVUsHlVeYXmk1ZxrJ1k1Hfsn1p2ynSCEHzdic0gb0EN1LxMdINQy0h/NoPehC6A46rVsvnSFo+LLvNlMJbD2JclHb+r+Y+jl1+5ATAH+3e0CFuRkP04NNa8FlbYDZ3GPktV2VKAXMfDUsUY9sxxXuPeNL6XdNvTGu18ozHnLS03i0M8kPABW/HWkfqjLHd32gQqLkZ+LChLsYRSfU717t894gLT+kxQG0S9VHaXQKtmuxbTHresoBSQZuKqO18ky9133q8dOmfA8ciyQc= root@bastion-g2lvh

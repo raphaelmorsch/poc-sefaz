@@ -1,0 +1,47 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  labels:
+    machine.openshift.io/cluster-api-cluster: esteno-trnsn
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker 
+    machine.openshift.io/region:
+    machine.openshift.io/zone:
+    sas.profile: sas-stateless
+  name: esteno-sas-stateless-worker-0
+  namespace: openshift-machine-api
+spec:
+  lifecycleHooks: {}
+  metadata: {}
+  providerSpec:
+    value:
+      apiVersion: machine.openshift.io/v1beta1
+      credentialsSecret:
+        name: vsphere-cloud-credentials
+      diskGiB: 200
+      kind: VSphereMachineProviderSpec
+      memoryMiB: 131072
+      metadata:
+        creationTimestamp: null
+      network:
+        devices:
+        - gateway: 192.168.23.1 
+          ipAddrs:
+          - 192.168.23.210/24 
+          nameservers: 
+          - 192.168.23.10
+          networkName: segment-sandbox-g2lvh
+      numCPUs: 16
+      numCoresPerSocket: 4
+      snapshot: ""
+      template: esteno-trnsn-rhcos-generated-region-generated-zone
+      userDataSecret:
+        name: worker-user-data
+      workspace:
+        datacenter: "SDDC-Datacenter" 
+        datastore: "SDDC-Datacenter/datastore/workload_share_SYmuF" 
+        folder: "/SDDC-Datacenter/vm/Workloads/sandbox-g2lvh" 
+        server: vcsnsx-vc.infra.demo.redhat.com 
+  nodeLabels:
+    sas.profile: sas-compute     
+status: {}
