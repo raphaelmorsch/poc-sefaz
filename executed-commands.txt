@@ -1,0 +1,207 @@
+    1  systemctl status dhcpd
+    2  systemctl status nameserver
+    3  clear
+    4  systemctl list
+    5  systemctl list-units
+    6  systemctl list-units | grep dhcp
+    7  clear
+    8  OCP_VERSION=4.16.23
+    9  MIRROR=mirror.openshift.com/pub/openshift-v4/clients
+   10  wget > https://{MIRROR}/ocp/${OCP_VERSION}/openshift-install-linux-${OCP_VERSION}.tar.gz
+   11  wget https://${MIRROR}/ocp/${OCP_VERSION}/openshift-install-linux-${OCP_VERSION}.tar.gz
+   12  ls
+   13  exit
+   14  clear
+   15  cd install-ocp4/
+   16  wget https://${MIRROR}/ocp/${OCP_VERSION}/openshift-install-linux-${OCP_VERSION}.tar.gz
+   17  cat ~/.bashrc 
+   18  vim ~/.bashrc 
+   19  echo $MIRROR
+   20  exit
+   21  echo $MIRROR
+   22  clear
+   23  echo $MIRROR 
+   24  echo $OCP_VERSION 
+   25  wget https://${MIRROR}/ocp/${OCP_VERSION}/openshift-install-linux-${OCP_VERSION}.tar.gz
+   26  tar zxvf openshift-install-linux-${OCP_VERSION}.tar.gz -C /usr/bin
+   27  rm -f openshift-install-linux-${OCP_VERSION}.tar.gz
+   28  chmod +x /usr/bin/openshift-install
+   29  openshift-install -version
+   30  openshift-install version
+   31  wget https://${MIRROR}/ocp/${OCP_VERSION}/openshift-client-linux-${OCP_VERSION}.tar.gz
+   32  tar zxvf openshift-client-linux-${OCP_VERSION}.tar.gz -C /usr/bin/
+   33  rm -f openshift-client-linux-${OCP_VERSION}.tar.gz
+   34  chmod +x /usr/bin/oc
+   35  oc completion bash >/etc/bash_completion.d/openshift
+   36  oc version
+   37  su - user
+   38  ssh-keygen -f \$\{HOME\}/.ssh/ocp416-key -N ''
+   39  ssh-keygen
+   40  cat ~/.ssh/id_rsa.pub 
+   41  clear 
+   42  systemctl status named
+   43  yum install named
+   44  clear
+   45  yum install bind bind-utils
+   46  history > install-ocp4/executed-commands.txt
+   47  cat install-ocp4/executed-commands.txt 
+   48  systemctl status named
+   49  vim /etc/named.conf 
+   50  cp /etc/named.conf /etc/named-old.conf
+   51  vim /etc/named.conf 
+   52  nmcli device show | grep IP4.DNS
+   53  nmcli dev show | grep DNS
+   54  dig google.com
+   55  nmap -sP 192.168.23.0/24
+   56  yum install nmap
+   57  nmap -sP 192.168.23.0/24
+   58  dig -x 192.168.23.10
+   59  dig -x 192.168.23.2
+   60  hostname
+   61  host 192.168.23.10
+   62  vim /etc/named.conf 
+   63  vim /var/named/fazenda.mg.example.com
+   64  ip addr
+   65  vim /var/named/fazenda.mg.example.com
+   66  vim /var/named/cluster.fazenda.mg.example.com
+   67  chown named:named /var/named/fazenda.mg.example.com.zone
+   68  mv /var/named/fazenda.mg.example.com /var/named/fazenda.mg.example.com.zone
+   69  mv /var/named/cluster.fazenda.mg.example.com /var/named/cluster.fazenda.mg.example.com.zone
+   70  chown named:named /var/named/fazenda.mg.example.com.zone 
+   71  chown named:named /var/named/cluster.fazenda.mg.example.com.zone 
+   72  systemctl restart named
+   73  systemctl enable named.service 
+   74  systemctl enable named
+   75  dig @192.168.23.10 api.g2lvh.dynamic.redhatworkshops.io 
+   76  dig @192.168.23.10 anything.apps.g2lvh.dynamic.redhatworkshops.io
+   77  curl -v test.apps.g2lvh.dynamic.redhatworkshops.io
+   78  ç
+   79  ping test.apps.g2lvh.dynamic.redhatworkshops.io
+   80  ping 192.168.23.201
+   81  systemctl status named
+   82  cat /var/named/fazenda.mg.example.com.zone 
+   83  cat /etc/named.conf 
+   84  exit
+   85  vim /etc/named.conf 
+   86  clear
+   87  less /etc/named.conf 
+   88  vim /etc/named.conf 
+   89  vim /var/named/23.168.192.reverse
+   90  vim /var/named/g2lvh.dynamic.redhatworkshops.io.zone 
+   91  vim /etc/named.conf 
+   92  systemctl restart named
+   93  journalctl -xeu named.service
+   94  vim /var/named/g2lvh.dynamic.redhatworkshops.io.zone 
+   95  vim /var/named/23.168.192.reverse 
+   96  vim /var/named/g2lvh.dynamic.redhatworkshops.io.zone 
+   97  systemctl restart named
+   98  journalctl -xeu named.service
+   99  vim /var/named/23.168.192.reverse 
+  100  systemctl restart named
+  101  journalctl -xeu named.service
+  102  vim /var/named/23.168.192.reverse 
+  103  systemctl restart named
+  104  dig api.g2lvh.dynamic.redhatworkshops.io
+  105  rm -rf /var/named/esteno.g2lvh.dynamic.redhatworkshops.io.zone 
+  106  systemctl restart named
+  107  chown named:named /var/named/g2lvh.dynamic.redhatworkshops.io.zone 
+  108  chown named:named /var/named/23.168.192.reverse 
+  109  systemctl restart named
+  110  systemctl enable named
+  111  nslookup api.g2lvh.dynamic.redhatworkshops.io
+  112  vim /etc/named.conf 
+  113  systemctl restart named
+  114  journalctl -xeu named.service
+  115  vim /etc/named.conf 
+  116  vim /etc/resolv.conf 
+  117  systemctl restart named
+  118  dig api.g2lvh.dynamic.redhatworkshops.io
+  119  vim /etc/resolv.conf 
+  120  systemctl restart named
+  121  dig api.g2lvh.dynamic.redhatworkshops.io
+  122  dig test.apps.g2lvh.dynamic.redhatworkshops.io
+  123  cd install-ocp4/
+  124  openshift-install wait-for bootstrap-complete --log-level debug 
+  125  ls -la 
+  126  vim install-config.yaml
+  127  cp install-config.yaml install-config-bkp.yaml
+  128  openshift-install wait-for bootstrap-complete --log-level debug 
+  129  openshift-install create cluster
+  130  vim install-config.yaml
+  131  openshift-install create cluster --log-level=debug
+  132  openshift-install destroy cluster
+  133  vim /etc/named.conf 
+  134  vim /var/named/g2lvh.dynamic.redhatworkshops.io.zone 
+  135  vim /var/named/23.168.192.reverse 
+  136  systemctl restart named
+  137  dig api.esteno.g2lvh.dynamic.redhatworkshops.io
+  138  dig test.apps.g2lvh.dynamic.redhatworkshops.io
+  139  cat /var/named/23.168.192.reverse 
+  140  openshift-install create install-config
+  141  vim install-config.yaml 
+  142  rm -rf install-config.yaml 
+  143  cp install-config-bkp.yaml install-config.yaml
+  144  vim install-config.yaml 
+  145  openshift-install create manifests
+  146  vim install-config-bkp.yaml 
+  147  cp install-config-bkp.yaml install-openshift.yaml
+  148  openshift-install wait-for bootstrap complete --log-level=debug
+  149  openshift-install wait-for bootstrap-complete --log-level=debug
+  150  ls -la
+  151  cd cluster-api/
+  152  ls
+  153  cd machines/
+  154  ls
+  155  vim 10_machine_esteno-7pk8m-master-0.yaml 
+  156  cd ..
+  157  openshift-install create cluster --log-level=debug
+  158  ssh core@192.168.23.230
+  159  sudo -i
+  160  journalctl -b -f -u bootkube.service
+  161  cd install-ocp4/
+  162  vim install-config-bkp.yaml 
+  163  vim pull-secret.json
+  164  openshift-install gather bootstrap
+  165  podman login quay.io --authfile=pull-secret.json 
+  166  nslookup quay.io
+  167  ls -la
+  168  cat .openshift_install.log 
+  169  curl -I https://quay.io/v2
+  170  curl -I quay.io/openshift-release-dev/ocp-release@sha256:be725d2e56befbcb28068207b77d731650ad2c82ae77630f46631af750894347
+  171  dig https://quay.io
+  172  dig quay.io
+  173  dig quay.io/v2
+  174  vim install-config-bkp.yaml 
+  175  ping 192.168.23.230
+  176  ssh -i ~/.ssh/id_rsa core@192.168.23.230
+  177  systemctl status firewalld
+  178  firewall-cmd --zone=public --add-service=dns --permanent
+  179  sudo firewall-cmd --zone=public --add-port=53/udp --permanent
+  180  sudo firewall-cmd --zone=public --add-port=53/tcp --permanent
+  181  firewall-cmd --reload
+  182  firewall-cmd --zone=public --list-all
+  183  nslookup api.g2lvh.dynamic.redhatworkshops.io
+  184  api.esteno.g2lvh.dynamic.redhatworkshops.io
+  185  nslookup api.esteno.g2lvh.dynamic.redhatworkshops.io
+  186  ssh -i ~/.ssh/id_rsa core@192.168.23.230
+  187  openshift-install destroy cluster
+  188  cp install-config-bkp.yaml install-config.yaml
+  189  openshift-install create cluster
+  190  cd install-ocp4/
+  191  ls -la
+  192  KUBECONFIG=auth/kube
+  193  oc get co
+  194  echo "export KUBECONFIG=/root/install-ocp4/auth/kubeconfig" >> ~/.bashrc 
+  195  oc get co
+  196  exit
+  197  echo $KUBECONFIG
+  198  oc get po
+  199  oc get co
+  200  cd install-ocp4/
+  201  ls  -la
+  202  cat auth/kubeadmin-password 
+  203  oc whoami --show-console 
+  204  curl -v https://console-openshift-console.apps.esteno.g2lvh.dynamic.redhatworkshops.io
+  205  history > install-ocp4/executed-commands.txt
+  206  history >> install-ocp4/executed-commands.txt
+  207  history > executed-commands.txt

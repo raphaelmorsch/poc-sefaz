@@ -1,0 +1,24 @@
+$TTL 86400
+@   IN  SOA ns1.g2lvh.dynamic.redhatworkshops.io. admin.g2lvh.dynamic.redhatworkshops.io. (
+        2024113001  ; Serial (modifique sempre que editar)
+        3600        ; Refresh
+        1800        ; Retry
+        1209600     ; Expire
+        86400       ; Minimum TTL
+)
+
+    IN  NS  ns1.g2lvh.dynamic.redhatworkshops.io.
+
+10   IN  PTR ns1.g2lvh.dynamic.redhatworkshops.io.
+201  IN  PTR api.esteno.g2lvh.dynamic.redhatworkshops.io.
+201  IN  PTR api-int.esteno.g2lvh.dynamic.redhatworkshops.io.
+202  IN  PTR apps.esteno.g2lvh.dynamic.redhatworkshops.io.
+231  IN  PTR master01.g2lvh.dynamic.redhatworkshops.io.
+232  IN  PTR master02.g2lvh.dynamic.redhatworkshops.io.
+233  IN  PTR master03.g2lvh.dynamic.redhatworkshops.io.
+234  IN  PTR worker01.g2lvh.dynamic.redhatworkshops.io.
+235  IN  PTR worker02.g2lvh.dynamic.redhatworkshops.io.
+236  IN  PTR worker03.g2lvh.dynamic.redhatworkshops.io.
+237  IN  PTR worker04.g2lvh.dynamic.redhatworkshops.io.
+238  IN  PTR worker05.g2lvh.dynamic.redhatworkshops.io.
+239  IN  PTR worker06.g2lvh.dynamic.redhatworkshops.io.
