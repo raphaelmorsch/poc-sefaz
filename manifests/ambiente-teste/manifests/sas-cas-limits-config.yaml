@@ -1,0 +1,22 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  name: sas-cas-limits-config
+  labels:
+    machineconfiguration.openshift.io/role: sas-cas
+spec:
+  config:
+    ignition:
+      version: 3.2.0
+    storage:
+      files:
+      - path: /etc/security/limits.conf
+        mode: 0644
+        contents:
+          source: |
+            data:text/plain;charset=utf-8,*
+            # Custom limits for sas-cas nodes
+            * soft nofile 150000
+            * hard nofile 150000
+            * soft nproc 100000
+            * hard nproc 100000
