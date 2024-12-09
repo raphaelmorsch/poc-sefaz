@@ -1,0 +1,1115 @@
+   30  oc logs -n openshift-etcd -l app=etcd
+   31  podman run --volume /var/lib/etcd:/var/lib/etcd:Z quay.io/cloud-bulldozer/etcd-perf
+   32  oc get no
+   33  ssh core@172.23.218.104
+   34  oc get no
+   35  oc get etcd/cluster
+   36  oc describe etcd/cluster | grep "Control Plane Hardware Speed"
+   37  oc describe etcd/cluster
+   38  oc ge tno
+   39  oc get no
+   40  oc get no esteno-bc7r5-master-2 -o yaml
+   41  oc get no esteno-bc7r5-master-2 -o yaml |grep -B5 KernelDeadlock
+   42  oc get ns |grep openshift-cluster-storage-operator
+   43  oc get event -n openshift-cluster-storage-operator     --sort-by={.metadata.creationTimestamp}
+   44  oc get cm 
+   45  oc get ns
+   46  oc get ns | grep etcd
+   47  oc get cm -n openshift-etcd
+   48  oc get cm cluster-config-v1 -n openshift-etcd -o yaml
+   49  oc get nodes -o custom-columns=NAME:.metadata.name,PROVIDER_ID:.spec.providerID,UUID:.status.nodeInfo.systemUUID
+   50  oc get no
+   51  oc get no -o wide
+   52  ls -lh 
+   53  cd /mnt/
+   54  ls -lh
+   55  . .p
+   56  . .profile 
+   57  clear
+   58  ssh core@172.23.218.102
+   59  ssh core@172.23.218.103
+   60  ssh core@172.23.218.104
+   61  exit
+   62  . .profile 
+   63  clear
+   64  oc get mcp
+   65  clear
+   66  oc get co
+   67  ssh core@172.23.218.104
+   68  oc get co
+   69  clear
+   70  oc get co
+   71  . .profile 
+   72  oc get co
+   73  clear
+   74  oc get co
+   75  ssh core@172.23.218.104
+   76  oc get events
+   77  export KUBECONFIG=/root/ocp4install/auth/kubeconfig 
+   78  oc get events
+   79  oc get no
+   80  ssh core@172.23.218.104
+   81  df -h 
+   82  ls -lh /mnt/
+   83  ls -lh /mnt/test_disk/
+   84  top
+   85  ssh core@172.23.218.104
+   86  ls -lh 
+   87  ps -ef |grep iostat
+   88  ssh core@172.23.218.104
+   89  oc get no
+   90  oc adm drain esteno-bc7r5-master-0 --delete-emptydir-data --ignore-daemonsets=true --force
+   91  oc get no
+   92  kubectl get no
+   93  export KUBECONFIG=/root/ocp4install/auth/kubeconfig 
+   94  kubectl get no
+   95  koc adm cordon esteno-bc7r5-master-2 
+   96  oc adm cordon esteno-bc7r5-master-2 
+   97  oc adm drain esteno-bc7r5-master-2
+   98  oc adm drain esteno-bc7r5-master-2 --ignore-daemonsets --delete-emptydir-data
+   99  oc get no
+  100  kubectl get no
+  101  kubectl get no -o wide
+  102  ping 172.23.218.104
+  103  oc get no
+  104  oc uncordon esteno-bc7r5-master-2
+  105  oc adm uncordon esteno-bc7r5-master-2
+  106  oc get no
+  107  ssh core@172.23.218.102
+  108  ssh core@172.23.218.103
+  109  ssh core@172.23.218.104
+  110  kubectl get no
+  111  oc adm cordon esteno-bc7r5-master-1 
+  112  oc adm drain esteno-bc7r5-master-1 --ignore-daemonsets --delete-emptydir-data
+  113  oc adm drain esteno-bc7r5-master-1 --ignore-daemonsets --delete-emptydir-data --force
+  114  oc get no
+  115  #oc adm cordon esteno-bc7r5-master-1 
+  116  ssh core@172.23.218.103
+  117  oc adm uncordon esteno-bc7r5-master-1 
+  118  oc get no
+  119  oc get not
+  120  oc get no
+  121  oc get events
+  122  oc get cs
+  123  history
+  124  oc get co
+  125  oc get cs
+  126  oc get clusteroperator
+  127  oc get pod -n openshift-etcd
+  128  oc exec -n openshift-etcd -c etcd <etcd-pod-name> -- etcdctl endpoint health
+  129  oc get pod -n openshift-etcd
+  130  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- etcdctl endpoint health
+  131  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-1 -- etcdctl endpoint health
+  132  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-2 -- etcdctl endpoint health
+  133  oc get no
+  134  oc adm cordon esteno-bc7r5-master-0
+  135  #oc adm drain esteno-bc7r5-master-0 --ignore-daemonsets --delete-emptydir-data --force
+  136  oc get no
+  137  oc adm drain esteno-bc7r5-master-0 --ignore-daemonsets --delete-emptydir-data --force
+  138  oc get no
+  139  ssh core@172.23.218.101
+  140  ssh core@172.23.218.102
+  141  oc get no
+  142  oc adm uncordon esteno-bc7r5-master-0
+  143  oc get no
+  144  oc adm must-gather -- /usr/bin/gather_audit_logs
+  145  oc get no
+  146  oc get cs
+  147  oc get componentstatuses 
+  148  oc get clusteroperator
+  149  pwd
+  150  ls -lh
+  151  cd /tmp/
+  152  oc adm must-gather -- /usr/bin/gather_audit_logs
+  153  ls -lh
+  154  tar -czvf must-gather.local.9209457912535318201 must-gather.local.9209457912535318201.tar.gz
+  155  tar -czvf must-gather.local.9209457912535318201.tar.gz must-gather.local.9209457912535318201
+  156  ls -lh
+  157  scp -P 2222 must-gather.local.9209457912535318201.tar.gz dlopes@172.23.202.163:/home/dlopes/Downloads/
+  158  ssh core@172.23.218.102
+  159  ssh core@172.23.218.103
+  160  ssh core@172.23.218.104
+  161  kubectl get no
+  162  history | grep etcd
+  163  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- etcdctl endpoint health
+  164  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- etcd etcdctl endpoint status --write-out table
+  165  ￼
+  166  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- etcdctl endpoints status --write-out table
+  167  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- etcdctl endpoint health
+  168  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- etcdctl endpoint status 
+  169  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- etcdctl endpoint status --write-out table
+  170  oc exec -n openshift-etcd -c etcd etcd-esteno-bc7r5-master-0 -- curl -L http://localhost:2379/metrics
+  171  ssh core@172.23.218.104
+  172  oc get no
+  173  oc debug node/esteno-bc7r5-master-0
+  174  oc get machineConfig
+  175  oc get machineConfig 00-master -o yaml
+  176  oc get machineConfig 00-master -o yaml | grep etcd
+  177  oc get machineConfig 00-master -o yaml | less
+  178  oc get mcp
+  179  nslookup api.esteno.fazenda.mg.gov.br
+  180  ssh core@172.23.218.104
+  181  ssh core@172.23.218.103
+  182  ssh core@172.23.218.102
+  183  ssh core@172.23.218.104
+  184  df -h /
+  185  cd /
+  186  vim io-test-disk.sh
+  187  df -h /mnt/
+  188  source io-test-disk.sh 
+  189  . .profile 
+  190  oc get co
+  191  # oc get co
+  192  The connection to the server api.esteno.fazenda.mg.gov.br:6443 was refused - did you specify the right host or port?
+  193  # oc get co
+  194  oc get node
+  195  oc get co
+  196  oc get ipaddresses.ipam.cluster.x-k8s.io 
+  197  oc delete ipaddresses.ipam.cluster.x-k8s.io esteno-sas-postgres-ipaddress-0-111 
+  198  oc get ipaddressclaims.ipam.cluster.x-k8s.io 
+  199  oc delete ipaddressclaims.ipam.cluster.x-k8s.io esteno-sas-postgres-5lzc4-claim-0-0 
+  200  oc get machinesets.machine.openshift.io 
+  201  oc delete machinesets.machine.openshift.io esteno-sas-postgres 
+  202  dig 172.23.218.111 -x
+  203  dig -x 172.23.218.111 
+  204  nmap -sn 172.23.218.0/24
+  205  git pull
+  206  cd poc-sefaz/
+  207  git pull
+  208  clear
+  209  oc get co
+  210  clear
+  211  oc whoami --show-console 
+  212  . .profile 
+  213  oc get co
+  214  oc get no
+  215  watch oc get co
+  216  oc get no
+  217  oc get co
+  218  watch oc get co
+  219  git clone https://raphaelmorsch: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@github.com/raphaelmorsch/poc-sefaz.git
+  220  cd poc-sefaz/
+  221  cd ..
+  222  clear
+  223  cd poc-sefaz/
+  224  git status
+  225  cd ..
+  226  rm -rf poc-sefaz/
+  227  git clone https://raphaelmorsch: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@github.com/raphaelmorsch/poc-sefaz.git
+  228  clear
+  229  oc project openshift-machine-api 
+  230  oc get machineset
+  231  oc apply -f poc-sefaz/manifests/sas-postgres-machineset.yaml 
+  232  oc describe machineset/esteno-bc7r5-worker-0
+  233  cd poc-sefaz/
+  234  git fetch
+  235  git pull
+  236  oc get co
+  237  oc apply -f manifests/sas-postgres-machineset.yaml 
+  238  git fetch 
+  239  git pull
+  240  oc apply -f manifests/sas-postgres-machineset.yaml 
+  241  git pull
+  242  oc apply -f manifests/sas-postgres-machineset.yaml 
+  243  oc get machine
+  244  oc describe machine/esteno-sas-postgres-4hv2s 
+  245  oc get machine
+  246  oc get co
+  247  oc get machine
+  248  ssh core@172.23.218.113
+  249  ping 172.23.218.113
+  250  oc describe machine/esteno-sas-postgres-fm8ch 
+  251  watch oc get co
+  252  oc get csr
+  253  oc get po
+  254  oc logs machine-api-api-operator-79d8fb4c98-p6b8v
+  255  oc logs pod/machine-api-operator-79d8fb4c98-p6b8v -n openshift-machine-api 
+  256  oc logs pod/machine-api-operator-79d8fb4c98-p6b8v -n openshift-machine-api >> machine-operator.log
+  257  git add .
+  258  git commit
+  259  git push
+  260  oc get co
+  261  oc get machine
+  262  oc get mcp
+  263  oc get machine/esteno-sas-postgres-4hv2s 
+  264  oc get machine/esteno-sas-postgres-4hv2s -o wide
+  265  oc get machine/esteno-sas-postgres-4hv2s -o yaml
+  266  nmap -sn 172.23.218.0/24
+  267  oc logs -n openshift-machine-api deployment/machine-controller
+  268  oc logs -n openshift-machine-api deployment/machine-api-controllers 
+  269  oc delete machineset/esteno-sas-postgres 
+  270  oc get machines
+  271  oc get co
+  272  oc adm top nodes
+  273  oc exec -n openshift-monitoring prometheus-k8s-0 -- curl http://localhost:9090/api/v1/query --data-urlencode 'query=node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes'
+  274  oc adm top pods -A
+  275  oc adm top pods -A | grep console
+  276  oc get po -n openshift-console
+  277  oc get machineset
+  278  oc describe machineset/esteno-bc7r5-worker-0
+  279  git pull
+  280  oc apply -f manifests/sas-postgres-machineset.yaml 
+  281  watch oc get machine
+  282  oc describe machine/esteno-sas-postgres-26gfg
+  283  oc delete machinesets.machine.openshift.io/esteno-sas-postgres 
+  284  oc describe machineset/esteno-bc7r5-worker-0
+  285  oc describe machineset/esteno-bc7r5-worker-0 >> manifests/esteno-worker-machineset.yaml
+  286  git add .
+  287  git commit
+  288  git push
+  289  oc get ipaddressclaims.ipam.cluster.x-k8s.io 
+  290  oc describe ipaddressclaims.ipam.cluster.x-k8s.io esteno-bc7r5-worker-5-claim-0-0 
+  291  oc get ippools.whereabouts.cni.cncf.io 
+  292  oc get ipaddresses.ipam.cluster.x-k8s.io 
+  293  git pull
+  294  oc apply -f manifests/sas-postgres-machineset.yaml 
+  295  oc get machine
+  296  oc scale machineset esteno-sas-postgres -n openshift-machine-api --replicas=1
+  297  oc get ipaddressclaims.ipam.cluster.x-k8s.io 
+  298  git pull
+  299  oc create -f manifests/ipaddress-postgres.yaml 
+  300  git pull
+  301  oc create -f manifests/ipaddress-postgres.yaml 
+  302  oc --type=merge patch IPAddressClaim esteno-sas-postgres-5lzc4-claim-0-0 -p='{"status":{"addressRef": {"name": "esteno-sas-postgres-ipaddress-0-111"}}}' -n openshift-machine-api --subresource=status
+  303  oc get machine
+  304  oc describe machine/esteno-sas-postgres-5lzc4 
+  305  oc get machine
+  306  oc ge co
+  307  oc get co
+  308  oc get machine
+  309  oc describe machines.machine.openshift.io esteno-bc7r5-worker-1 >> manifests/esteno-worker1-machine.yaml
+  310  git add .
+  311  git commit 
+  312  git push
+  313  oc get co
+  314  oc get mcp
+  315  oc get machineset
+  316  oc get nodes
+  317  vim manifests/install-config-sefaz.yaml 
+  318  oc get machines
+  319  oc describe machines.machine.openshift.io esteno-bc7r5-worker-5
+  320  oc get machine/esteno-bc7r5-worker-5 -o yaml
+  321  oc get machine/esteno-bc7r5-worker-5 -o yaml >> manifests/machine-worker-example.yaml
+  322  vim manifests/machine-worker-example.yaml 
+  323  rm -rf manifests/machine-worker-example.yaml 
+  324  git pull
+  325  vim manifests/esteno-sas-postgres-machine.yaml 
+  326  git pull
+  327  vim manifests/esteno-sas-postgres-machine.yaml 
+  328  cat manifests/sas-postgres-machineset.yaml 
+  329  vim manifests/esteno-sas-postgres-machine.yaml 
+  330  oc create -f manifests/esteno-sas-postgres-machine.yaml 
+  331  oc get machines
+  332  oc describe machines.machine.openshift.io esteno-sas-postgres-worker-1 
+  333  oc get machines
+  334  oc describe machines.machine.openshift.io esteno-sas-postgres-worker-1 
+  335  oc get machines
+  336  oc get csr
+  337  oc get machines
+  338  oc get nodes
+  339  oc get nodes --show-labels | grep postgres
+  340  oc get nodes
+  341  oc describe machines.machine.openshift.io esteno-sas-postgres-worker-1 
+  342  git pull
+  343  vim manifests/esteno-sas-postgres-machine.yaml 
+  344  oc create -f manifests/esteno-sas-postgres-machine.yaml 
+  345  oc get machines
+  346  oc describe machines.machine.openshift.io esteno-sas-postgres-worker-2
+  347  oc get machines
+  348  oc get csr
+  349  oc get machines
+  350  oc get csr
+  351  oc get machines
+  352  vim manifests/esteno-sas-postgres-machine.yaml 
+  353  cat manifests/esteno-sas-postgres-machine.yaml 
+  354  oc get machines
+  355  oc get csr
+  356  oc get machines
+  357  oc get nodes --show-labels | grep postgres
+  358  git pull
+  359  vim manifests/esteno-sas-postgres-machine.yaml 
+  360  oc create -f manifests/esteno-sas-postgres-machine.yaml 
+  361  oc describe machines.machine.openshift.io esteno-sas-postgres-worker-3
+  362  oc get csr
+  363  clear
+  364  oc get machines
+  365  oc label machine esteno-sas-postgres-worker-1 esteno-sas-postgres-worker-2 esteno-sas-postgres-worker-3 sas.profile=sas-postgres
+  366  oc label machine esteno-sas-postgres-worker-2 esteno-sas-postgres-worker-3 sas.profile=sas-postgres
+  367  oc label machine esteno-sas-postgres-worker-2  sas.profile=sas-postgres
+  368  oc get machines --show-labels | grep postgres
+  369  oc get nodes
+  370  git pull
+  371  vim manifests/esteno-sas-system-machine.yaml 
+  372  clear
+  373  oc create -f manifests/esteno-sas-system-machine.yaml 
+  374  oc get machines
+  375  watch oc get csr
+  376  oc describe machines.machine.openshift.io esteno-sas-system-worker-1 
+  377  oc get machines
+  378  oc get csr
+  379  oc get machines
+  380  oc get csr
+  381  oc get nodes --show-labels | grep system
+  382  oc get machines --show-labels | grep system
+  383  oc get nodes | grep postgres
+  384  oc label nodes esteno-sas-postgres-worker-1 esteno-sas-postgres-worker-2 esteno-sas-postgres-worker-3 sas.profile=sas-postgres
+  385  oc get nodes | grep system
+  386  oc label nodes esteno-sas-system-worker-1 sas.profile=sas-system
+  387  oc get nodes --show-labels | grep sas
+  388  git pull
+  389  vim manifests/esteno-sas-cas-machine.yaml 
+  390  clear
+  391  oc create -f manifests/esteno-sas-cas-machine.yaml 
+  392  oc get machines
+  393  oc get csr
+  394  clear
+  395  oc describe machines.machine.openshift.io esteno-sas-cas-worker-1 
+  396  clear
+  397  oc get machines
+  398  oc get csr
+  399  clear
+  400  oc get csr
+  401  oc get machines
+  402  oc get nodes
+  403  watch oc get nodes
+  404  clear
+  405  oc get nodes --show-labels | grep cas
+  406  oc get machines --show-labels | grep cas
+  407  oc label nodes esteno-sas-cas-worker-1 sas.profile=sas-cas
+  408  git pull
+  409  oc create -f manifests/esteno-sas-cas-machine.yaml 
+  410  clear
+  411  oc get machines
+  412  clear
+  413  oc get csr
+  414  clear 
+  415  oc get csr
+  416  oc get nodes
+  417  oc label nodes esteno-sas-cas-worker-2 sas.profile=sas-cas
+  418  git pull
+  419  oc create -f manifests/esteno-sas-cas-machine.yaml 
+  420  clear
+  421  watch oc get machines
+  422  oc get nodes
+  423  watch oc get nodes
+  424  oc label nodes esteno-sas-cas-worker-3 sas.profile=sas-cas
+  425  clear
+  426  git pull
+  427  oc create -f manifests/esteno-sas-cas-machine.yaml 
+  428  watch oc get nodes
+  429  oc get machines
+  430  watch oc get machines
+  431  oc get nodes
+  432  watch oc get nodes
+  433  oc label nodes esteno-sas-cas-worker-4 sas.profile=sas-cas
+  434  clear
+  435  git pull
+  436  oc create -f manifests/esteno-sas-compute-machine.yaml 
+  437  watch oc get machines
+  438  oc get nodes esteno-sas-cas-worker-1 --show-labels 
+  439  watch oc get machines
+  440  oc describe machines.machine.openshift.io esteno-sas-compute-worker-1 
+  441  oc delete machines.machine.openshift.io esteno-sas-compute-worker-1 
+  442  git pull
+  443  oc create -f manifests/esteno-sas-compute-machine.yaml 
+  444  oc get machine
+  445  oc describe machines.machine.openshift.io esteno-sas-compute-worker-1 
+  446  clear
+  447  watch oc get machine
+  448  oc get nodes
+  449  oc label nodes esteno-sas-compute-worker-1 sas.profile=sas-compute
+  450  git pull
+  451  oc create -f manifests/esteno-sas-compute-machine.yaml 
+  452  oc describe machines.machine.openshift.io esteno-sas-compute-worker-2 
+  453  watch oc get machine
+  454  watch oc get nodes
+  455  oc label nodes esteno-sas-compute-worker-2 sas.profile=sas-compute
+  456  git pull
+  457  oc create -f manifests/esteno-sas-stateless-machine.yaml 
+  458  oc describe machines.machine.openshift.io esteno-sas-stateless-worker-1 
+  459  watch oc get machine
+  460  oc get nodes
+  461  clear
+  462  git pull
+  463  vim manifests/sas-stateful-machineset.yaml 
+  464  oc create -f manifests/sas-stateful-machineset.yaml 
+  465  oc describe machine esteno-sas-stateful-59r6z 
+  466  watch oc get machine
+  467  oc describe machine esteno-sas-stateful-59r6z 
+  468  oc get csr
+  469  watch oc get machine
+  470  oc get csr
+  471  oc describe machine esteno-sas-stateful-59r6z 
+  472  oc get machines
+  473  oc delete machinesets.machine.openshift.io esteno-sas-stateful 
+  474  oc get machine
+  475  watch oc get machine
+  476  oc get nodes esteno-sas-stateless-worker-1 --show-labels 
+  477  oc label nodes esteno-sas-stateless-worker-1 sas.profile=sas-stateless
+  478  nmap -sn 172.23.218.0/24
+  479  clear
+  480  git pull
+  481  oc create -f manifests/esteno-sas-stateful-machine.yaml 
+  482  oc describe machines.machine.openshift.io esteno-sas-stateful-worker-1 
+  483  watch oc get machine
+  484  oc describe machines.machine.openshift.io esteno-sas-stateful-worker-1 
+  485  watch oc get machine
+  486  oc describe machines.machine.openshift.io esteno-sas-stateful-worker-1 
+  487  oc get csr
+  488  oc get csr | grep stateful
+  489  oc get csr
+  490  oc get machine
+  491  watch oc get machine
+  492  oc get nodes
+  493  watch oc get nodes
+  494  oc label nodes esteno-sas-stateful-worker-1 sas.profile=sas-stateful
+  495  oc create -f manifests/esteno-sas-stateful-machine.yaml 
+  496  git pull
+  497  oc create -f manifests/esteno-sas-stateful-machine.yaml 
+  498  watch oc get machine
+  499  oc describe machines.machine.openshift.io esteno-sas-stateful-worker-2 
+  500  watch oc get machine
+  501  oc get node
+  502  oc label nodes esteno-sas-stateful-worker-2 sas.profile=sas-stateful
+  503  git pull
+  504  oc create -f manifests/esteno-sas-esp-machine.yaml 
+  505  oc describe machines.machine.openshift.io esteno-sas-esp-worker-1 
+  506  watch oc get machines
+  507  oc get nodes
+  508  oc label nodes esteno-sas-esp-worker-1 sas.profile=sas-esp
+  509  git pull
+  510  oc create -f manifests/esteno-sas-keycloak-opensearch-machine.yaml 
+  511  watch oc get machine
+  512  git pull
+  513  oc create -f manifests/esteno-sas-keycloak-opensearch-machine.yaml 
+  514  git pull 
+  515  oc create -f manifests/esteno-sas-keycloak-opensearch-machine.yaml 
+  516  git pull 
+  517  oc create -f manifests/esteno-sas-keycloak-opensearch-machine.yaml 
+  518  watch oc get machine
+  519  watch oc get no
+  520  oc label nodes esteno-sas-keycloak-opensearch-worker-1 esteno-sas-keycloak-opensearch-worker-2 esteno-sas-keycloak-opensearch-worker-3 esteno-sas-keycloak-opensearch-worker-4 sas.profile=sas-keycloak-opensearch
+  521  ssh core@172.23.218.102
+  522  oc get node
+  523  oc debug node/esteno-bc7r5-master-0
+  524  oc get co
+  525  cd ..
+  526  . .profile 
+  527  oc get co
+  528  clear
+  529  oc get po -n openshift-console
+  530  oc logs console-76b694d4c7-2ndz9 -n openshift-console
+  531  oc logs console-76b694d4c7-2ndz9 -n openshift-console | grep error
+  532  oc get pods -n openshift-apiserver
+  533  oc status
+  534  oc status --suggest
+  535  oc describe co console
+  536  oc whoami --show-console 
+  537  curl -k -v https://console-openshift-console.apps.esteno.fazenda.mg.gov.br
+  538  oc describe route console -n openshift-console
+  539  dig 10.128.0.94
+  540  oc get network.config.openshift.io/cluster -o yaml
+  541  oc whoami --show-console
+  542  oc get po -n openshift-oauth-apiserver 
+  543  oc logs apiserver-6f774c54df-59287 -n openshift-oauth-apiserver 
+  544  oc get no
+  545  oc debug node/esteno-bc7r5-master-0
+  546  . .profile 
+  547  ssh core 172.23.218.104
+  548  ssh core@172.23.218.104
+  549  . .profile 
+  550  oc get no
+  551  oc debug node/esteno-bc7r5-master-0 
+  552  ssh core@172.23.218.102
+  553  resize
+  554  ssh core@172.23.218.102
+  555  ssh core@172.23.218.102
+  556  ssh core@172.23.218.104
+  557  podman run -it --rm --privileged quay.io/ramoreir/fedora-sysstat-for-amd64:latest
+  558  fio
+  559  fio --name=write_test     --rw=write     --bs=4k     --iodepth=1     --rate=100i     --size=1G     --time_based     --runtime=60     --ioengine=libaio     --direct=1
+  560  ls -lh 
+  561  rm write_test.0.0 
+  562  oc get no
+  563  export KUBECONFIG=/root/ocp4install/auth/kubeconfig 
+  564  oc get no
+  565  export KUBECONFIG=/root/ocp4install/auth/kubeconfig 
+  566  oc create ns unity
+  567  oc get ns
+  568  oc get ns |grep operator
+  569  oc get po -n openshift-operators
+  570  oc get po -n openshift-operators -w
+  571  oc get po -a | grep -i dell
+  572  oc get po -A | grep -i dell
+  573  . .profile 
+  574  oc get co
+  575  ssh core@172.23.218.104
+  576  cat /etc/yum.repos.d/redhat.repo 
+  577  kubectl get pods
+  578  su - k8s
+  579  env
+  580  env|grep -i kube
+  581  ls -lh 
+  582  cd ~
+  583  ls -lh
+  584  cd csi-unity/
+  585  ls -lh
+  586  helm
+  587  curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+  588  kubectl create ns unity
+  589  export KUBECONFIG=/root/ocp4install/auth/kubeconfig 
+  590  kubectl create ns unity
+  591  kubectl get po -n unity
+  592  kubectl create -f samples/secret/emptysecret.yaml 
+  593  kubectl get no
+  594  ls -lh
+  595  vim samples/secrets.yaml
+  596  cd samples/
+  597  kubectl create secret generic unity-creds -n unity --from-file=config=secret.yaml
+  598  ls -lh 
+  599  mv secrets.yaml secret.yaml
+  600  kubectl create secret generic unity-creds -n unity --from-file=config=secret.yaml
+  601  kubectl get secret -n unity
+  602  ls -lh
+  603  cd ..
+  604  ls -lh
+  605  cd dell-csi-helm-installer/
+  606  ls -lh
+  607  vim myvalues.yaml 
+  608  vim ../samples/secret.yaml 
+  609  ./csi-install.sh --namesapce unity --values ./myvalues.yaml 
+  610  ./csi-install.sh --namespace unity --values ./myvalues.yaml 
+  611  ls -lh
+  612  cd ..
+  613  kubectl  get po -n unity
+  614  ls -lh
+  615  cd dell-csi-helm-installer/
+  616  ls -lh
+  617  cd ..
+  618  ls -lh
+  619  cd dell-csi-helm-installer/
+  620  vim storage-class-config.yaml
+  621  kubectl get node
+  622  kubectl describe no esteno-bc7r5-worker-4 
+  623  kubectl get node
+  624  kubectl describe no esteno-bc7r5-master-0
+  625  kubectl describe no esteno-bc7r5-master-0 | grep "csi-unity.dellemc.com/fc500241500056-nfs=true"
+  626  kubectl describe no esteno-bc7r5-master-0 | grep "csi-unity"
+  627  kubectl get node
+  628  kubectl get node esteno-sas-keycloak-opensearch-worker-1 --show-label
+  629  kubectl get node esteno-sas-keycloak-opensearch-worker-1 --show-labels
+  630  ls -lh 
+  631  vim storage-class-config.yaml 
+  632  kubectl apply -f storage-class-config.yaml 
+  633  vim storage-class-config.yaml 
+  634  kubectl apply -f storage-class-config.yaml 
+  635  ls -lh
+  636  mkdir config
+  637  mv storage-class-config.yaml config/
+  638  mv myvalues.yaml config/
+  639  ls -lh
+  640  cd ..
+  641  ls -lh
+  642  pwd
+  643  ls -lh
+  644  cd dell-csi-helm-installer/
+  645  ls -lh
+  646  mkdir manifests-examples
+  647  cd manifests-examples/
+  648  ls -lh
+  649  vim po-1.yaml
+  650  vim pvc-1.yaml
+  651  kubectl get storageclass
+  652  ls -lh
+  653  vim pvc-1.yaml 
+  654  kubectl apply -f pvc-1.yaml 
+  655  kubectl get po 
+  656  kubectl delete -f pvc-1.yaml 
+  657  kubectl get ns
+  658  kubectl create ns teste
+  659  kubectl apply -f pvc-1.yaml -n teste
+  660  kubectl apply -f po-1.yaml -n teste
+  661  kubectl  get po -n teste
+  662  kubectl get po
+  663  kubectl get po -n teste
+  664  kubectl describe po nginx-with-vol01 -n teste
+  665  kubectl logs nginx-with-vol01 -n teste
+  666  kubectl explain pod.spec.container
+  667  kubectl explain pod.spec.containers
+  668  kubectl explain pod.spec.containers.securityContext --recursive 
+  669  kubectl explain pod.spec.containers.securityContext.capabilities --recursive 
+  670  vim po-1.yaml 
+  671  kubectl delete -f po-1.yaml -n teste
+  672  kubectl apply -f po-1.yaml -n teste
+  673  vim po-1.yaml 
+  674  kubectl delete -f po-1.yaml -n teste
+  675  kubectl apply -f po-1.yaml -n teste
+  676  vim po-1.yaml 
+  677  kubectl delete -f po-1.yaml -n teste
+  678  kubectl apply -f po-1.yaml -n teste
+  679  kubectl pexplain pod.spec.containers.securityContext.seccomProfile
+  680  kubectl explain pod.spec.containers.securityContext.seccomProfile
+  681  kubectl explain pod.spec.containers.securityContext --recursive
+  682  kubectl explain pod.spec.containers.securityContext.seccompProfile
+  683  vim po-1.yaml 
+  684  kubectl delete -f po-1.yaml -n teste
+  685  kubectl apply -f po-1.yaml -n teste
+  686  kubectl get po -n teste
+  687  kubectl get po
+  688  kubectl get po -n teste
+  689  kubectl describe po nginx-with-vol01 -n teste
+  690  kubectl logs -f nginx-with-vol01 -n teste
+  691  kubectl get po -n teste
+  692  kubectl logs -f nginx-with-vol01 -n teste
+  693  kubectl  get pvc
+  694  kubectl  get pvc -n teste
+  695  kubectl get po -n teste
+  696  kubectl describe po nginx-with-vol01 -n teste
+  697  kubectl edit po nginx-with-vol01 -n teste
+  698  kubectl delete -f po-1.yaml -f pvc-1.yaml 
+  699  kubectl delete -f po-1.yaml -f pvc-1.yaml -n teste
+  700  cd ..
+  701  cd config/
+  702  ls -lh
+  703  vim storage-class-config.yaml 
+  704  kubectl apply -f storage-class-config.yaml 
+  705  kubectl delete -f storage-class-config.yaml 
+  706  kubectl apply -f storage-class-config.yaml 
+  707  cd ..
+  708  cd manifests-examples/
+  709  kubectl apply -f pvc-1.yaml -n teste
+  710  kubectl get pvc
+  711  kubectl get pvc -n teste
+  712  vim pvc-1.yaml 
+  713  ls -lh
+  714  cd ..
+  715  cd config/
+  716  ls -lh
+  717  vim storage-class-config.yaml 
+  718  kubectl get pvc -n teste
+  719  vim storage-class-config.yaml 
+  720  kubectl get pvc
+  721  kubectl get pvc -n teste
+  722  vim storage-class-config.yaml 
+  723  kubectl delete -f storage-class-config.yaml 
+  724  vim storage-class-config.yaml 
+  725  kubectl apply -f storage-class-config.yaml 
+  726  cd ..
+  727  cd manifests-examples/
+  728  kubectl apply -f pvc-1.yaml -n teste
+  729  kubectl get pvc
+  730  kubectl get pvc -n teste
+  731  kubectl delete -f pvc-1.yaml -n teste
+  732  kubectl apply -f pvc-1.yaml -n teste
+  733  kubectl get pvc -n teste
+  734  kubectl get storageclass 
+  735  kubectl get storageclass unity-fc500241500056-nfs -o yaml
+  736  kubectl get pv
+  737  kubectl get pvc -n teste
+  738  ls -lh
+  739  kubectl apply -f po-1.yaml 
+  740  kubectl delete -f po-1.yaml 
+  741  kubectl apply -f po-1.yaml -n teste
+  742  kubectl get po -n teste
+  743  kubectl get po, pvc, pv -n teste
+  744  kubectl get po,pvc,pv -n teste
+  745  kubectl cluster-info
+  746  ls -lh
+  747  kubectl delete -f po-1.yaml -f pvc-1.yaml -n teste
+  748  . .profile 
+  749  clear
+  750  oc get co
+  751  oc get mcp
+  752  oc get nodes
+  753  oc label node esteno-sas-keycloak-opensearch-worker-1 esteno-sas-keycloak-opensearch-worker-2 esteno-sas-keycloak-opensearch-worker-3  esteno-sas-keycloak-opensearch-worker-4 custom-kubelet=small-pods
+  754  ls -la
+  755  cd ocp4install/
+  756  clear
+  757  vim kubelet-mc-pid-limits.yaml
+  758  cat kubelet-mc-pid-limits.yaml 
+  759  oc get machineconfigs.machineconfiguration.openshift.io 
+  760  oc create -f kubelet-mc-pid-limits.yaml 
+  761  watch oc get machineconfigs.machineconfiguration.openshift.io 
+  762  oc get kubeletconfigs.machineconfiguration.openshift.io 
+  763  oc describe kubeletconfigs.machineconfiguration.openshift.io sas-kubeconfig-pid-limit 
+  764  vim mcp-kubelet-pid-limits.yaml
+  765  oc get kubeletconfigs.machineconfiguration.openshift.io 
+  766  watch oc get machineconfigs.machineconfiguration.openshift.io 
+  767  clear
+  768  oc get machineconfigs.machineconfiguration.openshift.io 
+  769  oc delete kubeletconfigs.machineconfiguration.openshift.io sas-kubeconfig-pid-limit 
+  770  oc get machineconfigs.machineconfiguration.openshift.io 
+  771  clear
+  772  vim kubelet-mc-pid-limits.yaml 
+  773  oc create -f kubelet-mc-pid-limits.yaml 
+  774  oc get kubeletconfigs.machineconfiguration.openshift.io 
+  775  oc get machineconfigs.machineconfiguration.openshift.io 
+  776  clear
+  777  oc describe kubeletconfigs.machineconfiguration.openshift.io sas-kubeconfig-pid-limit 
+  778  vim mcp-kubelet-pid-limits.yaml 
+  779  oc get machineconfigs.machineconfiguration.openshift.io 
+  780  clear
+  781  oc create -f mcp-kubelet-pid-limits.yaml 
+  782  oc get machineconfigs.machineconfiguration.openshift.io 
+  783  watch oc get machineconfigs.machineconfiguration.openshift.io
+  784  clear
+  785  oc get mcp
+  786  oc describe kubeletconfigs.machineconfiguration.openshift.io 
+  787  oc delete kubeletconfigs.machineconfiguration.openshift.io 
+  788  oc delete kubeletconfigs.machineconfiguration.openshift.io sas-kubeconfig-pid-limit 
+  789  oc create -f kubelet-mc-pid-limits.yaml 
+  790  oc describe kubeletconfigs.machineconfiguration.openshift.io 
+  791  oc get machineconfigs
+  792  oc get machineconfigs.machineconfiguration.openshift.io 
+  793  watch oc get machineconfigs.machineconfiguration.openshift.io 
+  794  oc get mcp
+  795  oc get mc
+  796  vim esteno-sas-test-machine.yaml
+  797  vim poc-sefaz/manifests/sas-compute-machineset.yaml 
+  798  git remote -v
+  799  cd poc-sefaz/
+  800  git status
+  801  git pull
+  802  vim manifests/esteno-sas-esp-machine.yaml 
+  803  nmap -sn 172.23.218.101 - 172.23.218.136
+  804  nmap -sn 172.23.218.0 - 172.23.218.136
+  805  nmap -sn 172.23.218.0 
+  806  nmap -sn 172.23.218.1 
+  807  nmap -sn 172.23.218.0/24
+  808  nmap -sn 172.23.218.0/24 | grep esteno
+  809  oc create -f manifests/esteno-sas-esp-machine.yaml 
+  810  oc get machines
+  811  clear
+  812  watch oc get machine
+  813  oc describe machines.machine.openshift.io esteno-sas-test-worker-0 
+  814  watch oc get machine
+  815  oc get mcp
+  816  oc get node
+  817  oc get mcp
+  818  clear
+  819  oc get machineconfigs
+  820  oc get kubeletconfigs.machineconfiguration.openshift.io 
+  821  oc get mcp
+  822  clear
+  823  oc delete kubeletconfigs.machineconfiguration.openshift.io sas-kubeconfig-pid-limit 
+  824  oc delete machineconfigpools.machineconfiguration.openshift.io custom-set-sas-pid-limit 
+  825  oc get machineconfigs
+  826  oc get mco
+  827  clear
+  828  oc get mcp
+  829  oc get kubeletconfigs.machineconfiguration.openshift.io 
+  830  oc label node/esteno-sas-test-worker-0 custom-kubelet=small-pods-draft
+  831  oc get node/esteno-sas-test-worker-0 --show-labels 
+  832  oc apply -f ../mcp-kubelet-pid-limits.yaml 
+  833  oc get mcp
+  834  oc get machineconfig
+  835  oc apply -f ../kubelet-mc-pid-limits.yaml 
+  836  oc get mcp
+  837  oc get kubeletconfigs.machineconfiguration.openshift.io 
+  838  oc get machineconfig
+  839  oc describe kubeletconfigs.machineconfiguration.openshift.io sas-kubeconfig-pid-limit 
+  840  oc get machineconfig
+  841  oc get mcp
+  842  oc delete kubeletconfigs.machineconfiguration.openshift.io sas-kubeconfig-pid-limit 
+  843  oc delete machineconfigpools.machineconfiguration.openshift.io custom-set-sas-pid-limit 
+  844  oc get machineconfigs
+  845  oc apply -f ../mcp-kubelet-pid-limits.yaml 
+  846  oc get mcp
+  847  oc delete machineconfigpools.machineconfiguration.openshift.io custom-set-sas-pid-limit 
+  848  clear
+  849  vim ../mcp-kubelet-pid-limits.yaml 
+  850  oc apply -f ../mcp-kubelet-pid-limits.yaml 
+  851  oc get mcp
+  852  oc apply -f ../kubelet-mc-pid-limits.yaml 
+  853  oc get mcp
+  854  oc get machineconfig
+  855  oc get machineconfigs.machineconfiguration.openshift.io 99-custom-set-sas-pid-limit-generated-kubelet -o yaml | grep PidsLimit
+  856  oc get machineconfigs.machineconfiguration.openshift.io 99-custom-set-sas-pid-limit-generated-kubelet -o yaml 
+  857  oc debug node/esteno-sas-test-worker-0 -- chroot /host journalctl -u kubelet | grep -i podPIDs
+  858  oc get mcp
+  859  oc debug node/esteno-sas-test-worker-0 -- chroot /host journalctl -u kubelet | grep -i podPIDs
+  860  oc debug node/esteno-sas-test-worker-0 
+  861  oc get node/esteno-sas-test-worker-0 -o yaml | grep -E current
+  862  oc get node/esteno-sas-test-worker-0 -o yaml | grep -E current|desired
+  863  oc get node/esteno-sas-test-worker-0 -o yaml | grep -E desiredConfig
+  864  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf | grep podPIDsLimits
+  865  oc get no
+  866  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf | grep podPIDsLimits
+  867  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf | grep pids
+  868  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf
+  869  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf | grep podPids
+  870  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf | grep -i podPidsLimit
+  871  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf | grep -i container
+  872  oc get co
+  873  oc get mcp
+  874  oc get mc
+  875  oc get machineconfigs.machineconfiguration.openshift.io 99-custom-set-sas-pid-limit-generated-kubelet -o yaml | grep PidsLimit
+  876  oc get machineconfigs.machineconfiguration.openshift.io 99-custom-set-sas-pid-limit-generated-kubelet -o yaml 
+  877  oc get machineconfigpools.machineconfiguration.openshift.io custom-set-sas-pid-limit -o yaml
+  878  oc debug node/esteno-sas-test-worker-0 
+  879  watch oc get machines
+  880  watch oc get nodes
+  881  oc debug node/esteno-sas-test-worker-0 -- chroot /host cat /etc/kubernetes/kubelet.conf 
+  882  oc debug node/esteno-sas-test-worker-0 
+  883  oc describe node/esteno-sas-test-worker-0 -o yaml | grep currentConfig
+  884  oc describe node/esteno-sas-test-worker-0 | grep currentConfig
+  885  oc label machineconfigpools.machineconfiguration.openshift.io worker custom-kubelet=small-pod
+  886  oc apply -f <<EOF
+  887  apiVersion: machineconfiguration.openshift.io/v1
+  888  kind: KubeletConfig
+  889  metadata:
+  890    name: worker-kubeconfig-fix
+  891  spec:
+  892    machineConfigPoolSelector:
+  893      matchLabels:
+  894        custom-kubelet: small-pods 
+  895    kubeletConfig:
+  896        podPidsLimit: 65536
+  897  EOF
+  898  oc apply -f - <<EOF
+  899  apiVersion: machineconfiguration.openshift.io/v1
+  900  kind: KubeletConfig
+  901  metadata:
+  902    name: worker-kubeconfig-fix
+  903  spec:
+  904    machineConfigPoolSelector:
+  905      matchLabels:
+  906        custom-kubelet: small-pods 
+  907    kubeletConfig:
+  908        podPidsLimit: 65536
+  909  EOF
+  910  oc get kubeletconfigs.machineconfiguration.openshift.io 
+  911  oc get mcp
+  912  oc get machineconfigs
+  913  oc get mcp
+  914  oc get node
+  915  oc describe kubeletconfigs.machineconfiguration.openshift.io worker-kubeconfig-fix 
+  916  oc delete kubeletconfigs.machineconfiguration.openshift.io worker-kubeconfig-fix 
+  917  oc label machineconfigpools.machineconfiguration.openshift.io worker custom-crio=high-pid-limit
+  918  oc apply -f - <<EOF
+  919  apiVersion: machineconfiguration.openshift.io/v1
+  920  kind: KubeletConfig
+  921  metadata:
+  922    name: worker-kubeconfig-fix
+  923  spec:
+  924    machineConfigPoolSelector:
+  925      matchLabels:
+  926        custom-kubelet: small-pods 
+  927    kubeletConfig:
+  928        podPidsLimit: 65536
+  929  EOF
+  930  oc describe kubeletconfigs.machineconfiguration.openshift.io worker-kubeconfig-fix 
+  931  oc get mcp worker --show-labels 
+  932  oc delete kubeletconfigs.machineconfiguration.openshift.io worker-kubeconfig-fix 
+  933  oc label machineconfigpools.machineconfiguration.openshift.io worker custom-kubelet-
+  934  oc label machineconfigpools.machineconfiguration.openshift.io worker custom-kubelet=small-pods
+  935  oc apply -f - <<EOF
+  936  apiVersion: machineconfiguration.openshift.io/v1
+  937  kind: KubeletConfig
+  938  metadata:
+  939    name: worker-kubeconfig-fix
+  940  spec:
+  941    machineConfigPoolSelector:
+  942      matchLabels:
+  943        custom-kubelet: small-pods 
+  944    kubeletConfig:
+  945        podPidsLimit: 65536
+  946  EOF
+  947  oc get kubeletconfigs.machineconfiguration.openshift.io worker-kubeconfig-fix 
+  948  oc describe kubeletconfigs.machineconfiguration.openshift.io worker-kubeconfig-fix 
+  949  oc get mcp
+  950  oc get machines
+  951  oc get machineconfig
+  952  oc describe machineconfig 99-worker-generated-kubelet 
+  953  oc debug node/esteno-sas-cas-worker-0 
+  954  oc get node
+  955  oc get mcp
+  956  watch oc get mcp
+  957  oc describe mcp worker 
+  958  watch oc get mcp
+  959  . .profile 
+  960  oc get mcp
+  961  oc debug node/esteno-sas-postgres-worker-0 
+  962  oc get node 
+  963  oc debug node/esteno-sas-postgres-worker-1
+  964  chroot /host
+  965  oc debug node/esteno-sas-postgres-worker-1
+  966  oc debug node/esteno-sas-postgres-worker-2
+  967  oc get co
+  968  clear
+  969  oc debug node/esteno-sas-cas-worker-1 
+  970  clear
+  971  oc debug node/esteno-sas-compute-worker-1 
+  972  exit
+  973  . .profile 
+  974  clear
+  975  oc get co
+  976  clear
+  977  oc get mcp
+  978  clear
+  979  cd ocp4install/
+  980  vim secret-ldap.yaml
+  981  oc apply -f secret-ldap.yaml 
+  982  vim sefaz-ldap-oauth.yaml
+  983  oc apply -f sefaz-ldap-oauth.yaml 
+  984  oc get all -n openshift-config
+  985  oc get secrets -n openshift-config
+  986  oc get customresourcedefinitions.apiextensions.k8s.io cluster
+  987  oc get customresourcedefinitions.apiextensions.k8s.io 
+  988  oc get oauth
+  989  oc get oauth cluster -o yaml
+  990  oc get co
+  991  oc get mcp
+  992  oc get event -n openshift-cluster-storage-operator --sort-by=.metadata.creationTimestamp | grep VSphereCheck 
+  993  clear
+  994  date && oc get event -n openshift-cluster-storage-operator --sort-by=.metadata.creationTimestamp | grep VSphereCheck 
+  995  oc get co/node-tuning 
+  996  oc get tuned.tuned.openshift.io/default -o yaml -n openshift-cluster-node-tuning-operator
+  997  . .profile 
+  998  clear
+  999  oc get co
+ 1000  clear
+ 1001  oc get nodes --selector=node-role.kubernetes.io/infra
+ 1002  oc get no
+ 1003  oc get nodes --show-labels 
+ 1004  oc get nodes --show-labels | grep worker
+ 1005  oc label nodes esteno-bc7r5-worker-3 esteno-bc7r5-worker-4 esteno-bc7r5-worker-5 node-role.kubernetes.io/infra
+ 1006  oc label nodes esteno-bc7r5-worker-3 esteno-bc7r5-worker-4 esteno-bc7r5-worker-5 node-role.kubernetes.io/infra=
+ 1007  oc get nodes --selector=node-role.kubernetes.io/infra
+ 1008  oc adm taint nodes -l node-role.kubernetes.io/infra infra=reserved:NoSchedule infra=reserved:NoExecute
+ 1009  oc get ds
+ 1010  oc get ds -n all
+ 1011  oc get ds --all-namespaces 
+ 1012  oc patch ds machine-config-daemon -n openshift-machine-config-operator --type=merge -p '{"spec": {"template": { "spec": {"tolerations":[{"operator":"Exists"}]}}}}'
+ 1013  oc patch ingresscontroller/default -n openshift-ingress-operator --type=merge -p '{"spec":{"nodePlacement": {"nodeSelector": {"matchLabels": {"node-role.kubernetes.io/infra": ""}},"tolerations": [{"effect":"NoSchedule","key": "infra","value": "reserved"},{"effect":"NoExecute","key": "infra","value": "reserved"}]}}}'
+ 1014  oc patch ingresscontroller default -n openshift-ingress-operator --type=merge --patch='{"spec":{"replicas": 2}}'
+ 1015  oc patch configs.imageregistry.operator.openshift.io/cluster -n openshift-image-registry --type=merge -p '{"spec":{"nodeSelector": {"node-role.kubernetes.io/infra": ""},"tolerations": [{"effect":"NoSchedule","key": "infra","value": "reserved"},{"effect":"NoExecute","key": "infra","value": "reserved"}]}}'
+ 1016  oc patch configs.imageregistry.operator.openshift.io/cluster -n openshift-image-registry --type=merge --patch='{"spec":{"replicas": 2}}'
+ 1017  oc get pvc
+ 1018  oc get pvc --all-namespaces 
+ 1019  oc get all -n openshift-monitoring 
+ 1020  cat > ocp4install/monitoring-to-infra-cm.yaml <<EOF
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: cluster-monitoring-config
+ namespace: openshift-monitoring
+data:
+ config.yaml: |+
+   alertmanagerMain:
+     volumeClaimTemplate:
+       metadata:
+         name: pvc-alertmanager
+       spec:
+         storageClassName: thin
+         resources:
+           requests:
+             storage: 1Gi
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   prometheusK8s:
+     volumeClaimTemplate:
+       metadata:
+         name: pvc-prometheus
+       spec:
+         storageClassName: thin
+         resources:
+           requests:
+             storage: 10Gi
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   prometheusOperator:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   grafana:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   k8sPrometheusAdapter:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   kubeStateMetrics:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   telemeterClient:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   openshiftStateMetrics:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+   thanosQuerier:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+     tolerations:
+     - key: infra
+       value: reserved
+       effect: NoSchedule
+     - key: infra
+       value: reserved
+       effect: NoExecute
+EOF
+
+ 1021  cat ocp4install/monitoring-to-infra-cm.yaml 
+ 1022  oc apply -f ocp4install/monitoring-to-infra-cm.yaml --dry-run 
+ 1023  oc apply -f ocp4install/monitoring-to-infra-cm.yaml 
+ 1024  oc get cm
+ 1025  oc get cm/cluster-monitoring-config -n openshift-monitoring 
+ 1026  oc get co
+ 1027  oc get mcp
+ 1028  oc get co
+ 1029  history >> ocp4install/history-2024-12-09.log
