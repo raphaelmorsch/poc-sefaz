@@ -1,0 +1,168 @@
+{
+  "name": "esteno-bc7r5-master-0",
+  "cpu": "8",
+  "memory": "32834528Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-master-1",
+  "cpu": "8",
+  "memory": "32834528Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-master-2",
+  "cpu": "8",
+  "memory": "32834516Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-worker-0",
+  "cpu": "8",
+  "memory": "32865748Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-worker-1",
+  "cpu": "8",
+  "memory": "32865752Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-worker-2",
+  "cpu": "8",
+  "memory": "32865744Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-worker-3",
+  "cpu": "8",
+  "memory": "32865744Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-worker-4",
+  "cpu": "8",
+  "memory": "32865752Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-bc7r5-worker-5",
+  "cpu": "8",
+  "memory": "32865756Ki",
+  "ephemeral_storage": "167181292Ki"
+}
+{
+  "name": "esteno-sas-cas-worker-1",
+  "cpu": "16",
+  "memory": "131904980Ki",
+  "ephemeral_storage": "418700528Ki"
+}
+{
+  "name": "esteno-sas-cas-worker-2",
+  "cpu": "16",
+  "memory": "131904984Ki",
+  "ephemeral_storage": "418700528Ki"
+}
+{
+  "name": "esteno-sas-cas-worker-3",
+  "cpu": "16",
+  "memory": "131904984Ki",
+  "ephemeral_storage": "418700528Ki"
+}
+{
+  "name": "esteno-sas-cas-worker-4",
+  "cpu": "16",
+  "memory": "131904988Ki",
+  "ephemeral_storage": "418700528Ki"
+}
+{
+  "name": "esteno-sas-compute-worker-1",
+  "cpu": "16",
+  "memory": "65844752Ki",
+  "ephemeral_storage": "209124332Ki"
+}
+{
+  "name": "esteno-sas-compute-worker-2",
+  "cpu": "16",
+  "memory": "65844748Ki",
+  "ephemeral_storage": "209124332Ki"
+}
+{
+  "name": "esteno-sas-esp-worker-1",
+  "cpu": "8",
+  "memory": "65846824Ki",
+  "ephemeral_storage": "209124332Ki"
+}
+{
+  "name": "esteno-sas-keycloak-opensearch-worker-1",
+  "cpu": "4",
+  "memory": "65847868Ki",
+  "ephemeral_storage": "133626860Ki"
+}
+{
+  "name": "esteno-sas-keycloak-opensearch-worker-2",
+  "cpu": "4",
+  "memory": "65847872Ki",
+  "ephemeral_storage": "133626860Ki"
+}
+{
+  "name": "esteno-sas-keycloak-opensearch-worker-3",
+  "cpu": "4",
+  "memory": "65847872Ki",
+  "ephemeral_storage": "133626860Ki"
+}
+{
+  "name": "esteno-sas-keycloak-opensearch-worker-4",
+  "cpu": "4",
+  "memory": "65847872Ki",
+  "ephemeral_storage": "133626860Ki"
+}
+{
+  "name": "esteno-sas-postgres-worker-1",
+  "cpu": "4",
+  "memory": "32866904Ki",
+  "ephemeral_storage": "133626860Ki"
+}
+{
+  "name": "esteno-sas-postgres-worker-2",
+  "cpu": "4",
+  "memory": "32866900Ki",
+  "ephemeral_storage": "133626860Ki"
+}
+{
+  "name": "esteno-sas-postgres-worker-3",
+  "cpu": "4",
+  "memory": "32866904Ki",
+  "ephemeral_storage": "133626860Ki"
+}
+{
+  "name": "esteno-sas-stateful-worker-1",
+  "cpu": "8",
+  "memory": "65846824Ki",
+  "ephemeral_storage": "209124332Ki"
+}
+{
+  "name": "esteno-sas-stateful-worker-2",
+  "cpu": "8",
+  "memory": "65846832Ki",
+  "ephemeral_storage": "209124332Ki"
+}
+{
+  "name": "esteno-sas-stateless-worker-1",
+  "cpu": "16",
+  "memory": "131904980Ki",
+  "ephemeral_storage": "209124332Ki"
+}
+{
+  "name": "esteno-sas-system-worker-1",
+  "cpu": "8",
+  "memory": "65846832Ki",
+  "ephemeral_storage": "209124332Ki"
+}
+{
+  "name": "esteno-sas-test-worker-0",
+  "cpu": "8",
+  "memory": "65846836Ki",
+  "ephemeral_storage": "209124332Ki"
+}
