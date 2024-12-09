@@ -1,0 +1,31 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+    - ldap:
+        attributes:
+          email:
+          - mail 
+          id:
+          - cn
+          name:
+            - cn
+          preferredUsername:
+            - sAMAccountName
+        bindDN: [ldap-User]
+        bindPassword:
+          name: [ldap-secret]
+        insecure: true
+        url: >-
+          ldap://[ldap-ip]:389/OU=CTO,OU=[ou1],OU=[ou2],OU=[ou3],DC=[dc],DC=jm?sAMAccountName?sub?(objectClass=*)
+      mappingMethod: claim
+      name: Usuario AD
+      type: LDAP
+    - htpasswd:
+        fileData:
+          name: htpasswd-6w4j5
+      mappingMethod: claim
+      name: Usuario Local
+      type: HTPasswd

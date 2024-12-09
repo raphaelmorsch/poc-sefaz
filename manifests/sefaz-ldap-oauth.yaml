@@ -1,0 +1,24 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+    - ldap:
+        attributes:
+          email:
+            - mail
+          id:
+            - sAMAccountName
+          name:
+            - name
+          preferredUsername:
+            - name
+        bindDN: "cn=sasuser,ou=SistemasDesenvolvimento,ou=DIO - Diretoria de operacao e infraestrutura,ou=STI - Superintendencia de Tecnologia da informacao,ou=Orgaos Centrais,ou=Unidades SEF,ou=SEF,dc=fazenda,dc=mg"
+        bindPassword:
+          name: sefaz-ldap-bind-password
+        insecure: true
+        url: "ldap://fazenda.mg:389/ou=Usuarios,ou=STI - Superintendencia de Tecnologia da informacao,ou=Unidades SEF,ou=EstacaoSegura - Nova Estrutura,ou=SEF,dc=fazenda,dc=mg?sAMAccountName" 
+      mappingMethod: claim
+      name: SEFMG
+      type: LDAP
