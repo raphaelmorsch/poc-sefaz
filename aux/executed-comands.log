@@ -1,0 +1,102 @@
+[root@esteno-01 ~]# oc apply -f - <<EOF
+apiVersion: tuned.openshift.io/v1
+kind: Tuned
+metadata:
+  name: custom-limits
+  namespace: openshift-cluster-node-tuning-operator
+spec:
+  profile:
+    - name: custom-limits
+      data: |
+        [main]
+        summary=Custom limits for nofile and nproc
+        include=openshift-node
+        pam_limits_enable=true
+
+        [sysctl]
+        fs.file-max=150000
+        kernel.threads-max=100000
+  recommend:                          
+    - match:
+        - label: workload.sas
+      priority: 20
+      profile: custom-limits
+EOF                         
+tuned.tuned.openshift.io/custom-limits created
+
+/** 
+[root@esteno-01 ~]# oc get profiles.tuned.openshift.io -n openshift-cluster-node-tuning-operator 
+NAME                                      TUNED                     APPLIED   DEGRADED   AGE
+esteno-bc7r5-master-0                     openshift-control-plane   True      False      15d
+esteno-bc7r5-master-1                     openshift-control-plane   True      False      16d
+esteno-bc7r5-master-2                     openshift-control-plane   True      False      23d
+esteno-bc7r5-worker-0                     openshift-node            True      False      23d
+esteno-bc7r5-worker-1                     openshift-node            True      False      23d
+esteno-bc7r5-worker-2                     openshift-node            True      False      23d
+esteno-bc7r5-worker-3                     openshift-control-plane   True      False      23d
+esteno-bc7r5-worker-4                     openshift-control-plane   True      False      23d
+esteno-bc7r5-worker-5                     openshift-control-plane   True      False      23d
+esteno-sas-cas-worker-1                   custom-limits             True      True       13d
+esteno-sas-cas-worker-2                   custom-limits             True      True       13d
+esteno-sas-cas-worker-3                   custom-limits             True      True       13d
+esteno-sas-cas-worker-4                   custom-limits             True      True       13d
+esteno-sas-compute-worker-1               custom-limits             True      True       13d
+esteno-sas-compute-worker-2               custom-limits             True      True       13d
+esteno-sas-esp-worker-1                   custom-limits             True      True       13d
+esteno-sas-keycloak-opensearch-worker-1   custom-limits             True      True       13d
+esteno-sas-keycloak-opensearch-worker-2   custom-limits             True      True       13d
+esteno-sas-keycloak-opensearch-worker-3   custom-limits             True      True       13d
+esteno-sas-keycloak-opensearch-worker-4   custom-limits             True      True       13d
+esteno-sas-postgres-worker-1              custom-limits             True      True       13d
+esteno-sas-postgres-worker-2              custom-limits             True      True       13d
+esteno-sas-postgres-worker-3              custom-limits             True      True       13d
+esteno-sas-stateful-worker-1              custom-limits             True      True       13d
+esteno-sas-stateful-worker-2              custom-limits             True      True       13d
+esteno-sas-stateless-worker-1             custom-limits             True      True       13d
+esteno-sas-system-worker-1                custom-limits             True      True       13d
+esteno-sas-test-worker-0                  openshift-node            True      False      9d
+*/
+
+______________________________
+
+[root@esteno-01 ~]# oc get po -o wide -n openshift-cluster-node-tuning-operator 
+NAME                                            READY   STATUS    RESTARTS   AGE   IP               NODE                                      NOMINATED NODE   READINESS GATES
+cluster-node-tuning-operator-659c958446-f5rkf   1/1     Running   0          14d   10.128.0.41      esteno-bc7r5-master-0                     <none>           <none>
+tuned-2t96g                                     1/1     Running   1          13d   172.23.218.125   esteno-sas-stateful-worker-2              <none>           <none>
+tuned-49s7b                                     1/1     Running   1          13d   172.23.218.129   esteno-sas-keycloak-opensearch-worker-3   <none>           <none>
+tuned-5z262                                     1/1     Running   5          23d   172.23.218.107   esteno-bc7r5-worker-2                     <none>           <none>
+tuned-68cgp                                     1/1     Running   1          13d   172.23.218.126   esteno-sas-esp-worker-1                   <none>           <none>
+tuned-72nw2                                     1/1     Running   1          13d   172.23.218.113   esteno-sas-postgres-worker-1              <none>           <none>
+tuned-8x5rd                                     1/1     Running   1          13d   172.23.218.121   esteno-sas-compute-worker-1               <none>           <none>
+tuned-bktlt                                     1/1     Running   1          13d   172.23.218.119   esteno-sas-cas-worker-3                   <none>           <none>
+tuned-bm7qp                                     1/1     Running   2          9d    172.23.218.134   esteno-sas-test-worker-0                  <none>           <none>
+tuned-cnqgd                                     1/1     Running   1          13d   172.23.218.130   esteno-sas-keycloak-opensearch-worker-4   <none>           <none>
+tuned-flnbh                                     1/1     Running   1          13d   172.23.218.124   esteno-sas-stateful-worker-1              <none>           <none>
+tuned-hp5gq                                     1/1     Running   1          13d   172.23.218.123   esteno-sas-stateless-worker-1             <none>           <none>
+tuned-kbpzr                                     1/1     Running   4          23d   172.23.218.108   esteno-bc7r5-worker-3                     <none>           <none>
+tuned-kfcw4                                     1/1     Running   4          23d   172.23.218.104   esteno-bc7r5-master-2                     <none>           <none>
+tuned-lxzvf                                     1/1     Running   1          13d   172.23.218.122   esteno-sas-compute-worker-2               <none>           <none>
+tuned-mt8b4                                     1/1     Running   4          23d   172.23.218.103   esteno-bc7r5-master-1                     <none>           <none>
+tuned-n8xhv                                     1/1     Running   4          23d   172.23.218.102   esteno-bc7r5-master-0                     <none>           <none>
+tuned-ppnkw                                     1/1     Running   4          23d   172.23.218.105   esteno-bc7r5-worker-0                     <none>           <none>
+tuned-qdq5q                                     1/1     Running   4          23d   172.23.218.110   esteno-bc7r5-worker-5                     <none>           <none>
+tuned-sk4h5                                     1/1     Running   4          23d   172.23.218.109   esteno-bc7r5-worker-4                     <none>           <none>
+tuned-tvf44                                     1/1     Running   1          13d   172.23.218.114   esteno-sas-postgres-worker-2              <none>           <none>
+tuned-vczgl                                     1/1     Running   1          13d   172.23.218.116   esteno-sas-system-worker-1                <none>           <none>
+tuned-vq9s9                                     1/1     Running   4          23d   172.23.218.106   esteno-bc7r5-worker-1                     <none>           <none>
+tuned-w299s                                     1/1     Running   1          13d   172.23.218.120   esteno-sas-cas-worker-4                   <none>           <none>
+tuned-xgrhx                                     1/1     Running   1          13d   172.23.218.115   esteno-sas-postgres-worker-3              <none>           <none>
+tuned-xl5qh                                     1/1     Running   1          13d   172.23.218.117   esteno-sas-cas-worker-1                   <none>           <none>
+tuned-xnft5                                     1/1     Running   1          13d   172.23.218.128   esteno-sas-keycloak-opensearch-worker-2   <none>           <none>
+tuned-xvrcm                                     1/1     Running   1          13d   172.23.218.118   esteno-sas-cas-worker-2                   <none>           <none>
+tuned-zvgm5                                     1/1     Running   1          13d   172.23.218.127   esteno-sas-keycloak-opensearch-worker-1   <none>           <none>
+
+-------------------
+
+[root@esteno-01 ~]# oc rsh tuned-flnbh
+sh-5.1# 
+sh-5.1# sysctl fs.file-max
+fs.file-max = 150000
+sh-5.1# sysctl kernel.threads-max
+kernel.threads-max = 100000
+

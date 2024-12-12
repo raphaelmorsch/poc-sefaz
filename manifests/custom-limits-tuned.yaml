@@ -1,0 +1,28 @@
+apiVersion: tuned.openshift.io/v1
+kind: Tuned
+metadata:
+  name: custom-limits
+  namespace: openshift-cluster-node-tuning-operator
+spec:
+  profile:
+    - name: custom-limits
+      data: |
+        [main]
+        summary=Custom limits for nofile and nproc
+        include=openshift-node
+        pam_limits_enable=true
+
+        [sysctl]
+        fs.file-max=150000
+        kernel.threads-max=100000
+        user.max_user_processes=100000
+  recommend:
+    - match:
+        - label: workload.sas
+      priority: 20
+      profile: custom-limits
+
+
+
+#        limits=/etc/security/limits.d/99-custom.conf   
+
